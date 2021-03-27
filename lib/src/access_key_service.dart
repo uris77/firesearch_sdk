@@ -3,7 +3,7 @@ import 'package:firesearch_sdk/client.dart';
 /// AccessKeyService provices keys needed to perform searches.
 class AccessKeyService {
   /// Constructor
-  AccessKeyService({required this.client});
+  AccessKeyService(this.client);
 
   /// The Firesearch Client.
   final Client client;
