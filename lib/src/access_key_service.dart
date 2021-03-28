@@ -8,6 +8,8 @@ class AccessKeyService {
   /// The Firesearch Client.
   final Client client;
 
+  ///GenerateKey generates a key for an index path prefix to enable searches. The key
+  /// expires after 24 hours.
   Future<GenerateKeyResponse> generateKey(
       GenerateKeyRequest? generateKeyRequest) async {
     if (generateKeyRequest == null) {
