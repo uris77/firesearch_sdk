@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:firesearch_sdk/client.dart';
+import 'package:firesearch_sdk/src/index_service/put_doc_request.dart';
 
 /// IndexService provides the ability to create and manage full-text indexes, as
 /// well as populate them with data, and perform searches.
@@ -82,5 +83,17 @@ class IndexService {
     }
 
     return GetIndexesResponse.fromJson(jsonDecode(response.body));
+  }
+
+  /// PutDoc puts a document into an Index.
+  Future<PutDocResponse> putDoc(PutDocRequest putDocRequest) async {
+    var response = await client.httpClient.post('/api/IndexService.PutDoc',
+        headers: _headers, body: putDocRequest);
+    if (response != 200) {
+      throw Exception(
+          'firesearch: IndexService.PutDoc ${response.statusCode} ${response.body}');
+    }
+
+    return PutDocResponse.fromJson(jsonDecode(response.body));
   }
 }

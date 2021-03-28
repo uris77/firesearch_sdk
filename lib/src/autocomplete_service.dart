@@ -209,23 +209,6 @@ class CompleteQuery {
   final String text;
 }
 
-/// Field is a non-searchable key/value pair that can be filtered at query time.
-class Field {
-  /// Constructor
-  Field({required this.key, required this.value});
-
-  /// Converts a map to a Field
-  factory Field.fromMap(Map<String, dynamic> map) {
-    return Field(key: map['key'], value: map['value']);
-  }
-
-  /// Key is the name of the field. Cannot begin with an underscore.
-  final String key;
-
-  /// Value is the filterable value of this Field.
-  final dynamic value;
-}
-
 /// AutocompleteDoc describes a document that can be searched.
 class AutocompleteDoc {
   /// Constructor
@@ -235,7 +218,7 @@ class AutocompleteDoc {
   factory AutocompleteDoc.fromMap(Map<String, dynamic> map) {
     var _fields = map['fields']
         ? (map['fields'] as List<Map<String, dynamic>>)
-            .map((m) => Field.fromMap(map))
+            .map((m) => Field.fromJson(map))
             .toList()
         : List<Field>.empty();
     return AutocompleteDoc(id: map['id'], text: map['text'], fields: _fields);

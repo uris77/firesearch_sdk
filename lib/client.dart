@@ -1,6 +1,8 @@
 export './src/client.dart';
 export './src/http_client.dart';
 export './src/index_service/index.dart';
+export 'src/doc.dart';
+export 'src/field.dart';
 export 'src/index_service/create_index_request.dart';
 export 'src/index_service/create_index_response.dart';
 export 'src/index_service/delete_doc_request.dart';
@@ -11,3 +13,5 @@ export 'src/index_service/get_index_request.dart';
 export 'src/index_service/get_index_response.dart';
 export 'src/index_service/get_indexes_response.dart';
 export 'src/index_service/index_service.dart';
+export 'src/index_service/put_doc_response.dart';
+export 'src/search_field.dart';
