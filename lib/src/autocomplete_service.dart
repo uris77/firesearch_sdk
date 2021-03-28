@@ -63,6 +63,23 @@ class AutocompleteService {
 
     return DeleteAutocompleteDocResponse(error: response.body);
   }
+
+  /// DeleteIndex deletes the AutocompleteIndex. All index data, as well as any
+  /// metadata about this AutocompleteIndex will be completely deleted.
+  Future<DeleteAutocompleteIndexResponse> deleteIndex(
+      DeleteAutocompleteIndexRequest deleteAutocompleteIndexRequest) async {
+    var response = await client.httpClient.post(
+        '/api/AutocompleteService.DeleteIndex',
+        headers: _headers,
+        body: deleteAutocompleteIndexRequest);
+
+    if (response != 200) {
+      throw Exception(
+          'firesearch AutocompleteSrvice.DeleteIndex: ${response.statusCode} ${response.body}');
+    }
+
+    return DeleteAutocompleteIndexResponse(response.body);
+  }
 }
 
 /// CompleteRequest is the input object for Search.
@@ -263,4 +280,24 @@ class DeleteAutocompleteDocResponse {
 
   /// Error is string explaining what went wrong. Empty if everything was fine.
   final String error;
+}
+
+/// DeleteAutocompleteIndexRequest is the input object for DeleteAutocompleteIndex.
+class DeleteAutocompleteIndexRequest {
+  /// Default Constructor
+  DeleteAutocompleteIndexRequest(this.indexPath);
+
+  /// IndexPath is the collection path in Firestore that identifies an
+  ///AutocompleteIndex.
+  final String indexPath;
+}
+
+///  DeleteAutocompleteIndexResponse is the output object for
+/// DeleteAutocompleteIndex.
+class DeleteAutocompleteIndexResponse {
+  /// Constructor
+  DeleteAutocompleteIndexResponse(this.error);
+
+  /// Error is string explaining what went wrong. Empty if everything was fine.
+  String? error;
 }
