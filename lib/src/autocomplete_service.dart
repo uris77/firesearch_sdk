@@ -110,6 +110,22 @@ class AutocompleteService {
 
     return GetAutocompleteIndexesResponse.fromMap(jsonDecode(response.body));
   }
+
+  /// PutDoc puts a document into an AutocompleteIndex.
+  Future<PutAutocompleteDocResponse> putDoc(
+      PutAutocompleteDocRequest putAutocompleteDocRequest) async {
+    var response = await client.httpClient.post(
+        '/api/AutocompleteService.PutDoc',
+        headers: _headers,
+        body: putAutocompleteDocRequest);
+
+    if (response != 200) {
+      throw Exception(
+          'firesearch: AutocompleteService.PutDoc: ${response.statusCode} ${response.body}');
+    }
+
+    return PutAutocompleteDocResponse(response.body);
+  }
 }
 
 /// CompleteRequest is the input object for Search.
@@ -380,5 +396,32 @@ class GetAutocompleteIndexesResponse {
   List<AutocompleteIndex>? indexes;
 
   ///  Error is string explaining what went wrong. Empty if everything was fine.
+  String? error;
+}
+
+/// PutAutocompleteDocRequest is the input object for PutAutocompleteDoc.
+class PutAutocompleteDocRequest {
+  /// Default Constructor
+  PutAutocompleteDocRequest(this.indexPath, this.doc);
+
+  /// Converts a map to PutAutocompleteDocRequest
+  factory PutAutocompleteDocRequest.fromMap(Map<String, dynamic> map) {
+    return PutAutocompleteDocRequest(
+        map['indexPath'], AutocompleteDoc.fromMap(map['doc']));
+  }
+
+  /// IndexPath is the AutocompleteIndex to put a document to.
+  final String indexPath;
+
+  /// Doc is the document to put.
+  final AutocompleteDoc doc;
+}
+
+/// PutAutocompleteDocResponse is the output object for PutAutocompleteDoc.
+class PutAutocompleteDocResponse {
+  /// Default Constructor
+  PutAutocompleteDocResponse(this.error);
+
+  /// Error is string explaining what went wrong. Empty if everything was fine.
   String? error;
 }
