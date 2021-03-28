@@ -9,4 +9,5 @@ export 'src/index_service/delete_index_request.dart';
 export 'src/index_service/delete_index_response.dart';
 export 'src/index_service/get_index_request.dart';
 export 'src/index_service/get_index_response.dart';
+export 'src/index_service/get_indexes_response.dart';
 export 'src/index_service/index_service.dart';

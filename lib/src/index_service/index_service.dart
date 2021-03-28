@@ -1,13 +1,6 @@
 import 'dart:convert';
 
 import 'package:firesearch_sdk/client.dart';
-import 'package:firesearch_sdk/src/index_service/create_index_request.dart';
-import 'package:firesearch_sdk/src/index_service/create_index_response.dart';
-import 'package:firesearch_sdk/src/index_service/delete_doc_request.dart';
-import 'package:firesearch_sdk/src/index_service/delete_doc_response.dart';
-import 'package:firesearch_sdk/src/index_service/delete_index_request.dart';
-import 'package:firesearch_sdk/src/index_service/delete_index_response.dart';
-import 'package:firesearch_sdk/src/index_service/get_indexes_response.dart';
 
 /// IndexService provides the ability to create and manage full-text indexes, as
 /// well as populate them with data, and perform searches.
