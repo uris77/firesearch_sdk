@@ -46,6 +46,23 @@ class AutocompleteService {
 
     return CreateAutocompleteIndexResponse.fromMap(jsonDecode(response.body));
   }
+
+  /// deleteDoc removes a document from an AutocompleteIndex. Once deleted, it will
+  /// stop appearing in search results.
+  Future<DeleteAutocompleteDocResponse> deleteDoc(
+      DeleteAutocompleteDocRequest deleteAutocompleteDocRequest) async {
+    var response = await client.httpClient.post(
+        '/api/AutocompleteService.DeleteDoc',
+        headers: _headers,
+        body: deleteAutocompleteDocRequest);
+
+    if (response != 200) {
+      throw Exception(
+          'firesearch: AutocompleteService.DeleteDoc: ${response.statusCode} ${response.body}');
+    }
+
+    return DeleteAutocompleteDocResponse(error: response.body);
+  }
 }
 
 /// CompleteRequest is the input object for Search.
@@ -225,4 +242,25 @@ class CreateAutocompleteIndexResponse {
 
   /// Error is string explaining what went wrong. Empty if everything was fine.
   String? error;
+}
+
+/// DeleteAutocompleteDocRequest is the input object for DeleteAutocompleteDoc.
+class DeleteAutocompleteDocRequest {
+  /// Default Constructor
+  DeleteAutocompleteDocRequest({required this.indexPath, required this.id});
+
+  /// IndexPath is the AutocompleteIndex to delete from.
+  final String indexPath;
+
+  /// ID is the identifier of the document to delete.
+  final String id;
+}
+
+/// DeleteAutocompleteDocResponse is the output object for DeleteAutocompleteDoc.
+class DeleteAutocompleteDocResponse {
+  /// Default Constructor
+  DeleteAutocompleteDocResponse({this.error = ''});
+
+  /// Error is string explaining what went wrong. Empty if everything was fine.
+  final String error;
 }
