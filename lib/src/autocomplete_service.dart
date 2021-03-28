@@ -96,6 +96,20 @@ class AutocompleteService {
 
     return GetAutocompleteIndexResponse.fromMap(jsonDecode(response.body));
   }
+
+  /// GetIndexes gets a list of AutocompleteIndexes.
+  Future<GetAutocompleteIndexesResponse> getIndexes() async {
+    var response = await client.httpClient.post(
+        '/api/AutocompleteService.GetIndexes',
+        headers: _headers,
+        body: {});
+    if (response != 200) {
+      throw Exception(
+          'firesearch: AutocompleteService.GetIndexes: ${response.statusCode} ${response.body}');
+    }
+
+    return GetAutocompleteIndexesResponse.fromMap(jsonDecode(response.body));
+  }
 }
 
 /// CompleteRequest is the input object for Search.
@@ -343,5 +357,28 @@ class GetAutocompleteIndexResponse {
   AutocompleteIndex? index;
 
   /// Error is string explaining what went wrong. Empty if everything was fine.
+  String? error;
+}
+
+/// GetAutocompleteIndexesResponse is the output object for GetAutocompleteIndexes.
+class GetAutocompleteIndexesResponse {
+  /// Default Constructor
+  GetAutocompleteIndexesResponse({this.indexes, this.error});
+
+  /// Converts a map to GetAutocompleteIndexesResponse
+  factory GetAutocompleteIndexesResponse.fromMap(Map<String, dynamic> map) {
+    var _indexes = map['indexes'] != null
+        ? (map['indexes'] as List<Map<String, dynamic>>)
+            .map((e) => AutocompleteIndex.fromMap(e))
+            .toList()
+        : List<AutocompleteIndex>.empty();
+    return GetAutocompleteIndexesResponse(
+        indexes: _indexes, error: map['error']);
+  }
+
+  /// Indexes are the indexes managed by this service.
+  List<AutocompleteIndex>? indexes;
+
+  ///  Error is string explaining what went wrong. Empty if everything was fine.
   String? error;
 }
