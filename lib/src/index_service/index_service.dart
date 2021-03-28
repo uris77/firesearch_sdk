@@ -64,4 +64,17 @@ class IndexService {
 
     return DeleteIndexResponse.fromJson(jsonDecode(response.body));
   }
+
+  /// GetIndex gets an Index.
+  Future<GetIndexResponse> getIndex(GetIndexRequest getIndexRequest) async {
+    var response = await client.httpClient.post('/api/IndexService.GetIndex',
+        headers: _headers, body: getIndexRequest);
+
+    if (response != 200) {
+      throw Exception(
+          'firesearch: IndexService.GetIndex: ${response.statusCode} ${response.body}');
+    }
+
+    return GetIndexResponse.fromJson(jsonDecode(response.body));
+  }
 }

@@ -1,2 +1,12 @@
 export './src/client.dart';
 export './src/http_client.dart';
+export './src/index_service/index.dart';
+export 'src/index_service/create_index_request.dart';
+export 'src/index_service/create_index_response.dart';
+export 'src/index_service/delete_doc_request.dart';
+export 'src/index_service/delete_doc_response.dart';
+export 'src/index_service/delete_index_request.dart';
+export 'src/index_service/delete_index_response.dart';
+export 'src/index_service/get_index_request.dart';
+export 'src/index_service/get_index_response.dart';
+export 'src/index_service/index_service.dart';
