@@ -11,16 +11,17 @@ class AutocompleteService {
   /// The firesearch client
   final Client client;
 
+  late final Map<String, String> _headers = {
+    'X-API-Key': client.apiKey,
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+  };
+
   /// Complete performs a search on an AutocompleteIndex.
   Future<CompleteResponse> complete(CompleteRequest completeRequest) async {
-    var headers = Map<String, String>();
-    headers['X-API-KEY'] = client.apiKey;
-    headers['Accept'] = 'application/json';
-    headers['Content-Type'] = 'application/json';
-
     var response = await client.httpClient.post(
         '/api/AutocompleteService.Complete',
-        headers: headers,
+        headers: _headers,
         body: completeRequest);
 
     if (response.statusCode != 200) {
@@ -28,6 +29,22 @@ class AutocompleteService {
           'firesearch: AutocompleteService.Complete: ${response.statusCode} ${response.body}');
     }
     return CompleteResponse.fromMap(jsonDecode(response.body));
+  }
+
+  /// CreateIndex creates a new index.
+  Future<CreateAutocompleteIndexResponse> createIndex(
+      CreateAutocompleteIndexRequest createAutocompleteIndexRequest) async {
+    var response = await client.httpClient.post(
+        '/api/AutocompleteService.CreateIndex',
+        headers: _headers,
+        body: createAutocompleteIndexRequest);
+
+    if (response.statusCode != 200) {
+      throw Exception(
+          'firesearch: AutocompleteService.CreateIndex: ${response.statusCode} ${response.body}');
+    }
+
+    return CreateAutocompleteIndexResponse.fromMap(jsonDecode(response.body));
   }
 }
 
@@ -152,4 +169,60 @@ class AutocompleteDoc {
 
   /// Fields are the filterable fields for this document.
   final List<Field>? fields;
+}
+
+/// AutocompleteIndex describes a search index.
+class AutocompleteIndex {
+  /// Default Constructor
+  AutocompleteIndex(
+      {required this.indexPath,
+      required this.name,
+      required this.caseSensitive});
+
+  /// Converts a map to an AutocompleteIndex
+  factory AutocompleteIndex.fromMap(Map<String, dynamic> map) {
+    return AutocompleteIndex(
+        indexPath: map['indexPath'],
+        name: map['name'],
+        caseSensitive: map['caseSensitive']);
+  }
+
+  /// IndexPath is the collection path in Firestore for this index. Each index must
+  /// use a unique path.
+  final String indexPath;
+
+  /// Name is an internal human readable name for this index. End users will never see this.
+  final String name;
+
+  /// CaseSensitive preserves case across this index. By default, all entries and
+  /// queries are lower cased.
+  final bool caseSensitive;
+}
+
+/// CreateAutocompleteIndexRequest is the input object for CreateAutocompleteIndex.
+class CreateAutocompleteIndexRequest {
+  /// Default Constructor
+  CreateAutocompleteIndexRequest(this.index);
+
+  /// Index is the AutocompleteIndex to create.
+  AutocompleteIndex? index;
+}
+
+/// CreateAutocompleteIndexResponse is the output object for
+/// CreateAutocompleteIndex.
+class CreateAutocompleteIndexResponse {
+  /// Default Constructor
+  CreateAutocompleteIndexResponse({this.index, this.error});
+
+  factory CreateAutocompleteIndexResponse.fromMap(Map<String, dynamic> map) {
+    return CreateAutocompleteIndexResponse(
+        index: map['index'] ? AutocompleteIndex.fromMap(map['index']) : null,
+        error: map['error']);
+  }
+
+  /// Index is the AutocompleteIndex that was created.
+  AutocompleteIndex? index;
+
+  /// Error is string explaining what went wrong. Empty if everything was fine.
+  String? error;
 }
