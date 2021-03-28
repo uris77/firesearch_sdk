@@ -30,6 +30,21 @@ class IndexService {
 
     return CreateIndexResponse.fromMap(jsonDecode(response.body));
   }
+
+  /// DeleteDoc removes a document from an Index. Once deleted, it will stop appearing
+  /// in search results.
+  Future<DeleteDocResponse> deleteDoc(DeleteDocRequest deleteDocRequest) async {
+    var response = await client.httpClient.post('/api/IndexService.DeleteDoc',
+        headers: _headers, body: deleteDocRequest);
+
+    if (response != 200) {
+      throw Exception(
+          'firesearch: IndexService.DeleteDoc: ${response.statusCode} ${response.body}');
+    }
+
+    var body = jsonDecode(response.body);
+    return new DeleteDocResponse(body['error']);
+  }
 }
 
 /// Index describes a search index.
@@ -99,6 +114,27 @@ class CreateIndexResponse {
 
   /// Index is the Index that was created.
   Index? index;
+
+  /// Error is string explaining what went wrong. Empty if everything was fine.
+  String? error;
+}
+
+/// DeleteDocRequest is the input object for DeleteDoc.
+class DeleteDocRequest {
+  /// Default Constructor
+  DeleteDocRequest(this.indexPath, this.index);
+
+  /// IndexPath is the Index to delete from.
+  final String indexPath;
+
+  /// ID is the identifier of the document to delete.
+  final String index;
+}
+
+/// DeleteDocResponse is the output object for DeleteDoc.
+class DeleteDocResponse {
+  /// Default Constructor
+  DeleteDocResponse(this.error);
 
   /// Error is string explaining what went wrong. Empty if everything was fine.
   String? error;
