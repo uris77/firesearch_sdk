@@ -7,6 +7,7 @@ import 'package:firesearch_sdk/src/index_service/delete_doc_request.dart';
 import 'package:firesearch_sdk/src/index_service/delete_doc_response.dart';
 import 'package:firesearch_sdk/src/index_service/delete_index_request.dart';
 import 'package:firesearch_sdk/src/index_service/delete_index_response.dart';
+import 'package:firesearch_sdk/src/index_service/get_indexes_response.dart';
 
 /// IndexService provides the ability to create and manage full-text indexes, as
 /// well as populate them with data, and perform searches.
@@ -76,5 +77,17 @@ class IndexService {
     }
 
     return GetIndexResponse.fromJson(jsonDecode(response.body));
+  }
+
+  /// GetIndexes gets a list of Indexes.
+  Future<GetIndexesResponse> getIndexes() async {
+    var response = await client.httpClient
+        .post('/api/IndexService.GetIndexes', headers: _headers);
+    if (response != 200) {
+      throw Exception(
+          'firesearch: IndexService.GetIndexes: ${response.statusCode} ${response.body}');
+    }
+
+    return GetIndexesResponse.fromJson(jsonDecode(response.body));
   }
 }
