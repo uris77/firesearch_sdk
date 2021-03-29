@@ -28,7 +28,7 @@ class AutocompleteService {
       throw Exception(
           'firesearch: AutocompleteService.Complete: ${response.statusCode} ${response.body}');
     }
-    return CompleteResponse.fromMap(jsonDecode(response.body));
+    return CompleteResponse.fromJson(jsonDecode(response.body));
   }
 
   /// CreateIndex creates a new index.
@@ -126,54 +126,6 @@ class AutocompleteService {
 
     return PutAutocompleteDocResponse.fromJson(jsonDecode(response.body));
   }
-}
-
-/// CompleteRequest is the input object for Search.
-class CompleteRequest {
-  /// Constructor
-  CompleteRequest(this.query);
-
-  /// Query is the CompleteQuery to perform.
-  final CompleteQuery query;
-}
-
-/// CompleteResponse is the output object for Search.
-class CompleteResponse {
-  /// Constructor
-  CompleteResponse(
-      {required this.query,
-      required this.hits,
-      required this.duration,
-      this.error});
-
-  /// Converts a map to a CompleteResponse
-  factory CompleteResponse.fromMap(Map<String, dynamic> map) {
-    var q = CompleteQuery.fromMap(map['query']);
-    var _hits = map['hits']
-        ? (map['hits'] as List<Map<String, dynamic>>)
-            .map((e) => AutocompleteDoc.fromMap(e))
-            .toList()
-        : List<AutocompleteDoc>.empty();
-
-    return CompleteResponse(
-      query: q,
-      hits: _hits,
-      duration: int.tryParse(map['duration']) ?? 0,
-      error: map['error']?.toString(),
-    );
-  }
-
-  /// Query is the CompleteQuery that generated these results.
-  late final CompleteQuery query;
-
-  /// Hits are the search results.
-  late final List<AutocompleteDoc> hits;
-
-  ///  Duration is the milliseconds that the search took to execute in the server side
-  late final int duration;
-
-  /// Error is string explaining what went wrong. Empty if everything was fine.
-  late final String? error;
 }
 
 /// AutocompleteIndex describes a search index.
