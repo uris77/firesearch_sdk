@@ -176,39 +176,6 @@ class CompleteResponse {
   late final String? error;
 }
 
-/// CompleteQuery describes a search query.
-class CompleteQuery {
-  /// Constructor
-  CompleteQuery(
-      {required this.indexPath,
-      required this.accessKey,
-      required this.limit,
-      required this.text});
-
-  /// Factory for converting from a map.
-  factory CompleteQuery.fromMap(Map<String, dynamic> map) {
-    return CompleteQuery(
-        indexPath: map['indexPath'] ?? '',
-        accessKey: map['accessKey'] ?? '',
-        limit: map['limit'] ?? '',
-        text: map['text'] ?? '');
-  }
-
-  /// IndexPath is the path of the index to search.
-  final String indexPath;
-
-  /// AccessKey authenticates the request. Get an AccessKey from the
-  /// AccessKeyService.GenerateKey method.
-  final String accessKey;
-
-  /// Limit is the maximum number of search results to return. Smaller limits are
-  /// faster.
-  final int limit;
-
-  /// Text contains a phrase to autocomplete.
-  final String text;
-}
-
 /// AutocompleteIndex describes a search index.
 class AutocompleteIndex {
   /// Default Constructor

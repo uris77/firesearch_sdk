@@ -6,6 +6,7 @@ export 'src/access_key_service/generate_key_request.dart';
 export 'src/access_key_service/generate_key_response.dart';
 export 'src/autocomplete_service/autocomplete_doc.dart';
 export 'src/autocomplete_service/autocomplete_service.dart';
+export 'src/autocomplete_service/complete_query.dart';
 export 'src/autocomplete_service/put_autocomplete_doc_request.dart';
 export 'src/autocomplete_service/put_autocomplete_doc_response.dart';
 export 'src/doc.dart';
