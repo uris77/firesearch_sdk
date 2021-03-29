@@ -44,7 +44,7 @@ class AutocompleteService {
           'firesearch: AutocompleteService.CreateIndex: ${response.statusCode} ${response.body}');
     }
 
-    return CreateAutocompleteIndexResponse.fromMap(jsonDecode(response.body));
+    return CreateAutocompleteIndexResponse.fromJson(jsonDecode(response.body));
   }
 
   /// deleteDoc removes a document from an AutocompleteIndex. Once deleted, it will
@@ -126,62 +126,6 @@ class AutocompleteService {
 
     return PutAutocompleteDocResponse.fromJson(jsonDecode(response.body));
   }
-}
-
-/// AutocompleteIndex describes a search index.
-class AutocompleteIndex {
-  /// Default Constructor
-  AutocompleteIndex(
-      {required this.indexPath,
-      required this.name,
-      required this.caseSensitive});
-
-  /// Converts a map to an AutocompleteIndex
-  factory AutocompleteIndex.fromMap(Map<String, dynamic> map) {
-    return AutocompleteIndex(
-        indexPath: map['indexPath'],
-        name: map['name'],
-        caseSensitive: map['caseSensitive']);
-  }
-
-  /// IndexPath is the collection path in Firestore for this index. Each index must
-  /// use a unique path.
-  final String indexPath;
-
-  /// Name is an internal human readable name for this index. End users will never see this.
-  final String name;
-
-  /// CaseSensitive preserves case across this index. By default, all entries and
-  /// queries are lower cased.
-  final bool caseSensitive;
-}
-
-/// CreateAutocompleteIndexRequest is the input object for CreateAutocompleteIndex.
-class CreateAutocompleteIndexRequest {
-  /// Default Constructor
-  CreateAutocompleteIndexRequest(this.index);
-
-  /// Index is the AutocompleteIndex to create.
-  AutocompleteIndex? index;
-}
-
-/// CreateAutocompleteIndexResponse is the output object for
-/// CreateAutocompleteIndex.
-class CreateAutocompleteIndexResponse {
-  /// Default Constructor
-  CreateAutocompleteIndexResponse({this.index, this.error});
-
-  factory CreateAutocompleteIndexResponse.fromMap(Map<String, dynamic> map) {
-    return CreateAutocompleteIndexResponse(
-        index: map['index'] ? AutocompleteIndex.fromMap(map['index']) : null,
-        error: map['error']);
-  }
-
-  /// Index is the AutocompleteIndex that was created.
-  AutocompleteIndex? index;
-
-  /// Error is string explaining what went wrong. Empty if everything was fine.
-  String? error;
 }
 
 /// DeleteAutocompleteDocRequest is the input object for DeleteAutocompleteDoc.
