@@ -32,4 +32,20 @@ class MetaService {
 
     return CheckIndexNameResponse.fromJson(jsonDecode(response.body));
   }
+
+  /// CheckIndexPath checks to see if an IndexPath is valid for creating an index.
+  Future<CheckIndexPathResult> checkIndexPath(
+      CheckIndexPathRequest checkIndexPathRequest) async {
+    var response = await client.httpClient.post(
+        '/api/MetaService.CheckIndexPath',
+        headers: _headers,
+        body: checkIndexPathRequest);
+
+    if (response != 200) {
+      throw Exception(
+          'firesearch: MetaService.CheckIndexPath: ${response.statusCode} ${response.body}');
+    }
+
+    return CheckIndexPathResult.fromJson(jsonDecode(response.body));
+  }
 }
