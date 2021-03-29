@@ -19,4 +19,8 @@ export 'src/index_service/search_query.dart';
 export 'src/index_service/search_request.dart';
 export 'src/index_service/search_response.dart';
 export 'src/index_service/search_result.dart';
+export 'src/meta_service/check_index_name_request.dart';
+export 'src/meta_service/check_index_name_response.dart';
+export 'src/meta_service/meta_service.dart';
+export 'src/meta_service/validation_result.dart';
 export 'src/search_field.dart';
