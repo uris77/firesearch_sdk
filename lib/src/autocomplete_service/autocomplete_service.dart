@@ -108,7 +108,7 @@ class AutocompleteService {
           'firesearch: AutocompleteService.GetIndexes: ${response.statusCode} ${response.body}');
     }
 
-    return GetAutocompleteIndexesResponse.fromMap(jsonDecode(response.body));
+    return GetAutocompleteIndexesResponse.fromJson(jsonDecode(response.body));
   }
 
   /// PutDoc puts a document into an AutocompleteIndex.
@@ -126,27 +126,4 @@ class AutocompleteService {
 
     return PutAutocompleteDocResponse.fromJson(jsonDecode(response.body));
   }
-}
-
-/// GetAutocompleteIndexesResponse is the output object for GetAutocompleteIndexes.
-class GetAutocompleteIndexesResponse {
-  /// Default Constructor
-  GetAutocompleteIndexesResponse({this.indexes, this.error});
-
-  /// Converts a map to GetAutocompleteIndexesResponse
-  factory GetAutocompleteIndexesResponse.fromMap(Map<String, dynamic> map) {
-    var _indexes = map['indexes'] != null
-        ? (map['indexes'] as List<Map<String, dynamic>>)
-            .map((e) => AutocompleteIndex.fromMap(e))
-            .toList()
-        : List<AutocompleteIndex>.empty();
-    return GetAutocompleteIndexesResponse(
-        indexes: _indexes, error: map['error']);
-  }
-
-  /// Indexes are the indexes managed by this service.
-  List<AutocompleteIndex>? indexes;
-
-  ///  Error is string explaining what went wrong. Empty if everything was fine.
-  String? error;
 }

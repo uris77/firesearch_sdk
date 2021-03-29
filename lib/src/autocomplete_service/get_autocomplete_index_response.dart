@@ -19,6 +19,6 @@ class GetAutocompleteIndexResponse with _$GetAutocompleteIndexResponse {
       @Default('') String? error}) = _GetAutocompleteIndexResponse;
 
   /// Unmarshalls json to GetAutocompleteIndexResponse
-  factory GetAutocompleteIndexResponse.fromJson(Map<String, dynamic> Json) =>
+  factory GetAutocompleteIndexResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_GetAutocompleteIndexResponseFromJson(json);
 }

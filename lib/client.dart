@@ -18,6 +18,7 @@ export 'src/autocomplete_service/delete_autocomplete_index_request.dart';
 export 'src/autocomplete_service/delete_autocomplete_index_response.dart';
 export 'src/autocomplete_service/get_autocomplete_index_request.dart';
 export 'src/autocomplete_service/get_autocomplete_index_response.dart';
+export 'src/autocomplete_service/get_autocomplete_indexes_response.dart';
 export 'src/autocomplete_service/put_autocomplete_doc_request.dart';
 export 'src/autocomplete_service/put_autocomplete_doc_response.dart';
 export 'src/doc.dart';
