@@ -124,7 +124,7 @@ class AutocompleteService {
           'firesearch: AutocompleteService.PutDoc: ${response.statusCode} ${response.body}');
     }
 
-    return PutAutocompleteDocResponse(response.body);
+    return PutAutocompleteDocResponse.fromJson(jsonDecode(response.body));
   }
 }
 
@@ -207,31 +207,6 @@ class CompleteQuery {
 
   /// Text contains a phrase to autocomplete.
   final String text;
-}
-
-/// AutocompleteDoc describes a document that can be searched.
-class AutocompleteDoc {
-  /// Constructor
-  AutocompleteDoc({required this.id, required this.text, this.fields});
-
-  /// Converts a map to an AutocompleteDoc
-  factory AutocompleteDoc.fromMap(Map<String, dynamic> map) {
-    var _fields = map['fields']
-        ? (map['fields'] as List<Map<String, dynamic>>)
-            .map((m) => Field.fromJson(map))
-            .toList()
-        : List<Field>.empty();
-    return AutocompleteDoc(id: map['id'], text: map['text'], fields: _fields);
-  }
-
-  /// ID is the document identifier.
-  final String id;
-
-  /// Text is a string that can be completed via a call to Complete.
-  final String text;
-
-  /// Fields are the filterable fields for this document.
-  final List<Field>? fields;
 }
 
 /// AutocompleteIndex describes a search index.
@@ -379,32 +354,5 @@ class GetAutocompleteIndexesResponse {
   List<AutocompleteIndex>? indexes;
 
   ///  Error is string explaining what went wrong. Empty if everything was fine.
-  String? error;
-}
-
-/// PutAutocompleteDocRequest is the input object for PutAutocompleteDoc.
-class PutAutocompleteDocRequest {
-  /// Default Constructor
-  PutAutocompleteDocRequest(this.indexPath, this.doc);
-
-  /// Converts a map to PutAutocompleteDocRequest
-  factory PutAutocompleteDocRequest.fromMap(Map<String, dynamic> map) {
-    return PutAutocompleteDocRequest(
-        map['indexPath'], AutocompleteDoc.fromMap(map['doc']));
-  }
-
-  /// IndexPath is the AutocompleteIndex to put a document to.
-  final String indexPath;
-
-  /// Doc is the document to put.
-  final AutocompleteDoc doc;
-}
-
-/// PutAutocompleteDocResponse is the output object for PutAutocompleteDoc.
-class PutAutocompleteDocResponse {
-  /// Default Constructor
-  PutAutocompleteDocResponse(this.error);
-
-  /// Error is string explaining what went wrong. Empty if everything was fine.
   String? error;
 }
