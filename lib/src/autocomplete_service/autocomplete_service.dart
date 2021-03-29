@@ -61,7 +61,7 @@ class AutocompleteService {
           'firesearch: AutocompleteService.DeleteDoc: ${response.statusCode} ${response.body}');
     }
 
-    return DeleteAutocompleteDocResponse(error: response.body);
+    return DeleteAutocompleteDocResponse.fromJson(jsonDecode(response.body));
   }
 
   /// DeleteIndex deletes the AutocompleteIndex. All index data, as well as any
@@ -126,27 +126,6 @@ class AutocompleteService {
 
     return PutAutocompleteDocResponse.fromJson(jsonDecode(response.body));
   }
-}
-
-/// DeleteAutocompleteDocRequest is the input object for DeleteAutocompleteDoc.
-class DeleteAutocompleteDocRequest {
-  /// Default Constructor
-  DeleteAutocompleteDocRequest({required this.indexPath, required this.id});
-
-  /// IndexPath is the AutocompleteIndex to delete from.
-  final String indexPath;
-
-  /// ID is the identifier of the document to delete.
-  final String id;
-}
-
-/// DeleteAutocompleteDocResponse is the output object for DeleteAutocompleteDoc.
-class DeleteAutocompleteDocResponse {
-  /// Default Constructor
-  DeleteAutocompleteDocResponse({this.error = ''});
-
-  /// Error is string explaining what went wrong. Empty if everything was fine.
-  final String error;
 }
 
 /// DeleteAutocompleteIndexRequest is the input object for DeleteAutocompleteIndex.
