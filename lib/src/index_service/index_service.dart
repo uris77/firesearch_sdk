@@ -96,4 +96,17 @@ class IndexService {
 
     return PutDocResponse.fromJson(jsonDecode(response.body));
   }
+
+  /// Search performs a search on an Index.
+  Future<SearchResponse> search(SearchRequest searchRequest) async {
+    var response = await client.httpClient.post('/api/IndexService.Search',
+        headers: _headers, body: searchRequest);
+
+    if (response != 200) {
+      throw Exception(
+          'firesearch: IndexService.search ${response.statusCode} ${response.body}');
+    }
+
+    return SearchResponse.fromJson(jsonDecode(response.body));
+  }
 }
