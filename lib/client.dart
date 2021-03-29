@@ -1,6 +1,9 @@
 export './src/client.dart';
 export './src/http_client.dart';
 export './src/index_service/index.dart';
+export 'src/access_key_service/access_key_service.dart';
+export 'src/access_key_service/generate_key_request.dart';
+export 'src/access_key_service/generate_key_response.dart';
 export 'src/doc.dart';
 export 'src/field.dart';
 export 'src/index_service/create_index_request.dart';

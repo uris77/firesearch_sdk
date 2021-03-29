@@ -1,6 +1,6 @@
 import 'package:firesearch_sdk/client.dart';
 
-/// AccessKeyService provices keys needed to perform searches.
+/// AccessKeyService provides keys needed to perform searches.
 class AccessKeyService {
   /// Constructor
   AccessKeyService(this.client);
@@ -30,29 +30,4 @@ class AccessKeyService {
 
     return GenerateKeyResponse(accessKey: response.body);
   }
-}
-
-/// GenerateKeyResponse is the output object for GenerateKey
-class GenerateKeyResponse {
-  /// Constructor
-  GenerateKeyResponse({required this.accessKey, this.error});
-
-  /// AccessKey is the string that gets passed to `Search` and `Complete` methods to
-  /// perform searches. Access keys are valid for 24 hours.
-  final String accessKey;
-
-  /// Error is string explaining what went wrong. Empty if everything was fine.
-  final String? error;
-}
-
-/// GenerateKeyRequest is the input object for GenerateKey.
-class GenerateKeyRequest {
-  /// Constructor
-  GenerateKeyRequest({this.indexPathPrefix});
-
-  /// IndexPathPrefix is the collection path prefix in Firestore to provide access
-  /// for. For example, if you put the prefix "firesearch/orgs/my-org" you will be
-  /// able to perform searches on both "firesearch/orgs/my-org/cards" and
-  /// "firesearch/orgs/my-org/messages" indexes.
-  final String? indexPathPrefix;
 }
