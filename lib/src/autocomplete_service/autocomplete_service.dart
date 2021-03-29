@@ -78,7 +78,7 @@ class AutocompleteService {
           'firesearch AutocompleteService.DeleteIndex: ${response.statusCode} ${response.body}');
     }
 
-    return DeleteAutocompleteIndexResponse(response.body);
+    return DeleteAutocompleteIndexResponse.fromJson(jsonDecode(response.body));
   }
 
   /// GetIndex gets an AutocompleteIndex.
@@ -126,26 +126,6 @@ class AutocompleteService {
 
     return PutAutocompleteDocResponse.fromJson(jsonDecode(response.body));
   }
-}
-
-/// DeleteAutocompleteIndexRequest is the input object for DeleteAutocompleteIndex.
-class DeleteAutocompleteIndexRequest {
-  /// Default Constructor
-  DeleteAutocompleteIndexRequest(this.indexPath);
-
-  /// IndexPath is the collection path in Firestore that identifies an
-  ///AutocompleteIndex.
-  final String indexPath;
-}
-
-///  DeleteAutocompleteIndexResponse is the output object for
-/// DeleteAutocompleteIndex.
-class DeleteAutocompleteIndexResponse {
-  /// Constructor
-  DeleteAutocompleteIndexResponse(this.error);
-
-  /// Error is string explaining what went wrong. Empty if everything was fine.
-  String? error;
 }
 
 /// GetAutocompleteIndexRequest is the input object for GetAutocompleteIndex.
