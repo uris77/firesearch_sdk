@@ -15,7 +15,7 @@ class ValidationResult with _$ValidationResult {
       required bool valid,
 
       /// Message is a human readable objection, or empty if valid.
-      required String message}) = _ValidationResult;
+      @Default('') String? message}) = _ValidationResult;
 
   /// Unmarshalls json to ValidationResult
   factory ValidationResult.fromJson(Map<String, dynamic> json) =>

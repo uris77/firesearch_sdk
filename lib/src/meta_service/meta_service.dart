@@ -23,9 +23,9 @@ class MetaService {
     var response = await client.httpClient.post(
         '/api/MetaService.CheckIndexName',
         headers: _headers,
-        body: checkIndexNameRequest);
+        body: jsonEncode(checkIndexNameRequest));
 
-    if (response != 200) {
+    if (response.statusCode != 200) {
       throw Exception(
           'firesearch: MetaService.CheckIndexName ${response.statusCode} ${response.body}');
     }

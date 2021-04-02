@@ -20,7 +20,7 @@ ValidationResult _$ValidationResultFromJson(Map<String, dynamic> json) {
 class _$ValidationResultTearOff {
   const _$ValidationResultTearOff();
 
-  _ValidationResult call({required bool valid, required String message}) {
+  _ValidationResult call({required bool valid, String? message = ''}) {
     return _ValidationResult(
       valid: valid,
       message: message,
@@ -41,7 +41,7 @@ mixin _$ValidationResult {
   bool get valid => throw _privateConstructorUsedError;
 
   /// Message is a human readable objection, or empty if valid.
-  String get message => throw _privateConstructorUsedError;
+  String? get message => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -54,7 +54,7 @@ abstract class $ValidationResultCopyWith<$Res> {
   factory $ValidationResultCopyWith(
           ValidationResult value, $Res Function(ValidationResult) then) =
       _$ValidationResultCopyWithImpl<$Res>;
-  $Res call({bool valid, String message});
+  $Res call({bool valid, String? message});
 }
 
 /// @nodoc
@@ -79,7 +79,7 @@ class _$ValidationResultCopyWithImpl<$Res>
       message: message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -91,7 +91,7 @@ abstract class _$ValidationResultCopyWith<$Res>
           _ValidationResult value, $Res Function(_ValidationResult) then) =
       __$ValidationResultCopyWithImpl<$Res>;
   @override
-  $Res call({bool valid, String message});
+  $Res call({bool valid, String? message});
 }
 
 /// @nodoc
@@ -118,7 +118,7 @@ class __$ValidationResultCopyWithImpl<$Res>
       message: message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -127,7 +127,7 @@ class __$ValidationResultCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_ValidationResult implements _ValidationResult {
-  const _$_ValidationResult({required this.valid, required this.message});
+  const _$_ValidationResult({required this.valid, this.message = ''});
 
   factory _$_ValidationResult.fromJson(Map<String, dynamic> json) =>
       _$_$_ValidationResultFromJson(json);
@@ -136,10 +136,11 @@ class _$_ValidationResult implements _ValidationResult {
 
   /// Valid indicates whether the validation was successful or not.
   final bool valid;
+  @JsonKey(defaultValue: '')
   @override
 
   /// Message is a human readable objection, or empty if valid.
-  final String message;
+  final String? message;
 
   @override
   String toString() {
@@ -174,8 +175,8 @@ class _$_ValidationResult implements _ValidationResult {
 }
 
 abstract class _ValidationResult implements ValidationResult {
-  const factory _ValidationResult(
-      {required bool valid, required String message}) = _$_ValidationResult;
+  const factory _ValidationResult({required bool valid, String? message}) =
+      _$_ValidationResult;
 
   factory _ValidationResult.fromJson(Map<String, dynamic> json) =
       _$_ValidationResult.fromJson;
@@ -187,7 +188,7 @@ abstract class _ValidationResult implements ValidationResult {
   @override
 
   /// Message is a human readable objection, or empty if valid.
-  String get message => throw _privateConstructorUsedError;
+  String? get message => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ValidationResultCopyWith<_ValidationResult> get copyWith =>

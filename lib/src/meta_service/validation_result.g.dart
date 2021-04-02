@@ -9,7 +9,7 @@ part of 'validation_result.dart';
 _$_ValidationResult _$_$_ValidationResultFromJson(Map<String, dynamic> json) {
   return _$_ValidationResult(
     valid: json['valid'] as bool,
-    message: json['message'] as String,
+    message: json['message'] as String? ?? '',
   );
 }
 
