@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:firesearch_sdk/client.dart';
 
 /// AccessKeyService provides keys needed to perform searches.
@@ -21,13 +23,15 @@ class AccessKeyService {
     headers['Accept'] = 'application/json';
     headers['Content-Type'] = 'application/json';
 
-    var response = await client.httpClient
-        .post('/api/AccessKeyService.GenerateKey', headers: headers);
+    var response = await client.httpClient.post(
+        '/api/AccessKeyService.GenerateKey',
+        headers: headers,
+        body: jsonEncode(generateKeyRequest));
     if (response.statusCode != 200) {
       throw new Exception(
           'firesearch: AccessKeyService.GenerateKey: ${response.statusCode} ${response.body}');
     }
 
-    return GenerateKeyResponse(accessKey: response.body);
+    return GenerateKeyResponse.fromJson(jsonDecode(response.body));
   }
 }
