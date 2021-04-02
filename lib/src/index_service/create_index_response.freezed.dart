@@ -20,7 +20,7 @@ CreateIndexResponse _$CreateIndexResponseFromJson(Map<String, dynamic> json) {
 class _$CreateIndexResponseTearOff {
   const _$CreateIndexResponseTearOff();
 
-  _CreateIndexResponse call({String? index, String? error = ''}) {
+  _CreateIndexResponse call({Index? index, String? error = ''}) {
     return _CreateIndexResponse(
       index: index,
       error: error,
@@ -38,7 +38,7 @@ const $CreateIndexResponse = _$CreateIndexResponseTearOff();
 /// @nodoc
 mixin _$CreateIndexResponse {
   /// Index is the Index that was created
-  String? get index => throw _privateConstructorUsedError;
+  Index? get index => throw _privateConstructorUsedError;
 
   /// Error is string explaining what went wrong. Empty if everything was fine.
   String? get error => throw _privateConstructorUsedError;
@@ -54,7 +54,9 @@ abstract class $CreateIndexResponseCopyWith<$Res> {
   factory $CreateIndexResponseCopyWith(
           CreateIndexResponse value, $Res Function(CreateIndexResponse) then) =
       _$CreateIndexResponseCopyWithImpl<$Res>;
-  $Res call({String? index, String? error});
+  $Res call({Index? index, String? error});
+
+  $IndexCopyWith<$Res>? get index;
 }
 
 /// @nodoc
@@ -75,12 +77,23 @@ class _$CreateIndexResponseCopyWithImpl<$Res>
       index: index == freezed
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as Index?,
       error: error == freezed
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
+  }
+
+  @override
+  $IndexCopyWith<$Res>? get index {
+    if (_value.index == null) {
+      return null;
+    }
+
+    return $IndexCopyWith<$Res>(_value.index!, (value) {
+      return _then(_value.copyWith(index: value));
+    });
   }
 }
 
@@ -91,7 +104,10 @@ abstract class _$CreateIndexResponseCopyWith<$Res>
           $Res Function(_CreateIndexResponse) then) =
       __$CreateIndexResponseCopyWithImpl<$Res>;
   @override
-  $Res call({String? index, String? error});
+  $Res call({Index? index, String? error});
+
+  @override
+  $IndexCopyWith<$Res>? get index;
 }
 
 /// @nodoc
@@ -114,7 +130,7 @@ class __$CreateIndexResponseCopyWithImpl<$Res>
       index: index == freezed
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as Index?,
       error: error == freezed
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -135,7 +151,7 @@ class _$_CreateIndexResponse implements _CreateIndexResponse {
   @override
 
   /// Index is the Index that was created
-  final String? index;
+  final Index? index;
   @JsonKey(defaultValue: '')
   @override
 
@@ -176,7 +192,7 @@ class _$_CreateIndexResponse implements _CreateIndexResponse {
 }
 
 abstract class _CreateIndexResponse implements CreateIndexResponse {
-  const factory _CreateIndexResponse({String? index, String? error}) =
+  const factory _CreateIndexResponse({Index? index, String? error}) =
       _$_CreateIndexResponse;
 
   factory _CreateIndexResponse.fromJson(Map<String, dynamic> json) =
@@ -185,7 +201,7 @@ abstract class _CreateIndexResponse implements CreateIndexResponse {
   @override
 
   /// Index is the Index that was created
-  String? get index => throw _privateConstructorUsedError;
+  Index? get index => throw _privateConstructorUsedError;
   @override
 
   /// Error is string explaining what went wrong. Empty if everything was fine.

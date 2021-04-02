@@ -22,9 +22,9 @@ class IndexService {
   Future<CreateIndexResponse> createIndex(
       CreateIndexRequest createIndexRequest) async {
     var response = await client.httpClient.post('/api/IndexService.CreateIndex',
-        headers: _headers, body: createIndexRequest);
+        headers: _headers, body: jsonEncode(createIndexRequest));
 
-    if (response != 200) {
+    if (response.statusCode != 200) {
       throw Exception(
           'firesearch: IndexService.CreateIndex: ${response.statusCode} ${response.body}');
     }
