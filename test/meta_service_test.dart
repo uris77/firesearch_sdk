@@ -28,5 +28,18 @@ void main() {
       var response = await metaService.checkIndexName(request);
       expect(response.validationResult?.valid, isTrue);
     });
+
+    test('checks index path', () async {
+      final request = CheckIndexPathRequest(
+          indexPath: 'firesearch-tutorial/indexes/movies-index');
+
+      when(() => mockHttpClient.post('/api/MetaService.CheckIndexPath',
+              headers: any(named: 'headers'), body: jsonEncode(request)))
+          .thenAnswer((_) async => HttpResponse(
+              statusCode: 200, body: '{"validationResult": {"valid": true}}'));
+
+      var response = await metaService.checkIndexPath(request);
+      expect(response.validationResult?.valid, isTrue);
+    });
   });
 }
