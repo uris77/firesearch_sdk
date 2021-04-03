@@ -113,5 +113,25 @@ void main() {
       var response = await indexService.putDoc(request);
       expect(response.error, isEmpty);
     });
+
+    test('searches for a document', () async {
+      final searchQuery = SearchQuery(
+          indexPath: 'firesearch-tutorial/indexes/index-name',
+          accessKey: 'accessKey',
+          limit: 100,
+          text: 'search for this');
+      final request = SearchRequest(query: searchQuery);
+
+      final searchResponse = SearchResponse(searchQuery: searchQuery, hits: []);
+      when(() => mockHttpClient.post(any(),
+              headers: any(named: 'headers'), body: request.toJson()))
+          .thenAnswer((_) async =>
+              HttpResponse(statusCode: 200, body: jsonEncode(searchResponse)));
+
+      var response = await indexService.search(request);
+      expect(response.error, isEmpty);
+      expect(response.searchQuery, equals(searchQuery));
+      expect(response.hits, isEmpty);
+    });
   });
 }
