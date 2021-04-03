@@ -22,7 +22,7 @@ class AutocompleteService {
     var response = await client.httpClient.post(
         '/api/AutocompleteService.Complete',
         headers: _headers,
-        body: completeRequest);
+        body: completeRequest.toJson());
 
     if (response.statusCode != 200) {
       throw Exception(
@@ -56,7 +56,7 @@ class AutocompleteService {
         headers: _headers,
         body: deleteAutocompleteDocRequest);
 
-    if (response != 200) {
+    if (response.statusCode != 200) {
       throw Exception(
           'firesearch: AutocompleteService.DeleteDoc: ${response.statusCode} ${response.body}');
     }
@@ -73,7 +73,7 @@ class AutocompleteService {
         headers: _headers,
         body: deleteAutocompleteIndexRequest);
 
-    if (response != 200) {
+    if (response.statusCode != 200) {
       throw Exception(
           'firesearch AutocompleteService.DeleteIndex: ${response.statusCode} ${response.body}');
     }
@@ -103,7 +103,7 @@ class AutocompleteService {
         '/api/AutocompleteService.GetIndexes',
         headers: _headers,
         body: {});
-    if (response != 200) {
+    if (response.statusCode != 200) {
       throw Exception(
           'firesearch: AutocompleteService.GetIndexes: ${response.statusCode} ${response.body}');
     }
@@ -119,7 +119,7 @@ class AutocompleteService {
         headers: _headers,
         body: putAutocompleteDocRequest);
 
-    if (response != 200) {
+    if (response.statusCode != 200) {
       throw Exception(
           'firesearch: AutocompleteService.PutDoc: ${response.statusCode} ${response.body}');
     }
