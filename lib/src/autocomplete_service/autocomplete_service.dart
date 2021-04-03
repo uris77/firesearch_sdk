@@ -54,7 +54,7 @@ class AutocompleteService {
     var response = await client.httpClient.post(
         '/api/AutocompleteService.DeleteDoc',
         headers: _headers,
-        body: deleteAutocompleteDocRequest);
+        body: deleteAutocompleteDocRequest.toJson());
 
     if (response.statusCode != 200) {
       throw Exception(
