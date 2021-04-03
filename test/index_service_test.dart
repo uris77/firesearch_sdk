@@ -65,5 +65,23 @@ void main() {
       var response = await indexService.deleteIndex(request);
       expect(response.error, isEmpty);
     });
+
+    test('gets an index', () async {
+      final request =
+          GetIndexRequest(indexPath: 'firesearch-tutorial/indexes/index-name');
+
+      when(() => mockHttpClient.post(any(),
+              headers: any(named: 'headers'), body: request.toJson()))
+          .thenAnswer((_) async => HttpResponse(
+              statusCode: 200,
+              body: jsonEncode(GetIndexResponse(
+                  index: Index(
+                      indexPath: 'firesearch-tutorial/indexes/index-name',
+                      name: 'My Index',
+                      language: 'english')))));
+
+      var response = await indexService.getIndex(request);
+      expect(response.index?.indexPath, equals(request.indexPath));
+    });
   });
 }

@@ -63,9 +63,9 @@ class IndexService {
   /// GetIndex gets an Index.
   Future<GetIndexResponse> getIndex(GetIndexRequest getIndexRequest) async {
     var response = await client.httpClient.post('/api/IndexService.GetIndex',
-        headers: _headers, body: getIndexRequest);
+        headers: _headers, body: getIndexRequest.toJson());
 
-    if (response != 200) {
+    if (response.statusCode != 200) {
       throw Exception(
           'firesearch: IndexService.GetIndex: ${response.statusCode} ${response.body}');
     }
