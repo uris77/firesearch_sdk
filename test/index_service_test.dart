@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:firesearch_sdk/client.dart';
+import 'package:firesearch_sdk/src/index_service/put_doc_request.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:test/test.dart';
 
@@ -93,6 +94,23 @@ void main() {
 
       var response = await indexService.getIndexes();
       expect(response.indexes, isEmpty);
+      expect(response.error, isEmpty);
+    });
+
+    test('puts a document into an index', () async {
+      final request = PutDocRequest(
+          indexPath: 'firesearch-tutorial/indexes/index-name',
+          doc: Doc(id: 'document-id', fields: [
+            Field(key: 'key', value: {'name': 'searchable_field'})
+          ]));
+
+      when(() =>
+          mockHttpClient.post(any(),
+              headers: any(named: 'headers'),
+              body: request.toJson())).thenAnswer((_) async =>
+          HttpResponse(statusCode: 200, body: jsonEncode(PutDocResponse())));
+
+      var response = await indexService.putDoc(request);
       expect(response.error, isEmpty);
     });
   });

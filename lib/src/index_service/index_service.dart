@@ -88,8 +88,8 @@ class IndexService {
   /// PutDoc puts a document into an Index.
   Future<PutDocResponse> putDoc(PutDocRequest putDocRequest) async {
     var response = await client.httpClient.post('/api/IndexService.PutDoc',
-        headers: _headers, body: putDocRequest);
-    if (response != 200) {
+        headers: _headers, body: putDocRequest.toJson());
+    if (response.statusCode != 200) {
       throw Exception(
           'firesearch: IndexService.PutDoc ${response.statusCode} ${response.body}');
     }
@@ -100,9 +100,9 @@ class IndexService {
   /// Search performs a search on an Index.
   Future<SearchResponse> search(SearchRequest searchRequest) async {
     var response = await client.httpClient.post('/api/IndexService.Search',
-        headers: _headers, body: searchRequest);
+        headers: _headers, body: searchRequest.toJson());
 
-    if (response != 200) {
+    if (response.statusCode != 200) {
       throw Exception(
           'firesearch: IndexService.search ${response.statusCode} ${response.body}');
     }
