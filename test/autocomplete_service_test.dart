@@ -82,5 +82,24 @@ void main() {
       var response = await autocompleteService.deleteIndex(request);
       expect(response.error, isEmpty);
     });
+
+    test('gets an index', () async {
+      final request = GetAutocompleteIndexRequest(
+          indexPath: 'firesearch-tutorial/indexes/index-name');
+
+      when(() => mockHttpClient.post(any(),
+              headers: any(named: 'headers'), body: request.toJson()))
+          .thenAnswer((_) async => HttpResponse(
+              statusCode: 200,
+              body: jsonEncode(GetAutocompleteIndexResponse(
+                  index: AutocompleteIndex(
+                indexPath: 'firesearch-tutorial/indexes/index-name',
+                name: 'Test Index',
+                caseSensitive: false,
+              )))));
+
+      var response = await autocompleteService.getIndex(request);
+      expect(response.error, isEmpty);
+    });
   });
 }

@@ -18,9 +18,16 @@ class AutocompleteIndex with _$AutocompleteIndex {
       /// Name is an internal human readable name for this index. End users will never see this.
       required String name,
 
+      /// KeepStopWords prevents stop words from being removed from this index.
+      @Default(false) bool? keepStopWords,
+
       /// CaseSensitive preserves case across this index. By default, all entries and
       /// queries are lower cased.
-      required bool caseSensitive}) = _AutocompleteIndex;
+      @Default(false) bool? caseSensitive,
+
+      /// NoStem prevents words from being reduced. Only effective if a Language is
+      /// specified.
+      @Default(false) bool? noStem}) = _AutocompleteIndex;
 
   /// Unmarshalls json to an AutocompleteIndex
   factory AutocompleteIndex.fromJson(Map<String, dynamic> json) =>

@@ -10,7 +10,9 @@ _$_AutocompleteIndex _$_$_AutocompleteIndexFromJson(Map<String, dynamic> json) {
   return _$_AutocompleteIndex(
     indexPath: json['indexPath'] as String,
     name: json['name'] as String,
-    caseSensitive: json['caseSensitive'] as bool,
+    keepStopWords: json['keepStopWords'] as bool? ?? false,
+    caseSensitive: json['caseSensitive'] as bool? ?? false,
+    noStem: json['noStem'] as bool? ?? false,
   );
 }
 
@@ -19,5 +21,7 @@ Map<String, dynamic> _$_$_AutocompleteIndexToJson(
     <String, dynamic>{
       'indexPath': instance.indexPath,
       'name': instance.name,
+      'keepStopWords': instance.keepStopWords,
       'caseSensitive': instance.caseSensitive,
+      'noStem': instance.noStem,
     };

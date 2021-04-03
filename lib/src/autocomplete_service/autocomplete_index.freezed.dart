@@ -23,11 +23,15 @@ class _$AutocompleteIndexTearOff {
   _AutocompleteIndex call(
       {required String indexPath,
       required String name,
-      required bool caseSensitive}) {
+      bool? keepStopWords = false,
+      bool? caseSensitive = false,
+      bool? noStem = false}) {
     return _AutocompleteIndex(
       indexPath: indexPath,
       name: name,
+      keepStopWords: keepStopWords,
       caseSensitive: caseSensitive,
+      noStem: noStem,
     );
   }
 
@@ -48,9 +52,16 @@ mixin _$AutocompleteIndex {
   /// Name is an internal human readable name for this index. End users will never see this.
   String get name => throw _privateConstructorUsedError;
 
+  /// KeepStopWords prevents stop words from being removed from this index.
+  bool? get keepStopWords => throw _privateConstructorUsedError;
+
   /// CaseSensitive preserves case across this index. By default, all entries and
   /// queries are lower cased.
-  bool get caseSensitive => throw _privateConstructorUsedError;
+  bool? get caseSensitive => throw _privateConstructorUsedError;
+
+  /// NoStem prevents words from being reduced. Only effective if a Language is
+  /// specified.
+  bool? get noStem => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -63,7 +74,12 @@ abstract class $AutocompleteIndexCopyWith<$Res> {
   factory $AutocompleteIndexCopyWith(
           AutocompleteIndex value, $Res Function(AutocompleteIndex) then) =
       _$AutocompleteIndexCopyWithImpl<$Res>;
-  $Res call({String indexPath, String name, bool caseSensitive});
+  $Res call(
+      {String indexPath,
+      String name,
+      bool? keepStopWords,
+      bool? caseSensitive,
+      bool? noStem});
 }
 
 /// @nodoc
@@ -79,7 +95,9 @@ class _$AutocompleteIndexCopyWithImpl<$Res>
   $Res call({
     Object? indexPath = freezed,
     Object? name = freezed,
+    Object? keepStopWords = freezed,
     Object? caseSensitive = freezed,
+    Object? noStem = freezed,
   }) {
     return _then(_value.copyWith(
       indexPath: indexPath == freezed
@@ -90,10 +108,18 @@ class _$AutocompleteIndexCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
+      keepStopWords: keepStopWords == freezed
+          ? _value.keepStopWords
+          : keepStopWords // ignore: cast_nullable_to_non_nullable
+              as bool?,
       caseSensitive: caseSensitive == freezed
           ? _value.caseSensitive
           : caseSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
+      noStem: noStem == freezed
+          ? _value.noStem
+          : noStem // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -105,7 +131,12 @@ abstract class _$AutocompleteIndexCopyWith<$Res>
           _AutocompleteIndex value, $Res Function(_AutocompleteIndex) then) =
       __$AutocompleteIndexCopyWithImpl<$Res>;
   @override
-  $Res call({String indexPath, String name, bool caseSensitive});
+  $Res call(
+      {String indexPath,
+      String name,
+      bool? keepStopWords,
+      bool? caseSensitive,
+      bool? noStem});
 }
 
 /// @nodoc
@@ -123,7 +154,9 @@ class __$AutocompleteIndexCopyWithImpl<$Res>
   $Res call({
     Object? indexPath = freezed,
     Object? name = freezed,
+    Object? keepStopWords = freezed,
     Object? caseSensitive = freezed,
+    Object? noStem = freezed,
   }) {
     return _then(_AutocompleteIndex(
       indexPath: indexPath == freezed
@@ -134,10 +167,18 @@ class __$AutocompleteIndexCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
+      keepStopWords: keepStopWords == freezed
+          ? _value.keepStopWords
+          : keepStopWords // ignore: cast_nullable_to_non_nullable
+              as bool?,
       caseSensitive: caseSensitive == freezed
           ? _value.caseSensitive
           : caseSensitive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
+      noStem: noStem == freezed
+          ? _value.noStem
+          : noStem // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -149,7 +190,9 @@ class _$_AutocompleteIndex implements _AutocompleteIndex {
   const _$_AutocompleteIndex(
       {required this.indexPath,
       required this.name,
-      required this.caseSensitive});
+      this.keepStopWords = false,
+      this.caseSensitive = false,
+      this.noStem = false});
 
   factory _$_AutocompleteIndex.fromJson(Map<String, dynamic> json) =>
       _$_$_AutocompleteIndexFromJson(json);
@@ -163,15 +206,27 @@ class _$_AutocompleteIndex implements _AutocompleteIndex {
 
   /// Name is an internal human readable name for this index. End users will never see this.
   final String name;
+  @JsonKey(defaultValue: false)
+  @override
+
+  /// KeepStopWords prevents stop words from being removed from this index.
+  final bool? keepStopWords;
+  @JsonKey(defaultValue: false)
   @override
 
   /// CaseSensitive preserves case across this index. By default, all entries and
   /// queries are lower cased.
-  final bool caseSensitive;
+  final bool? caseSensitive;
+  @JsonKey(defaultValue: false)
+  @override
+
+  /// NoStem prevents words from being reduced. Only effective if a Language is
+  /// specified.
+  final bool? noStem;
 
   @override
   String toString() {
-    return 'AutocompleteIndex(indexPath: $indexPath, name: $name, caseSensitive: $caseSensitive)';
+    return 'AutocompleteIndex(indexPath: $indexPath, name: $name, keepStopWords: $keepStopWords, caseSensitive: $caseSensitive, noStem: $noStem)';
   }
 
   @override
@@ -183,9 +238,14 @@ class _$_AutocompleteIndex implements _AutocompleteIndex {
                     .equals(other.indexPath, indexPath)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.keepStopWords, keepStopWords) ||
+                const DeepCollectionEquality()
+                    .equals(other.keepStopWords, keepStopWords)) &&
             (identical(other.caseSensitive, caseSensitive) ||
                 const DeepCollectionEquality()
-                    .equals(other.caseSensitive, caseSensitive)));
+                    .equals(other.caseSensitive, caseSensitive)) &&
+            (identical(other.noStem, noStem) ||
+                const DeepCollectionEquality().equals(other.noStem, noStem)));
   }
 
   @override
@@ -193,7 +253,9 @@ class _$_AutocompleteIndex implements _AutocompleteIndex {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(indexPath) ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(caseSensitive);
+      const DeepCollectionEquality().hash(keepStopWords) ^
+      const DeepCollectionEquality().hash(caseSensitive) ^
+      const DeepCollectionEquality().hash(noStem);
 
   @JsonKey(ignore: true)
   @override
@@ -210,7 +272,9 @@ abstract class _AutocompleteIndex implements AutocompleteIndex {
   const factory _AutocompleteIndex(
       {required String indexPath,
       required String name,
-      required bool caseSensitive}) = _$_AutocompleteIndex;
+      bool? keepStopWords,
+      bool? caseSensitive,
+      bool? noStem}) = _$_AutocompleteIndex;
 
   factory _AutocompleteIndex.fromJson(Map<String, dynamic> json) =
       _$_AutocompleteIndex.fromJson;
@@ -226,9 +290,18 @@ abstract class _AutocompleteIndex implements AutocompleteIndex {
   String get name => throw _privateConstructorUsedError;
   @override
 
+  /// KeepStopWords prevents stop words from being removed from this index.
+  bool? get keepStopWords => throw _privateConstructorUsedError;
+  @override
+
   /// CaseSensitive preserves case across this index. By default, all entries and
   /// queries are lower cased.
-  bool get caseSensitive => throw _privateConstructorUsedError;
+  bool? get caseSensitive => throw _privateConstructorUsedError;
+  @override
+
+  /// NoStem prevents words from being reduced. Only effective if a Language is
+  /// specified.
+  bool? get noStem => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$AutocompleteIndexCopyWith<_AutocompleteIndex> get copyWith =>

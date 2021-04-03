@@ -87,9 +87,9 @@ class AutocompleteService {
     var response = await client.httpClient.post(
         '/api/AutocompleteService.GetIndex',
         headers: _headers,
-        body: getAutocompleteIndexRequest);
+        body: getAutocompleteIndexRequest.toJson());
 
-    if (response != 200) {
+    if (response.statusCode != 200) {
       throw Exception(
           'firesearch AutocompleteService.GetIndex: ${response.statusCode} ${response.body}');
     }
