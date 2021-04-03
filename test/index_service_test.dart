@@ -47,11 +47,23 @@ void main() {
           id: 'document-id');
 
       when(() => mockHttpClient.post(any(),
-              headers: any(named: 'headers'), body: jsonEncode(request)))
+              headers: any(named: 'headers'), body: request.toJson()))
           .thenAnswer((_) async => HttpResponse(statusCode: 200, body: '{}'));
 
       var response = await indexService.deleteDoc(request);
       expect(response.error, equals(''));
+    });
+
+    test('delete an index', () async {
+      final request = DeleteIndexRequest(
+          indexPath: 'firesearch-tutorial/indexes/index-name');
+
+      when(() => mockHttpClient.post(any(),
+              headers: any(named: 'headers'), body: request.toJson()))
+          .thenAnswer((_) async => HttpResponse(statusCode: 200, body: '{}'));
+
+      var response = await indexService.deleteIndex(request);
+      expect(response.error, isEmpty);
     });
   });
 }

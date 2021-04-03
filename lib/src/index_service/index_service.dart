@@ -36,7 +36,7 @@ class IndexService {
   /// in search results.
   Future<DeleteDocResponse> deleteDoc(DeleteDocRequest deleteDocRequest) async {
     var response = await client.httpClient.post('/api/IndexService.DeleteDoc',
-        headers: _headers, body: jsonEncode(deleteDocRequest));
+        headers: _headers, body: deleteDocRequest.toJson());
 
     if (response.statusCode != 200) {
       throw Exception(
@@ -50,9 +50,9 @@ class IndexService {
   Future<DeleteIndexResponse> deleteIndex(
       DeleteIndexRequest deleteIndexRequest) async {
     var response = await client.httpClient.post('/api/IndexService.DeleteIndex',
-        headers: _headers, body: deleteIndexRequest);
+        headers: _headers, body: deleteIndexRequest.toJson());
 
-    if (response != 200) {
+    if (response.statusCode != 200) {
       throw Exception(
           'firesearch: IndexService.DeleteIndex: ${response.statusCode} ${response.body}');
     }
