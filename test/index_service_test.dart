@@ -12,7 +12,7 @@ void main() {
   });
 
   group('Index Service', () {
-    var firesearchClient = Client(host: "localhost:8080", apiKey: "apiKey");
+    var firesearchClient = Client(host: "localhost:8888", apiKey: "apiKey");
     final mockHttpClient = MockHttp();
     firesearchClient.httpClient = mockHttpClient;
     var indexService = IndexService(firesearchClient);
@@ -82,6 +82,18 @@ void main() {
 
       var response = await indexService.getIndex(request);
       expect(response.index?.indexPath, equals(request.indexPath));
+    });
+
+    test('gets indexes', () async {
+      when(() => mockHttpClient.post(any(),
+              headers: any(named: 'headers'), body: jsonEncode({})))
+          .thenAnswer((_) async => HttpResponse(
+              statusCode: 200,
+              body: jsonEncode(GetIndexesResponse(indexes: []))));
+
+      var response = await indexService.getIndexes();
+      expect(response.indexes, isEmpty);
+      expect(response.error, isEmpty);
     });
   });
 }
