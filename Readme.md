@@ -26,10 +26,3 @@ pub run build_runner build --delete-conflicting-outputs
 
 ## Testing
 
-
-## ToDos
-[ ] Tests for Access Key Service
-[ ] Tests for Index Service
-[ ] Tests for Autocomplete Service
-[ ] Tests for Meta Service
-[ ] Document how to run tests against local Firesearch docker container.
