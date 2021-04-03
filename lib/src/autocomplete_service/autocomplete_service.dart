@@ -71,7 +71,7 @@ class AutocompleteService {
     var response = await client.httpClient.post(
         '/api/AutocompleteService.DeleteIndex',
         headers: _headers,
-        body: deleteAutocompleteIndexRequest);
+        body: deleteAutocompleteIndexRequest.toJson());
 
     if (response.statusCode != 200) {
       throw Exception(

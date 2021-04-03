@@ -69,5 +69,18 @@ void main() {
       var response = await autocompleteService.deleteDoc(request);
       expect(response.error, isEmpty);
     });
+
+    test('deletes an index', () async {
+      final request = DeleteAutocompleteIndexRequest(
+          indexPath: 'firesearch-tutorial/indexes/index-name');
+
+      when(() => mockHttpClient.post(any(),
+              headers: any(named: 'headers'), body: request.toJson()))
+          .thenAnswer((_) async => HttpResponse(
+              statusCode: 200,
+              body: jsonEncode(DeleteAutocompleteIndexResponse())));
+      var response = await autocompleteService.deleteIndex(request);
+      expect(response.error, isEmpty);
+    });
   });
 }
