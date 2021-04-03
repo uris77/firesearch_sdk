@@ -101,5 +101,16 @@ void main() {
       var response = await autocompleteService.getIndex(request);
       expect(response.error, isEmpty);
     });
+
+    test('gets indexes', () async {
+      when(() => mockHttpClient
+              .post(any(), headers: any(named: 'headers'), body: {}))
+          .thenAnswer((_) async => HttpResponse(
+              statusCode: 200,
+              body: jsonEncode(GetAutocompleteIndexesResponse(indexes: []))));
+
+      var response = await autocompleteService.getIndexes();
+      expect(response.indexes, isEmpty);
+    });
   });
 }

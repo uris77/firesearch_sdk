@@ -117,7 +117,7 @@ class AutocompleteService {
     var response = await client.httpClient.post(
         '/api/AutocompleteService.PutDoc',
         headers: _headers,
-        body: putAutocompleteDocRequest);
+        body: putAutocompleteDocRequest.toJson());
 
     if (response.statusCode != 200) {
       throw Exception(
