@@ -37,7 +37,7 @@ class AutocompleteService {
     var response = await client.httpClient.post(
         '/api/AutocompleteService.CreateIndex',
         headers: _headers,
-        body: createAutocompleteIndexRequest);
+        body: createAutocompleteIndexRequest.toJson());
 
     if (response.statusCode != 200) {
       throw Exception(

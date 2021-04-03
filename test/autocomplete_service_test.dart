@@ -37,5 +37,22 @@ void main() {
       expect(response.query, equals(completeQuery));
       expect(response.hits, isEmpty);
     });
+
+    test('creates new index', () async {
+      final index = AutocompleteIndex(
+          indexPath: 'firesearch-tutorial/indexes/index-name',
+          name: 'Autocomplete Index',
+          caseSensitive: false);
+      final request = CreateAutocompleteIndexRequest(index: index);
+
+      when(() => mockHttpClient.post(any(),
+              headers: any(named: 'headers'), body: request.toJson()))
+          .thenAnswer((_) async => HttpResponse(
+              statusCode: 200,
+              body: jsonEncode(CreateAutocompleteIndexResponse(index: index))));
+
+      var response = await autocompleteService.createIndex(request);
+      expect(response.index, equals(index));
+    });
   });
 }
