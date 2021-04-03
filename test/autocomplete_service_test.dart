@@ -112,5 +112,20 @@ void main() {
       var response = await autocompleteService.getIndexes();
       expect(response.indexes, isEmpty);
     });
+
+    test('puts a document', () async {
+      var request = PutAutocompleteDocRequest(
+          indexPath: 'firesearch-tutorial/indexes/index-name',
+          doc: AutocompleteDoc(
+              id: 'document-id', text: 'the text to autocomplete', fields: []));
+
+      when(() => mockHttpClient.post(any(),
+              headers: any(named: 'headers'), body: request.toJson()))
+          .thenAnswer((_) async => HttpResponse(
+              statusCode: 200, body: jsonEncode(PutAutocompleteDocResponse())));
+
+      var response = await autocompleteService.putDoc(request);
+      expect(response.error, isEmpty);
+    });
   });
 }
