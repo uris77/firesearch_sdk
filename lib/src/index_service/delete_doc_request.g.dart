@@ -9,7 +9,7 @@ part of 'delete_doc_request.dart';
 _$_DeleteDocRequest _$_$_DeleteDocRequestFromJson(Map<String, dynamic> json) {
   return _$_DeleteDocRequest(
     indexPath: json['indexPath'] as String,
-    index: json['index'] as String,
+    id: json['id'] as String,
   );
 }
 
@@ -17,5 +17,5 @@ Map<String, dynamic> _$_$_DeleteDocRequestToJson(
         _$_DeleteDocRequest instance) =>
     <String, dynamic>{
       'indexPath': instance.indexPath,
-      'index': instance.index,
+      'id': instance.id,
     };

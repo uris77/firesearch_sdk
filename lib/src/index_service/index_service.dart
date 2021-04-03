@@ -36,9 +36,9 @@ class IndexService {
   /// in search results.
   Future<DeleteDocResponse> deleteDoc(DeleteDocRequest deleteDocRequest) async {
     var response = await client.httpClient.post('/api/IndexService.DeleteDoc',
-        headers: _headers, body: deleteDocRequest);
+        headers: _headers, body: jsonEncode(deleteDocRequest));
 
-    if (response != 200) {
+    if (response.statusCode != 200) {
       throw Exception(
           'firesearch: IndexService.DeleteDoc: ${response.statusCode} ${response.body}');
     }

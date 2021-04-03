@@ -40,5 +40,18 @@ void main() {
       expect(response.index?.noStem, isFalse);
       expect(response.index?.keepStopWords, isFalse);
     });
+
+    test('delete a document', () async {
+      final request = DeleteDocRequest(
+          indexPath: 'firesearch-tutorial/indexes/index-name',
+          id: 'document-id');
+
+      when(() => mockHttpClient.post(any(),
+              headers: any(named: 'headers'), body: jsonEncode(request)))
+          .thenAnswer((_) async => HttpResponse(statusCode: 200, body: '{}'));
+
+      var response = await indexService.deleteDoc(request);
+      expect(response.error, equals(''));
+    });
   });
 }

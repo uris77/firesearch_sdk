@@ -13,7 +13,7 @@ class DeleteDocRequest with _$DeleteDocRequest {
     required String indexPath,
 
     /// ID is the identifier of the document to delete.
-    required String index,
+    required String id,
   }) = _DeleteDocRequest;
 
   /// Unmarshalls from json to DeleteDocRequest

@@ -20,10 +20,10 @@ DeleteDocRequest _$DeleteDocRequestFromJson(Map<String, dynamic> json) {
 class _$DeleteDocRequestTearOff {
   const _$DeleteDocRequestTearOff();
 
-  _DeleteDocRequest call({required String indexPath, required String index}) {
+  _DeleteDocRequest call({required String indexPath, required String id}) {
     return _DeleteDocRequest(
       indexPath: indexPath,
-      index: index,
+      id: id,
     );
   }
 
@@ -41,7 +41,7 @@ mixin _$DeleteDocRequest {
   String get indexPath => throw _privateConstructorUsedError;
 
   /// ID is the identifier of the document to delete.
-  String get index => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -54,7 +54,7 @@ abstract class $DeleteDocRequestCopyWith<$Res> {
   factory $DeleteDocRequestCopyWith(
           DeleteDocRequest value, $Res Function(DeleteDocRequest) then) =
       _$DeleteDocRequestCopyWithImpl<$Res>;
-  $Res call({String indexPath, String index});
+  $Res call({String indexPath, String id});
 }
 
 /// @nodoc
@@ -69,16 +69,16 @@ class _$DeleteDocRequestCopyWithImpl<$Res>
   @override
   $Res call({
     Object? indexPath = freezed,
-    Object? index = freezed,
+    Object? id = freezed,
   }) {
     return _then(_value.copyWith(
       indexPath: indexPath == freezed
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
-      index: index == freezed
-          ? _value.index
-          : index // ignore: cast_nullable_to_non_nullable
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -91,7 +91,7 @@ abstract class _$DeleteDocRequestCopyWith<$Res>
           _DeleteDocRequest value, $Res Function(_DeleteDocRequest) then) =
       __$DeleteDocRequestCopyWithImpl<$Res>;
   @override
-  $Res call({String indexPath, String index});
+  $Res call({String indexPath, String id});
 }
 
 /// @nodoc
@@ -108,16 +108,16 @@ class __$DeleteDocRequestCopyWithImpl<$Res>
   @override
   $Res call({
     Object? indexPath = freezed,
-    Object? index = freezed,
+    Object? id = freezed,
   }) {
     return _then(_DeleteDocRequest(
       indexPath: indexPath == freezed
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
-      index: index == freezed
-          ? _value.index
-          : index // ignore: cast_nullable_to_non_nullable
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -127,7 +127,7 @@ class __$DeleteDocRequestCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_DeleteDocRequest implements _DeleteDocRequest {
-  const _$_DeleteDocRequest({required this.indexPath, required this.index});
+  const _$_DeleteDocRequest({required this.indexPath, required this.id});
 
   factory _$_DeleteDocRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_DeleteDocRequestFromJson(json);
@@ -139,11 +139,11 @@ class _$_DeleteDocRequest implements _DeleteDocRequest {
   @override
 
   /// ID is the identifier of the document to delete.
-  final String index;
+  final String id;
 
   @override
   String toString() {
-    return 'DeleteDocRequest(indexPath: $indexPath, index: $index)';
+    return 'DeleteDocRequest(indexPath: $indexPath, id: $id)';
   }
 
   @override
@@ -153,15 +153,15 @@ class _$_DeleteDocRequest implements _DeleteDocRequest {
             (identical(other.indexPath, indexPath) ||
                 const DeepCollectionEquality()
                     .equals(other.indexPath, indexPath)) &&
-            (identical(other.index, index) ||
-                const DeepCollectionEquality().equals(other.index, index)));
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(indexPath) ^
-      const DeepCollectionEquality().hash(index);
+      const DeepCollectionEquality().hash(id);
 
   @JsonKey(ignore: true)
   @override
@@ -176,7 +176,7 @@ class _$_DeleteDocRequest implements _DeleteDocRequest {
 
 abstract class _DeleteDocRequest implements DeleteDocRequest {
   const factory _DeleteDocRequest(
-      {required String indexPath, required String index}) = _$_DeleteDocRequest;
+      {required String indexPath, required String id}) = _$_DeleteDocRequest;
 
   factory _DeleteDocRequest.fromJson(Map<String, dynamic> json) =
       _$_DeleteDocRequest.fromJson;
@@ -188,7 +188,7 @@ abstract class _DeleteDocRequest implements DeleteDocRequest {
   @override
 
   /// ID is the identifier of the document to delete.
-  String get index => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DeleteDocRequestCopyWith<_DeleteDocRequest> get copyWith =>
