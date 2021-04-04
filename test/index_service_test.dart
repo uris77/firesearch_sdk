@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:firesearch_sdk/client.dart';
-import 'package:firesearch_sdk/src/index_service/put_doc_request.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:test/test.dart';
 

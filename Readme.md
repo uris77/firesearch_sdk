@@ -17,6 +17,24 @@ var firesearchClient = Client(
     apiKey: "<Your API Key>");
 ```
 
+## Using in Flutter Web or Flutter Mobile
+In a frontend application you will only need to search documents. Indexing and putting documents into __Firesearch__
+should only be done by a backend service.
+
+1. Retrieve an access key from your backend api.
+2. Create a `SearchQuery` with the retrieved key:
+
+```dart
+final searchQuery = SearchQuery(
+          indexPath: 'path/to/index',
+          accessKey: '<accessKey retrieved from a server>',
+          limit: 100,
+          text: 'search for this');
+final request = SearchRequest(query: searchQuery);
+
+var response = indexService.search(request);
+```
+
 ## [Access Key Service](https://firesearch.dev/docs/security/access-keys)
 
 _Access Keys_ allow you to safely search from web & mobile. Without access keys you will have to expose the

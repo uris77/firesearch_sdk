@@ -34,6 +34,7 @@ export 'src/index_service/get_index_response.dart';
 export 'src/index_service/get_indexes_response.dart';
 export 'src/index_service/highlight.dart';
 export 'src/index_service/index_service.dart';
+export 'src/index_service/put_doc_request.dart';
 export 'src/index_service/put_doc_response.dart';
 export 'src/index_service/search_query.dart';
 export 'src/index_service/search_request.dart';

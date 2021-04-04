@@ -73,7 +73,7 @@ class FiresearchHttpClient implements HttpClient {
 
     try {
       final response =
-          await http.post(Uri.http(host, url), headers: headers, body: body);
+          await http.post(Uri.https(host, url), headers: headers, body: body);
       httpResponse = _returnResponse(response);
     } on SocketException {
       throw FetchDataException('an unexpected socket exception');
