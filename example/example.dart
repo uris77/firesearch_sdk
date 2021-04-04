@@ -3,6 +3,8 @@ import 'package:http/http.dart' as http;
 
 // Create a Firesearch Client
 var firesearchClient = Client(host: "localhost:8888");
+// Instantiate the index service
+final indexService = IndexService(firesearchClient);
 
 // Retrieve an access key from your service
 // In this example, a service at `https://firesearch.example.com/api/accessKey`
@@ -14,18 +16,19 @@ final headers = {
   'Authorization': 'Bearer <A JWT TOKEN FOR AUTHENTICATION>'
 };
 
-var accessKey = await http.get(
-    Uri.https('https://firesearch.example.com', '/api/accessKey'),
-    headers: headers);
+void doSearch() async {
+  var accessKey = await http.get(
+      Uri.https('https://firesearch.example.com', '/api/accessKey'),
+      headers: headers);
 
-// Instantiate the index service
-final indexService = IndexService(firesearchClient);
 // Make a request to Firesearch using the access key
-final searchRequest = SearchRequest(
-    query: SearchQuery(
-  indexPath: 'path/to/index',
-  accessKey: accessKey.body, // assuming the access key is returned int the body
-  limit: 100,
-  text: 'text you are searching for',
-));
-var response = await indexService.search(searchRequest);
+  final searchRequest = SearchRequest(
+      query: SearchQuery(
+    indexPath: 'path/to/index',
+    accessKey:
+        accessKey.body, // assuming the access key is returned int the body
+    limit: 100,
+    text: 'text you are searching for',
+  ));
+  var response = await indexService.search(searchRequest);
+}
