@@ -18,14 +18,20 @@ class AccessKeyService {
       generateKeyRequest = GenerateKeyRequest();
     }
 
-    var headers = Map<String, String>();
-    headers['X-API-Key'] = this.client.apiKey;
-    headers['Accept'] = 'application/json';
-    headers['Content-Type'] = 'application/json';
+    Map<String, String> _headers() {
+      var _h = {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      };
+      if (client.apiKey != null && client.apiKey!.isNotEmpty) {
+        _h['X-API-KEY'] = client.apiKey!;
+      }
+      return _h;
+    }
 
     var response = await client.httpClient.post(
         '/api/AccessKeyService.GenerateKey',
-        headers: headers,
+        headers: _headers(),
         body: jsonEncode(generateKeyRequest));
     if (response.statusCode != 200) {
       throw new Exception(

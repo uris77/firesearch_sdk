@@ -11,17 +11,22 @@ class AutocompleteService {
   /// The firesearch client
   final Client client;
 
-  late final Map<String, String> _headers = {
-    'X-API-Key': client.apiKey,
-    'Accept': 'application/json',
-    'Content-Type': 'application/json',
-  };
+  Map<String, String> _headers() {
+    var _h = {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    };
+    if (client.apiKey != null && client.apiKey!.isNotEmpty) {
+      _h['X-API-KEY'] = client.apiKey!;
+    }
+    return _h;
+  }
 
   /// Complete performs a search on an AutocompleteIndex.
   Future<CompleteResponse> complete(CompleteRequest completeRequest) async {
     var response = await client.httpClient.post(
         '/api/AutocompleteService.Complete',
-        headers: _headers,
+        headers: _headers(),
         body: completeRequest.toJson());
 
     if (response.statusCode != 200) {
@@ -36,7 +41,7 @@ class AutocompleteService {
       CreateAutocompleteIndexRequest createAutocompleteIndexRequest) async {
     var response = await client.httpClient.post(
         '/api/AutocompleteService.CreateIndex',
-        headers: _headers,
+        headers: _headers(),
         body: createAutocompleteIndexRequest.toJson());
 
     if (response.statusCode != 200) {
@@ -53,7 +58,7 @@ class AutocompleteService {
       DeleteAutocompleteDocRequest deleteAutocompleteDocRequest) async {
     var response = await client.httpClient.post(
         '/api/AutocompleteService.DeleteDoc',
-        headers: _headers,
+        headers: _headers(),
         body: deleteAutocompleteDocRequest.toJson());
 
     if (response.statusCode != 200) {
@@ -70,7 +75,7 @@ class AutocompleteService {
       DeleteAutocompleteIndexRequest deleteAutocompleteIndexRequest) async {
     var response = await client.httpClient.post(
         '/api/AutocompleteService.DeleteIndex',
-        headers: _headers,
+        headers: _headers(),
         body: deleteAutocompleteIndexRequest.toJson());
 
     if (response.statusCode != 200) {
@@ -86,7 +91,7 @@ class AutocompleteService {
       GetAutocompleteIndexRequest getAutocompleteIndexRequest) async {
     var response = await client.httpClient.post(
         '/api/AutocompleteService.GetIndex',
-        headers: _headers,
+        headers: _headers(),
         body: getAutocompleteIndexRequest.toJson());
 
     if (response.statusCode != 200) {
@@ -101,7 +106,7 @@ class AutocompleteService {
   Future<GetAutocompleteIndexesResponse> getIndexes() async {
     var response = await client.httpClient.post(
         '/api/AutocompleteService.GetIndexes',
-        headers: _headers,
+        headers: _headers(),
         body: {});
     if (response.statusCode != 200) {
       throw Exception(
@@ -116,7 +121,7 @@ class AutocompleteService {
       PutAutocompleteDocRequest putAutocompleteDocRequest) async {
     var response = await client.httpClient.post(
         '/api/AutocompleteService.PutDoc',
-        headers: _headers,
+        headers: _headers(),
         body: putAutocompleteDocRequest.toJson());
 
     if (response.statusCode != 200) {

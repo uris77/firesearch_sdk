@@ -12,17 +12,22 @@ class IndexService {
   /// The firesearch client
   final Client client;
 
-  late final Map<String, String> _headers = {
-    'X-API-Key': client.apiKey,
-    'Accept': 'application/json',
-    'Content-Type': 'application/json',
-  };
+  Map<String, String> _headers() {
+    var _h = {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    };
+    if (client.apiKey != null && client.apiKey!.isNotEmpty) {
+      _h['X-API-KEY'] = client.apiKey!;
+    }
+    return _h;
+  }
 
   /// CreateIndex creates a new index.
   Future<CreateIndexResponse> createIndex(
       CreateIndexRequest createIndexRequest) async {
     var response = await client.httpClient.post('/api/IndexService.CreateIndex',
-        headers: _headers, body: jsonEncode(createIndexRequest));
+        headers: _headers(), body: jsonEncode(createIndexRequest));
 
     if (response.statusCode != 200) {
       throw Exception(
@@ -36,7 +41,7 @@ class IndexService {
   /// in search results.
   Future<DeleteDocResponse> deleteDoc(DeleteDocRequest deleteDocRequest) async {
     var response = await client.httpClient.post('/api/IndexService.DeleteDoc',
-        headers: _headers, body: deleteDocRequest.toJson());
+        headers: _headers(), body: deleteDocRequest.toJson());
 
     if (response.statusCode != 200) {
       throw Exception(
@@ -50,7 +55,7 @@ class IndexService {
   Future<DeleteIndexResponse> deleteIndex(
       DeleteIndexRequest deleteIndexRequest) async {
     var response = await client.httpClient.post('/api/IndexService.DeleteIndex',
-        headers: _headers, body: deleteIndexRequest.toJson());
+        headers: _headers(), body: deleteIndexRequest.toJson());
 
     if (response.statusCode != 200) {
       throw Exception(
@@ -63,7 +68,7 @@ class IndexService {
   /// GetIndex gets an Index.
   Future<GetIndexResponse> getIndex(GetIndexRequest getIndexRequest) async {
     var response = await client.httpClient.post('/api/IndexService.GetIndex',
-        headers: _headers, body: getIndexRequest.toJson());
+        headers: _headers(), body: getIndexRequest.toJson());
 
     if (response.statusCode != 200) {
       throw Exception(
@@ -76,7 +81,7 @@ class IndexService {
   /// GetIndexes gets a list of Indexes.
   Future<GetIndexesResponse> getIndexes() async {
     var response = await client.httpClient.post('/api/IndexService.GetIndexes',
-        headers: _headers, body: jsonEncode({}));
+        headers: _headers(), body: jsonEncode({}));
     if (response.statusCode != 200) {
       throw Exception(
           'firesearch: IndexService.GetIndexes: ${response.statusCode} ${response.body}');
@@ -88,7 +93,7 @@ class IndexService {
   /// PutDoc puts a document into an Index.
   Future<PutDocResponse> putDoc(PutDocRequest putDocRequest) async {
     var response = await client.httpClient.post('/api/IndexService.PutDoc',
-        headers: _headers, body: putDocRequest.toJson());
+        headers: _headers(), body: putDocRequest.toJson());
     if (response.statusCode != 200) {
       throw Exception(
           'firesearch: IndexService.PutDoc ${response.statusCode} ${response.body}');
@@ -100,7 +105,7 @@ class IndexService {
   /// Search performs a search on an Index.
   Future<SearchResponse> search(SearchRequest searchRequest) async {
     var response = await client.httpClient.post('/api/IndexService.Search',
-        headers: _headers, body: searchRequest.toJson());
+        headers: _headers(), body: searchRequest.toJson());
 
     if (response.statusCode != 200) {
       throw Exception(
