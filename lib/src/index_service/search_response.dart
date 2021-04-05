@@ -1,4 +1,4 @@
-import 'package:firesearch_sdk/client.dart';
+import 'package:firesearch_sdk/firesearch_sdk.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'search_response.freezed.dart';

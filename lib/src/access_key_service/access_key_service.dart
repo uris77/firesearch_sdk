@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:firesearch_sdk/client.dart';
+import 'package:firesearch_sdk/firesearch_sdk.dart';
 
 /// AccessKeyService provides keys needed to perform searches.
 class AccessKeyService {

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:firesearch_sdk/client.dart';
+import 'package:firesearch_sdk/firesearch_sdk.dart';
 
 /// AutocompleteService provides the ability to create and manage autocomplete
 /// indexes, as well as populate them with data, and perform lookups.

@@ -1,4 +1,4 @@
-import 'package:firesearch_sdk/client.dart';
+import 'package:firesearch_sdk/firesearch_sdk.dart';
 import 'package:http/http.dart' as http;
 
 // Create a Firesearch Client

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:firesearch_sdk/client.dart';
+import 'package:firesearch_sdk/firesearch_sdk.dart';
 import 'package:firesearch_sdk/src/index_service/put_doc_request.dart';
 
 /// IndexService provides the ability to create and manage full-text indexes, as
