@@ -2,6 +2,10 @@
 
 _Unofficial Firesearch SDK for Dart_
 
+<p align="center">
+<a href="https://github.com/uris77/firesearch_sdk/actions"><img src="https://github.com/uris77/firesearch_sdk/workflows/dart.yml/badge.svg" alt="build"></a>
+</p>
+
 [Firesearch](https://firesearch.dev) is a solution for full-text search on top of Firestore.
 
 ---
