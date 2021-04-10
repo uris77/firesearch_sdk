@@ -1,3 +1,5 @@
+library firesearch_sdk;
+
 export './src/client.dart';
 export './src/http_client.dart';
 export './src/index_service/index.dart';

@@ -12,5 +12,5 @@ class Client {
   final String? apiKey;
 
   /// The http client used for issuing requests to Firesearch.
-  late var httpClient = FiresearchHttpClient(host: host);
+  late var httpClient = FiresearchHttpClient(host);
 }

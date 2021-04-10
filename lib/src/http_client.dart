@@ -61,10 +61,16 @@ class UnauthorisedException extends FiresearchException {
 /// The implementation of a Firesearch Http Client
 class FiresearchHttpClient implements HttpClient {
   /// Constructor
-  FiresearchHttpClient({required this.host});
+  FiresearchHttpClient(String host) {
+    this.host = _urlHost(host);
+    this.scheme = _urlScheme(host);
+  }
 
   /// The Firesearch host
-  final String host;
+  late final String host;
+
+  /// The url scheme should be either http or https.
+  late final String scheme;
 
   @override
   Future<HttpResponse> post(String url,
@@ -72,8 +78,10 @@ class FiresearchHttpClient implements HttpClient {
     HttpResponse httpResponse;
 
     try {
-      final response =
-          await http.post(Uri.https(host, url), headers: headers, body: body);
+      final response = await http.post(
+          Uri(scheme: scheme, host: host, path: url),
+          headers: headers,
+          body: body);
       httpResponse = _returnResponse(response);
     } on SocketException {
       throw FetchDataException('an unexpected socket exception');
@@ -98,5 +106,21 @@ class FiresearchHttpClient implements HttpClient {
         throw FetchDataException(
             'Error occurred while Communication with Server with StatusCode : ${response.statusCode}');
     }
+  }
+
+  String _urlScheme(String url) {
+    final splits = url.split('://');
+    if (!['http', 'https'].contains(splits[0])) {
+      throw Exception('The host must have an http or https scheme');
+    }
+    return splits[0];
+  }
+
+  String _urlHost(String url) {
+    final splits = url.split('://');
+    if (splits.length != 2) {
+      throw Exception('The host must have an http or https scheme');
+    }
+    return splits[1];
   }
 }
