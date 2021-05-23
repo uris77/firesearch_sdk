@@ -1,3 +1,7 @@
+# 0.1.2
+---
+- Fixes Bad State error due to content-type header in the Index Service
+
 # 0.1.1
 ---
 - Adds support for firesearch running locally during development 
