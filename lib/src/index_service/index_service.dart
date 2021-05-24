@@ -15,6 +15,7 @@ class IndexService {
   Map<String, String> _headers() {
     var _h = {
       'Accept': 'application/json',
+      'Content-Type': 'application/json',
     };
     if (client.apiKey != null && client.apiKey!.isNotEmpty) {
       _h['X-API-KEY'] = client.apiKey!;
@@ -39,8 +40,9 @@ class IndexService {
   /// DeleteDoc removes a document from an Index. Once deleted, it will stop appearing
   /// in search results.
   Future<DeleteDocResponse> deleteDoc(DeleteDocRequest deleteDocRequest) async {
-    var response = await client.httpClient.post('/api/IndexService.DeleteDoc',
-        headers: _headers(), body: deleteDocRequest.toJson());
+    var body = jsonEncode(deleteDocRequest);
+    var response = await client.httpClient
+        .post('/api/IndexService.DeleteDoc', headers: _headers(), body: body);
 
     if (response.statusCode != 200) {
       throw Exception(
@@ -53,8 +55,9 @@ class IndexService {
   /// this Index will be completely deleted.
   Future<DeleteIndexResponse> deleteIndex(
       DeleteIndexRequest deleteIndexRequest) async {
-    var response = await client.httpClient.post('/api/IndexService.DeleteIndex',
-        headers: _headers(), body: deleteIndexRequest.toJson());
+    var body = jsonEncode(deleteIndexRequest);
+    var response = await client.httpClient
+        .post('/api/IndexService.DeleteIndex', headers: _headers(), body: body);
 
     if (response.statusCode != 200) {
       throw Exception(
@@ -66,8 +69,9 @@ class IndexService {
 
   /// GetIndex gets an Index.
   Future<GetIndexResponse> getIndex(GetIndexRequest getIndexRequest) async {
-    var response = await client.httpClient.post('/api/IndexService.GetIndex',
-        headers: _headers(), body: getIndexRequest.toJson());
+    var body = jsonEncode(getIndexRequest);
+    var response = await client.httpClient
+        .post('/api/IndexService.GetIndex', headers: _headers(), body: body);
 
     if (response.statusCode != 200) {
       throw Exception(
@@ -91,8 +95,9 @@ class IndexService {
 
   /// PutDoc puts a document into an Index.
   Future<PutDocResponse> putDoc(PutDocRequest putDocRequest) async {
-    var response = await client.httpClient.post('/api/IndexService.PutDoc',
-        headers: _headers(), body: putDocRequest.toJson());
+    var body = jsonEncode(putDocRequest);
+    var response = await client.httpClient
+        .post('/api/IndexService.PutDoc', headers: _headers(), body: body);
     if (response.statusCode != 200) {
       throw Exception(
           'firesearch: IndexService.PutDoc ${response.statusCode} ${response.body}');
@@ -103,8 +108,9 @@ class IndexService {
 
   /// Search performs a search on an Index.
   Future<SearchResponse> search(SearchRequest searchRequest) async {
-    var response = await client.httpClient.post('/api/IndexService.Search',
-        headers: _headers(), body: searchRequest.toJson());
+    var body = jsonEncode(searchRequest);
+    var response = await client.httpClient
+        .post('/api/IndexService.Search', headers: _headers(), body: body);
 
     if (response.statusCode != 200) {
       throw Exception(

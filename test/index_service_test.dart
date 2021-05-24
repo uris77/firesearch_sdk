@@ -47,7 +47,7 @@ void main() {
           id: 'document-id');
 
       when(() => mockHttpClient.post(any(),
-              headers: any(named: 'headers'), body: request.toJson()))
+              headers: any(named: 'headers'), body: jsonEncode(request)))
           .thenAnswer((_) async => HttpResponse(statusCode: 200, body: '{}'));
 
       var response = await indexService.deleteDoc(request);
@@ -59,7 +59,7 @@ void main() {
           indexPath: 'firesearch-tutorial/indexes/index-name');
 
       when(() => mockHttpClient.post(any(),
-              headers: any(named: 'headers'), body: request.toJson()))
+              headers: any(named: 'headers'), body: jsonEncode(request)))
           .thenAnswer((_) async => HttpResponse(statusCode: 200, body: '{}'));
 
       var response = await indexService.deleteIndex(request);
@@ -71,7 +71,7 @@ void main() {
           GetIndexRequest(indexPath: 'firesearch-tutorial/indexes/index-name');
 
       when(() => mockHttpClient.post(any(),
-              headers: any(named: 'headers'), body: request.toJson()))
+              headers: any(named: 'headers'), body: jsonEncode(request)))
           .thenAnswer((_) async => HttpResponse(
               statusCode: 200,
               body: jsonEncode(GetIndexResponse(
@@ -106,7 +106,7 @@ void main() {
       when(() =>
           mockHttpClient.post(any(),
               headers: any(named: 'headers'),
-              body: request.toJson())).thenAnswer((_) async =>
+              body: jsonEncode(request))).thenAnswer((_) async =>
           HttpResponse(statusCode: 200, body: jsonEncode(PutDocResponse())));
 
       var response = await indexService.putDoc(request);
@@ -123,7 +123,7 @@ void main() {
 
       final searchResponse = SearchResponse(searchQuery: searchQuery, hits: []);
       when(() => mockHttpClient.post(any(),
-              headers: any(named: 'headers'), body: request.toJson()))
+              headers: any(named: 'headers'), body: jsonEncode(request)))
           .thenAnswer((_) async =>
               HttpResponse(statusCode: 200, body: jsonEncode(searchResponse)));
 
