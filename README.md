@@ -139,7 +139,7 @@ pub run build_runner build --delete-conflicting-outputs
 ```
 
 ## Dart Versions
-- Dart 2: >= 2.12
+- Dart 3: >= 3.4.0
 
 ## Maintainers
 - [Roberto Guerra](https://github.com/uris77)
