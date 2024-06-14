@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'search_response.dart';
 
@@ -10,40 +12,11 @@ part of 'search_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SearchResponse _$SearchResponseFromJson(Map<String, dynamic> json) {
   return _SearchResponse.fromJson(json);
 }
-
-/// @nodoc
-class _$SearchResponseTearOff {
-  const _$SearchResponseTearOff();
-
-  _SearchResponse call(
-      {SearchQuery? searchQuery,
-      List<SearchResult>? hits,
-      int? duration = 0,
-      String? cursor,
-      bool? more = false,
-      String? error = ''}) {
-    return _SearchResponse(
-      searchQuery: searchQuery,
-      hits: hits,
-      duration: duration,
-      cursor: cursor,
-      more: more,
-      error: error,
-    );
-  }
-
-  SearchResponse fromJson(Map<String, Object> json) {
-    return SearchResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SearchResponse = _$SearchResponseTearOff();
 
 /// @nodoc
 mixin _$SearchResponse {
@@ -77,7 +50,8 @@ mixin _$SearchResponse {
 abstract class $SearchResponseCopyWith<$Res> {
   factory $SearchResponseCopyWith(
           SearchResponse value, $Res Function(SearchResponse) then) =
-      _$SearchResponseCopyWithImpl<$Res>;
+      _$SearchResponseCopyWithImpl<$Res, SearchResponse>;
+  @useResult
   $Res call(
       {SearchQuery? searchQuery,
       List<SearchResult>? hits,
@@ -90,14 +64,16 @@ abstract class $SearchResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SearchResponseCopyWithImpl<$Res>
+class _$SearchResponseCopyWithImpl<$Res, $Val extends SearchResponse>
     implements $SearchResponseCopyWith<$Res> {
   _$SearchResponseCopyWithImpl(this._value, this._then);
 
-  final SearchResponse _value;
   // ignore: unused_field
-  final $Res Function(SearchResponse) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? searchQuery = freezed,
@@ -108,52 +84,54 @@ class _$SearchResponseCopyWithImpl<$Res>
     Object? error = freezed,
   }) {
     return _then(_value.copyWith(
-      searchQuery: searchQuery == freezed
+      searchQuery: freezed == searchQuery
           ? _value.searchQuery
           : searchQuery // ignore: cast_nullable_to_non_nullable
               as SearchQuery?,
-      hits: hits == freezed
+      hits: freezed == hits
           ? _value.hits
           : hits // ignore: cast_nullable_to_non_nullable
               as List<SearchResult>?,
-      duration: duration == freezed
+      duration: freezed == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as int?,
-      cursor: cursor == freezed
+      cursor: freezed == cursor
           ? _value.cursor
           : cursor // ignore: cast_nullable_to_non_nullable
               as String?,
-      more: more == freezed
+      more: freezed == more
           ? _value.more
           : more // ignore: cast_nullable_to_non_nullable
               as bool?,
-      error: error == freezed
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SearchQueryCopyWith<$Res>? get searchQuery {
     if (_value.searchQuery == null) {
       return null;
     }
 
     return $SearchQueryCopyWith<$Res>(_value.searchQuery!, (value) {
-      return _then(_value.copyWith(searchQuery: value));
+      return _then(_value.copyWith(searchQuery: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$SearchResponseCopyWith<$Res>
+abstract class _$$SearchResponseImplCopyWith<$Res>
     implements $SearchResponseCopyWith<$Res> {
-  factory _$SearchResponseCopyWith(
-          _SearchResponse value, $Res Function(_SearchResponse) then) =
-      __$SearchResponseCopyWithImpl<$Res>;
+  factory _$$SearchResponseImplCopyWith(_$SearchResponseImpl value,
+          $Res Function(_$SearchResponseImpl) then) =
+      __$$SearchResponseImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {SearchQuery? searchQuery,
       List<SearchResult>? hits,
@@ -167,16 +145,14 @@ abstract class _$SearchResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SearchResponseCopyWithImpl<$Res>
-    extends _$SearchResponseCopyWithImpl<$Res>
-    implements _$SearchResponseCopyWith<$Res> {
-  __$SearchResponseCopyWithImpl(
-      _SearchResponse _value, $Res Function(_SearchResponse) _then)
-      : super(_value, (v) => _then(v as _SearchResponse));
+class __$$SearchResponseImplCopyWithImpl<$Res>
+    extends _$SearchResponseCopyWithImpl<$Res, _$SearchResponseImpl>
+    implements _$$SearchResponseImplCopyWith<$Res> {
+  __$$SearchResponseImplCopyWithImpl(
+      _$SearchResponseImpl _value, $Res Function(_$SearchResponseImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _SearchResponse get _value => super._value as _SearchResponse;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? searchQuery = freezed,
@@ -186,28 +162,28 @@ class __$SearchResponseCopyWithImpl<$Res>
     Object? more = freezed,
     Object? error = freezed,
   }) {
-    return _then(_SearchResponse(
-      searchQuery: searchQuery == freezed
+    return _then(_$SearchResponseImpl(
+      searchQuery: freezed == searchQuery
           ? _value.searchQuery
           : searchQuery // ignore: cast_nullable_to_non_nullable
               as SearchQuery?,
-      hits: hits == freezed
-          ? _value.hits
+      hits: freezed == hits
+          ? _value._hits
           : hits // ignore: cast_nullable_to_non_nullable
               as List<SearchResult>?,
-      duration: duration == freezed
+      duration: freezed == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as int?,
-      cursor: cursor == freezed
+      cursor: freezed == cursor
           ? _value.cursor
           : cursor // ignore: cast_nullable_to_non_nullable
               as String?,
-      more: more == freezed
+      more: freezed == more
           ? _value.more
           : more // ignore: cast_nullable_to_non_nullable
               as bool?,
-      error: error == freezed
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -215,49 +191,57 @@ class __$SearchResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_SearchResponse implements _SearchResponse {
-  const _$_SearchResponse(
+@JsonSerializable()
+class _$SearchResponseImpl implements _SearchResponse {
+  const _$SearchResponseImpl(
       {this.searchQuery,
-      this.hits,
+      final List<SearchResult>? hits,
       this.duration = 0,
       this.cursor,
       this.more = false,
-      this.error = ''});
+      this.error = ''})
+      : _hits = hits;
 
-  factory _$_SearchResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_SearchResponseFromJson(json);
-
-  @override
+  factory _$SearchResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SearchResponseImplFromJson(json);
 
   /// Query is the SearchQuery that generated these results.
-  final SearchQuery? searchQuery;
   @override
+  final SearchQuery? searchQuery;
 
   /// Hits are the search results.
-  final List<SearchResult>? hits;
-  @JsonKey(defaultValue: 0)
+  final List<SearchResult>? _hits;
+
+  /// Hits are the search results.
   @override
+  List<SearchResult>? get hits {
+    final value = _hits;
+    if (value == null) return null;
+    if (_hits is EqualUnmodifiableListView) return _hits;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   ///  Duration is the milliseconds that the search took to execute in the server side
-  final int? duration;
   @override
+  @JsonKey()
+  final int? duration;
 
   /// Cursor is a encoded string that you can pass to a new Query to get more results.
-  final String? cursor;
-  @JsonKey(defaultValue: false)
   @override
+  final String? cursor;
 
   /// More indicates that there may be more search results. If true, make the same
   /// Search request passing this Cursor. For performance reasons, Firesearch doesn't
   /// always know with certainty so it's possible the subsequent request will return
-  final bool? more;
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
+  final bool? more;
 
   /// Error is string explaining what went wrong. Empty if everything was fine.
+  @override
+  @JsonKey()
   final String? error;
 
   @override
@@ -266,86 +250,86 @@ class _$_SearchResponse implements _SearchResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _SearchResponse &&
+        (other.runtimeType == runtimeType &&
+            other is _$SearchResponseImpl &&
             (identical(other.searchQuery, searchQuery) ||
-                const DeepCollectionEquality()
-                    .equals(other.searchQuery, searchQuery)) &&
-            (identical(other.hits, hits) ||
-                const DeepCollectionEquality().equals(other.hits, hits)) &&
+                other.searchQuery == searchQuery) &&
+            const DeepCollectionEquality().equals(other._hits, _hits) &&
             (identical(other.duration, duration) ||
-                const DeepCollectionEquality()
-                    .equals(other.duration, duration)) &&
-            (identical(other.cursor, cursor) ||
-                const DeepCollectionEquality().equals(other.cursor, cursor)) &&
-            (identical(other.more, more) ||
-                const DeepCollectionEquality().equals(other.more, more)) &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+                other.duration == duration) &&
+            (identical(other.cursor, cursor) || other.cursor == cursor) &&
+            (identical(other.more, more) || other.more == more) &&
+            (identical(other.error, error) || other.error == error));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(searchQuery) ^
-      const DeepCollectionEquality().hash(hits) ^
-      const DeepCollectionEquality().hash(duration) ^
-      const DeepCollectionEquality().hash(cursor) ^
-      const DeepCollectionEquality().hash(more) ^
-      const DeepCollectionEquality().hash(error);
 
   @JsonKey(ignore: true)
   @override
-  _$SearchResponseCopyWith<_SearchResponse> get copyWith =>
-      __$SearchResponseCopyWithImpl<_SearchResponse>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      searchQuery,
+      const DeepCollectionEquality().hash(_hits),
+      duration,
+      cursor,
+      more,
+      error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchResponseImplCopyWith<_$SearchResponseImpl> get copyWith =>
+      __$$SearchResponseImplCopyWithImpl<_$SearchResponseImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SearchResponseToJson(this);
+    return _$$SearchResponseImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _SearchResponse implements SearchResponse {
   const factory _SearchResponse(
-      {SearchQuery? searchQuery,
-      List<SearchResult>? hits,
-      int? duration,
-      String? cursor,
-      bool? more,
-      String? error}) = _$_SearchResponse;
+      {final SearchQuery? searchQuery,
+      final List<SearchResult>? hits,
+      final int? duration,
+      final String? cursor,
+      final bool? more,
+      final String? error}) = _$SearchResponseImpl;
 
   factory _SearchResponse.fromJson(Map<String, dynamic> json) =
-      _$_SearchResponse.fromJson;
+      _$SearchResponseImpl.fromJson;
 
   @override
 
   /// Query is the SearchQuery that generated these results.
-  SearchQuery? get searchQuery => throw _privateConstructorUsedError;
+  SearchQuery? get searchQuery;
   @override
 
   /// Hits are the search results.
-  List<SearchResult>? get hits => throw _privateConstructorUsedError;
+  List<SearchResult>? get hits;
   @override
 
   ///  Duration is the milliseconds that the search took to execute in the server side
-  int? get duration => throw _privateConstructorUsedError;
+  int? get duration;
   @override
 
   /// Cursor is a encoded string that you can pass to a new Query to get more results.
-  String? get cursor => throw _privateConstructorUsedError;
+  String? get cursor;
   @override
 
   /// More indicates that there may be more search results. If true, make the same
   /// Search request passing this Cursor. For performance reasons, Firesearch doesn't
   /// always know with certainty so it's possible the subsequent request will return
-  bool? get more => throw _privateConstructorUsedError;
+  bool? get more;
   @override
 
   /// Error is string explaining what went wrong. Empty if everything was fine.
-  String? get error => throw _privateConstructorUsedError;
+  String? get error;
   @override
   @JsonKey(ignore: true)
-  _$SearchResponseCopyWith<_SearchResponse> get copyWith =>
+  _$$SearchResponseImplCopyWith<_$SearchResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

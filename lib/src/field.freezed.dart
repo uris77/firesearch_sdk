@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'field.dart';
 
@@ -10,30 +12,11 @@ part of 'field.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Field _$FieldFromJson(Map<String, dynamic> json) {
   return _Field.fromJson(json);
 }
-
-/// @nodoc
-class _$FieldTearOff {
-  const _$FieldTearOff();
-
-  _Field call({required String key, required dynamic value}) {
-    return _Field(
-      key: key,
-      value: value,
-    );
-  }
-
-  Field fromJson(Map<String, Object> json) {
-    return Field.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Field = _$FieldTearOff();
 
 /// @nodoc
 mixin _$Field {
@@ -51,64 +34,70 @@ mixin _$Field {
 /// @nodoc
 abstract class $FieldCopyWith<$Res> {
   factory $FieldCopyWith(Field value, $Res Function(Field) then) =
-      _$FieldCopyWithImpl<$Res>;
+      _$FieldCopyWithImpl<$Res, Field>;
+  @useResult
   $Res call({String key, dynamic value});
 }
 
 /// @nodoc
-class _$FieldCopyWithImpl<$Res> implements $FieldCopyWith<$Res> {
+class _$FieldCopyWithImpl<$Res, $Val extends Field>
+    implements $FieldCopyWith<$Res> {
   _$FieldCopyWithImpl(this._value, this._then);
 
-  final Field _value;
   // ignore: unused_field
-  final $Res Function(Field) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? key = freezed,
+    Object? key = null,
     Object? value = freezed,
   }) {
     return _then(_value.copyWith(
-      key: key == freezed
+      key: null == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
               as String,
-      value: value == freezed
+      value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as dynamic,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$FieldCopyWith<$Res> implements $FieldCopyWith<$Res> {
-  factory _$FieldCopyWith(_Field value, $Res Function(_Field) then) =
-      __$FieldCopyWithImpl<$Res>;
+abstract class _$$FieldImplCopyWith<$Res> implements $FieldCopyWith<$Res> {
+  factory _$$FieldImplCopyWith(
+          _$FieldImpl value, $Res Function(_$FieldImpl) then) =
+      __$$FieldImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String key, dynamic value});
 }
 
 /// @nodoc
-class __$FieldCopyWithImpl<$Res> extends _$FieldCopyWithImpl<$Res>
-    implements _$FieldCopyWith<$Res> {
-  __$FieldCopyWithImpl(_Field _value, $Res Function(_Field) _then)
-      : super(_value, (v) => _then(v as _Field));
+class __$$FieldImplCopyWithImpl<$Res>
+    extends _$FieldCopyWithImpl<$Res, _$FieldImpl>
+    implements _$$FieldImplCopyWith<$Res> {
+  __$$FieldImplCopyWithImpl(
+      _$FieldImpl _value, $Res Function(_$FieldImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _Field get _value => super._value as _Field;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? key = freezed,
+    Object? key = null,
     Object? value = freezed,
   }) {
-    return _then(_Field(
-      key: key == freezed
+    return _then(_$FieldImpl(
+      key: null == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
               as String,
-      value: value == freezed
+      value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -116,22 +105,20 @@ class __$FieldCopyWithImpl<$Res> extends _$FieldCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_Field implements _Field {
-  const _$_Field({required this.key, required this.value});
+@JsonSerializable()
+class _$FieldImpl implements _Field {
+  const _$FieldImpl({required this.key, required this.value});
 
-  factory _$_Field.fromJson(Map<String, dynamic> json) =>
-      _$_$_FieldFromJson(json);
-
-  @override
+  factory _$FieldImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FieldImplFromJson(json);
 
   /// Key is the name of the field. Cannot begin with an underscore.
-  final String key;
   @override
+  final String key;
 
   /// Value is the filterable value of this Field.
+  @override
   final dynamic value;
 
   @override
@@ -140,47 +127,49 @@ class _$_Field implements _Field {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _Field &&
-            (identical(other.key, key) ||
-                const DeepCollectionEquality().equals(other.key, key)) &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)));
+        (other.runtimeType == runtimeType &&
+            other is _$FieldImpl &&
+            (identical(other.key, key) || other.key == key) &&
+            const DeepCollectionEquality().equals(other.value, value));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(key) ^
-      const DeepCollectionEquality().hash(value);
 
   @JsonKey(ignore: true)
   @override
-  _$FieldCopyWith<_Field> get copyWith =>
-      __$FieldCopyWithImpl<_Field>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, key, const DeepCollectionEquality().hash(value));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FieldImplCopyWith<_$FieldImpl> get copyWith =>
+      __$$FieldImplCopyWithImpl<_$FieldImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_FieldToJson(this);
+    return _$$FieldImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Field implements Field {
-  const factory _Field({required String key, required dynamic value}) =
-      _$_Field;
+  const factory _Field(
+      {required final String key, required final dynamic value}) = _$FieldImpl;
 
-  factory _Field.fromJson(Map<String, dynamic> json) = _$_Field.fromJson;
+  factory _Field.fromJson(Map<String, dynamic> json) = _$FieldImpl.fromJson;
 
   @override
 
   /// Key is the name of the field. Cannot begin with an underscore.
-  String get key => throw _privateConstructorUsedError;
+  String get key;
   @override
 
   /// Value is the filterable value of this Field.
-  dynamic get value => throw _privateConstructorUsedError;
+  dynamic get value;
   @override
   @JsonKey(ignore: true)
-  _$FieldCopyWith<_Field> get copyWith => throw _privateConstructorUsedError;
+  _$$FieldImplCopyWith<_$FieldImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

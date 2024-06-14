@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'put_autocomplete_doc_request.dart';
 
@@ -10,32 +12,12 @@ part of 'put_autocomplete_doc_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PutAutocompleteDocRequest _$PutAutocompleteDocRequestFromJson(
     Map<String, dynamic> json) {
   return _PutAutocompleteDocRequest.fromJson(json);
 }
-
-/// @nodoc
-class _$PutAutocompleteDocRequestTearOff {
-  const _$PutAutocompleteDocRequestTearOff();
-
-  _PutAutocompleteDocRequest call(
-      {required String indexPath, required AutocompleteDoc doc}) {
-    return _PutAutocompleteDocRequest(
-      indexPath: indexPath,
-      doc: doc,
-    );
-  }
-
-  PutAutocompleteDocRequest fromJson(Map<String, Object> json) {
-    return PutAutocompleteDocRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PutAutocompleteDocRequest = _$PutAutocompleteDocRequestTearOff();
 
 /// @nodoc
 mixin _$PutAutocompleteDocRequest {
@@ -55,53 +37,60 @@ mixin _$PutAutocompleteDocRequest {
 abstract class $PutAutocompleteDocRequestCopyWith<$Res> {
   factory $PutAutocompleteDocRequestCopyWith(PutAutocompleteDocRequest value,
           $Res Function(PutAutocompleteDocRequest) then) =
-      _$PutAutocompleteDocRequestCopyWithImpl<$Res>;
+      _$PutAutocompleteDocRequestCopyWithImpl<$Res, PutAutocompleteDocRequest>;
+  @useResult
   $Res call({String indexPath, AutocompleteDoc doc});
 
   $AutocompleteDocCopyWith<$Res> get doc;
 }
 
 /// @nodoc
-class _$PutAutocompleteDocRequestCopyWithImpl<$Res>
+class _$PutAutocompleteDocRequestCopyWithImpl<$Res,
+        $Val extends PutAutocompleteDocRequest>
     implements $PutAutocompleteDocRequestCopyWith<$Res> {
   _$PutAutocompleteDocRequestCopyWithImpl(this._value, this._then);
 
-  final PutAutocompleteDocRequest _value;
   // ignore: unused_field
-  final $Res Function(PutAutocompleteDocRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexPath = freezed,
-    Object? doc = freezed,
+    Object? indexPath = null,
+    Object? doc = null,
   }) {
     return _then(_value.copyWith(
-      indexPath: indexPath == freezed
+      indexPath: null == indexPath
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
-      doc: doc == freezed
+      doc: null == doc
           ? _value.doc
           : doc // ignore: cast_nullable_to_non_nullable
               as AutocompleteDoc,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AutocompleteDocCopyWith<$Res> get doc {
     return $AutocompleteDocCopyWith<$Res>(_value.doc, (value) {
-      return _then(_value.copyWith(doc: value));
+      return _then(_value.copyWith(doc: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$PutAutocompleteDocRequestCopyWith<$Res>
+abstract class _$$PutAutocompleteDocRequestImplCopyWith<$Res>
     implements $PutAutocompleteDocRequestCopyWith<$Res> {
-  factory _$PutAutocompleteDocRequestCopyWith(_PutAutocompleteDocRequest value,
-          $Res Function(_PutAutocompleteDocRequest) then) =
-      __$PutAutocompleteDocRequestCopyWithImpl<$Res>;
+  factory _$$PutAutocompleteDocRequestImplCopyWith(
+          _$PutAutocompleteDocRequestImpl value,
+          $Res Function(_$PutAutocompleteDocRequestImpl) then) =
+      __$$PutAutocompleteDocRequestImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String indexPath, AutocompleteDoc doc});
 
   @override
@@ -109,28 +98,27 @@ abstract class _$PutAutocompleteDocRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PutAutocompleteDocRequestCopyWithImpl<$Res>
-    extends _$PutAutocompleteDocRequestCopyWithImpl<$Res>
-    implements _$PutAutocompleteDocRequestCopyWith<$Res> {
-  __$PutAutocompleteDocRequestCopyWithImpl(_PutAutocompleteDocRequest _value,
-      $Res Function(_PutAutocompleteDocRequest) _then)
-      : super(_value, (v) => _then(v as _PutAutocompleteDocRequest));
+class __$$PutAutocompleteDocRequestImplCopyWithImpl<$Res>
+    extends _$PutAutocompleteDocRequestCopyWithImpl<$Res,
+        _$PutAutocompleteDocRequestImpl>
+    implements _$$PutAutocompleteDocRequestImplCopyWith<$Res> {
+  __$$PutAutocompleteDocRequestImplCopyWithImpl(
+      _$PutAutocompleteDocRequestImpl _value,
+      $Res Function(_$PutAutocompleteDocRequestImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _PutAutocompleteDocRequest get _value =>
-      super._value as _PutAutocompleteDocRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexPath = freezed,
-    Object? doc = freezed,
+    Object? indexPath = null,
+    Object? doc = null,
   }) {
-    return _then(_PutAutocompleteDocRequest(
-      indexPath: indexPath == freezed
+    return _then(_$PutAutocompleteDocRequestImpl(
+      indexPath: null == indexPath
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
-      doc: doc == freezed
+      doc: null == doc
           ? _value.doc
           : doc // ignore: cast_nullable_to_non_nullable
               as AutocompleteDoc,
@@ -138,23 +126,21 @@ class __$PutAutocompleteDocRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_PutAutocompleteDocRequest implements _PutAutocompleteDocRequest {
-  const _$_PutAutocompleteDocRequest(
+@JsonSerializable()
+class _$PutAutocompleteDocRequestImpl implements _PutAutocompleteDocRequest {
+  const _$PutAutocompleteDocRequestImpl(
       {required this.indexPath, required this.doc});
 
-  factory _$_PutAutocompleteDocRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_PutAutocompleteDocRequestFromJson(json);
-
-  @override
+  factory _$PutAutocompleteDocRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PutAutocompleteDocRequestImplFromJson(json);
 
   /// IndexPath is the AutocompleteIndex to put a document to.
-  final String indexPath;
   @override
+  final String indexPath;
 
   /// Doc is the document to put.
+  @override
   final AutocompleteDoc doc;
 
   @override
@@ -163,53 +149,52 @@ class _$_PutAutocompleteDocRequest implements _PutAutocompleteDocRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _PutAutocompleteDocRequest &&
+        (other.runtimeType == runtimeType &&
+            other is _$PutAutocompleteDocRequestImpl &&
             (identical(other.indexPath, indexPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.indexPath, indexPath)) &&
-            (identical(other.doc, doc) ||
-                const DeepCollectionEquality().equals(other.doc, doc)));
+                other.indexPath == indexPath) &&
+            (identical(other.doc, doc) || other.doc == doc));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(indexPath) ^
-      const DeepCollectionEquality().hash(doc);
 
   @JsonKey(ignore: true)
   @override
-  _$PutAutocompleteDocRequestCopyWith<_PutAutocompleteDocRequest>
-      get copyWith =>
-          __$PutAutocompleteDocRequestCopyWithImpl<_PutAutocompleteDocRequest>(
-              this, _$identity);
+  int get hashCode => Object.hash(runtimeType, indexPath, doc);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PutAutocompleteDocRequestImplCopyWith<_$PutAutocompleteDocRequestImpl>
+      get copyWith => __$$PutAutocompleteDocRequestImplCopyWithImpl<
+          _$PutAutocompleteDocRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PutAutocompleteDocRequestToJson(this);
+    return _$$PutAutocompleteDocRequestImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _PutAutocompleteDocRequest implements PutAutocompleteDocRequest {
   const factory _PutAutocompleteDocRequest(
-      {required String indexPath,
-      required AutocompleteDoc doc}) = _$_PutAutocompleteDocRequest;
+      {required final String indexPath,
+      required final AutocompleteDoc doc}) = _$PutAutocompleteDocRequestImpl;
 
   factory _PutAutocompleteDocRequest.fromJson(Map<String, dynamic> json) =
-      _$_PutAutocompleteDocRequest.fromJson;
+      _$PutAutocompleteDocRequestImpl.fromJson;
 
   @override
 
   /// IndexPath is the AutocompleteIndex to put a document to.
-  String get indexPath => throw _privateConstructorUsedError;
+  String get indexPath;
   @override
 
   /// Doc is the document to put.
-  AutocompleteDoc get doc => throw _privateConstructorUsedError;
+  AutocompleteDoc get doc;
   @override
   @JsonKey(ignore: true)
-  _$PutAutocompleteDocRequestCopyWith<_PutAutocompleteDocRequest>
+  _$$PutAutocompleteDocRequestImplCopyWith<_$PutAutocompleteDocRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

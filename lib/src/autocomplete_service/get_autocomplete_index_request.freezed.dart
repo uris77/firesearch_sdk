@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'get_autocomplete_index_request.dart';
 
@@ -10,30 +12,12 @@ part of 'get_autocomplete_index_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetAutocompleteIndexRequest _$GetAutocompleteIndexRequestFromJson(
     Map<String, dynamic> json) {
   return _GetAutocompleteIndexRequest.fromJson(json);
 }
-
-/// @nodoc
-class _$GetAutocompleteIndexRequestTearOff {
-  const _$GetAutocompleteIndexRequestTearOff();
-
-  _GetAutocompleteIndexRequest call({required String indexPath}) {
-    return _GetAutocompleteIndexRequest(
-      indexPath: indexPath,
-    );
-  }
-
-  GetAutocompleteIndexRequest fromJson(Map<String, Object> json) {
-    return GetAutocompleteIndexRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetAutocompleteIndexRequest = _$GetAutocompleteIndexRequestTearOff();
 
 /// @nodoc
 mixin _$GetAutocompleteIndexRequest {
@@ -52,62 +36,66 @@ abstract class $GetAutocompleteIndexRequestCopyWith<$Res> {
   factory $GetAutocompleteIndexRequestCopyWith(
           GetAutocompleteIndexRequest value,
           $Res Function(GetAutocompleteIndexRequest) then) =
-      _$GetAutocompleteIndexRequestCopyWithImpl<$Res>;
+      _$GetAutocompleteIndexRequestCopyWithImpl<$Res,
+          GetAutocompleteIndexRequest>;
+  @useResult
   $Res call({String indexPath});
 }
 
 /// @nodoc
-class _$GetAutocompleteIndexRequestCopyWithImpl<$Res>
+class _$GetAutocompleteIndexRequestCopyWithImpl<$Res,
+        $Val extends GetAutocompleteIndexRequest>
     implements $GetAutocompleteIndexRequestCopyWith<$Res> {
   _$GetAutocompleteIndexRequestCopyWithImpl(this._value, this._then);
 
-  final GetAutocompleteIndexRequest _value;
   // ignore: unused_field
-  final $Res Function(GetAutocompleteIndexRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexPath = freezed,
+    Object? indexPath = null,
   }) {
     return _then(_value.copyWith(
-      indexPath: indexPath == freezed
+      indexPath: null == indexPath
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$GetAutocompleteIndexRequestCopyWith<$Res>
+abstract class _$$GetAutocompleteIndexRequestImplCopyWith<$Res>
     implements $GetAutocompleteIndexRequestCopyWith<$Res> {
-  factory _$GetAutocompleteIndexRequestCopyWith(
-          _GetAutocompleteIndexRequest value,
-          $Res Function(_GetAutocompleteIndexRequest) then) =
-      __$GetAutocompleteIndexRequestCopyWithImpl<$Res>;
+  factory _$$GetAutocompleteIndexRequestImplCopyWith(
+          _$GetAutocompleteIndexRequestImpl value,
+          $Res Function(_$GetAutocompleteIndexRequestImpl) then) =
+      __$$GetAutocompleteIndexRequestImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String indexPath});
 }
 
 /// @nodoc
-class __$GetAutocompleteIndexRequestCopyWithImpl<$Res>
-    extends _$GetAutocompleteIndexRequestCopyWithImpl<$Res>
-    implements _$GetAutocompleteIndexRequestCopyWith<$Res> {
-  __$GetAutocompleteIndexRequestCopyWithImpl(
-      _GetAutocompleteIndexRequest _value,
-      $Res Function(_GetAutocompleteIndexRequest) _then)
-      : super(_value, (v) => _then(v as _GetAutocompleteIndexRequest));
+class __$$GetAutocompleteIndexRequestImplCopyWithImpl<$Res>
+    extends _$GetAutocompleteIndexRequestCopyWithImpl<$Res,
+        _$GetAutocompleteIndexRequestImpl>
+    implements _$$GetAutocompleteIndexRequestImplCopyWith<$Res> {
+  __$$GetAutocompleteIndexRequestImplCopyWithImpl(
+      _$GetAutocompleteIndexRequestImpl _value,
+      $Res Function(_$GetAutocompleteIndexRequestImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _GetAutocompleteIndexRequest get _value =>
-      super._value as _GetAutocompleteIndexRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexPath = freezed,
+    Object? indexPath = null,
   }) {
-    return _then(_GetAutocompleteIndexRequest(
-      indexPath: indexPath == freezed
+    return _then(_$GetAutocompleteIndexRequestImpl(
+      indexPath: null == indexPath
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
@@ -115,19 +103,19 @@ class __$GetAutocompleteIndexRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_GetAutocompleteIndexRequest implements _GetAutocompleteIndexRequest {
-  const _$_GetAutocompleteIndexRequest({required this.indexPath});
+@JsonSerializable()
+class _$GetAutocompleteIndexRequestImpl
+    implements _GetAutocompleteIndexRequest {
+  const _$GetAutocompleteIndexRequestImpl({required this.indexPath});
 
-  factory _$_GetAutocompleteIndexRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_GetAutocompleteIndexRequestFromJson(json);
-
-  @override
+  factory _$GetAutocompleteIndexRequestImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$GetAutocompleteIndexRequestImplFromJson(json);
 
   /// IndexPath is the collection path in Firestore that identifies an
   /// AutocompleteIndex.
+  @override
   final String indexPath;
 
   @override
@@ -136,45 +124,48 @@ class _$_GetAutocompleteIndexRequest implements _GetAutocompleteIndexRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _GetAutocompleteIndexRequest &&
+        (other.runtimeType == runtimeType &&
+            other is _$GetAutocompleteIndexRequestImpl &&
             (identical(other.indexPath, indexPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.indexPath, indexPath)));
+                other.indexPath == indexPath));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(indexPath);
 
   @JsonKey(ignore: true)
   @override
-  _$GetAutocompleteIndexRequestCopyWith<_GetAutocompleteIndexRequest>
-      get copyWith => __$GetAutocompleteIndexRequestCopyWithImpl<
-          _GetAutocompleteIndexRequest>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, indexPath);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetAutocompleteIndexRequestImplCopyWith<_$GetAutocompleteIndexRequestImpl>
+      get copyWith => __$$GetAutocompleteIndexRequestImplCopyWithImpl<
+          _$GetAutocompleteIndexRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GetAutocompleteIndexRequestToJson(this);
+    return _$$GetAutocompleteIndexRequestImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _GetAutocompleteIndexRequest
     implements GetAutocompleteIndexRequest {
-  const factory _GetAutocompleteIndexRequest({required String indexPath}) =
-      _$_GetAutocompleteIndexRequest;
+  const factory _GetAutocompleteIndexRequest(
+      {required final String indexPath}) = _$GetAutocompleteIndexRequestImpl;
 
   factory _GetAutocompleteIndexRequest.fromJson(Map<String, dynamic> json) =
-      _$_GetAutocompleteIndexRequest.fromJson;
+      _$GetAutocompleteIndexRequestImpl.fromJson;
 
   @override
 
   /// IndexPath is the collection path in Firestore that identifies an
   /// AutocompleteIndex.
-  String get indexPath => throw _privateConstructorUsedError;
+  String get indexPath;
   @override
   @JsonKey(ignore: true)
-  _$GetAutocompleteIndexRequestCopyWith<_GetAutocompleteIndexRequest>
+  _$$GetAutocompleteIndexRequestImplCopyWith<_$GetAutocompleteIndexRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

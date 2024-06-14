@@ -8,7 +8,6 @@ part 'put_doc_request.g.dart';
 @freezed
 class PutDocRequest with _$PutDocRequest {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory PutDocRequest({
     /// IndexPath is the Index to put a document to.
     required String indexPath,
@@ -19,5 +18,5 @@ class PutDocRequest with _$PutDocRequest {
 
   /// Unmarshalls from json to PutDocRequest
   factory PutDocRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_PutDocRequestFromJson(json);
+      _$PutDocRequestFromJson(json);
 }

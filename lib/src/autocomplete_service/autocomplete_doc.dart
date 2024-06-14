@@ -8,10 +8,8 @@ part 'autocomplete_doc.g.dart';
 @freezed
 class AutocompleteDoc with _$AutocompleteDoc {
   /// Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory AutocompleteDoc(
       {
-
       /// ID is the document identifier.
       required String id,
 
@@ -23,5 +21,5 @@ class AutocompleteDoc with _$AutocompleteDoc {
 
   /// Unmarshalls json to an AutocompleteDoc
   factory AutocompleteDoc.fromJson(Map<String, dynamic> json) =>
-      _$_$_AutocompleteDocFromJson(json);
+      _$$AutocompleteDocImplFromJson(json);
 }

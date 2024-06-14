@@ -7,7 +7,6 @@ part 'delete_doc_request.g.dart';
 @freezed
 class DeleteDocRequest with _$DeleteDocRequest {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory DeleteDocRequest({
     /// IndexPath is the Index to delete from.
     required String indexPath,
@@ -18,5 +17,5 @@ class DeleteDocRequest with _$DeleteDocRequest {
 
   /// Unmarshalls from json to DeleteDocRequest
   factory DeleteDocRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeleteDocRequestFromJson(json);
+      _$DeleteDocRequestFromJson(json);
 }

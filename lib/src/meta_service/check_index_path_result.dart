@@ -8,7 +8,6 @@ part 'check_index_path_result.g.dart';
 @freezed
 class CheckIndexPathResult with _$CheckIndexPathResult {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory CheckIndexPathResult({
     /// ValidationResult holds the result of the check.
     ValidationResult? validationResult,
@@ -19,5 +18,5 @@ class CheckIndexPathResult with _$CheckIndexPathResult {
 
   /// Unmarshalls json to CheckIndexPathResult
   factory CheckIndexPathResult.fromJson(Map<String, dynamic> json) =>
-      _$_$_CheckIndexPathResultFromJson(json);
+      _$CheckIndexPathResultFromJson(json);
 }

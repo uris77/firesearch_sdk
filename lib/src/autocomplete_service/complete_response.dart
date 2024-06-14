@@ -8,10 +8,8 @@ part 'complete_response.g.dart';
 @freezed
 class CompleteResponse with _$CompleteResponse {
   /// Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory CompleteResponse(
       {
-
       /// Query is the CompleteQuery that generated these results.
       required CompleteQuery query,
 
@@ -26,5 +24,5 @@ class CompleteResponse with _$CompleteResponse {
 
   /// Unmarshalls json to CompleteResponse
   factory CompleteResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_CompleteResponseFromJson(json);
+      _$CompleteResponseFromJson(json);
 }

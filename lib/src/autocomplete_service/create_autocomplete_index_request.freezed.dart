@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'create_autocomplete_index_request.dart';
 
@@ -10,31 +12,12 @@ part of 'create_autocomplete_index_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CreateAutocompleteIndexRequest _$CreateAutocompleteIndexRequestFromJson(
     Map<String, dynamic> json) {
   return _CreateAutocompleteIndexRequest.fromJson(json);
 }
-
-/// @nodoc
-class _$CreateAutocompleteIndexRequestTearOff {
-  const _$CreateAutocompleteIndexRequestTearOff();
-
-  _CreateAutocompleteIndexRequest call({AutocompleteIndex? index}) {
-    return _CreateAutocompleteIndexRequest(
-      index: index,
-    );
-  }
-
-  CreateAutocompleteIndexRequest fromJson(Map<String, Object> json) {
-    return CreateAutocompleteIndexRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CreateAutocompleteIndexRequest =
-    _$CreateAutocompleteIndexRequestTearOff();
 
 /// @nodoc
 mixin _$CreateAutocompleteIndexRequest {
@@ -52,53 +35,60 @@ abstract class $CreateAutocompleteIndexRequestCopyWith<$Res> {
   factory $CreateAutocompleteIndexRequestCopyWith(
           CreateAutocompleteIndexRequest value,
           $Res Function(CreateAutocompleteIndexRequest) then) =
-      _$CreateAutocompleteIndexRequestCopyWithImpl<$Res>;
+      _$CreateAutocompleteIndexRequestCopyWithImpl<$Res,
+          CreateAutocompleteIndexRequest>;
+  @useResult
   $Res call({AutocompleteIndex? index});
 
   $AutocompleteIndexCopyWith<$Res>? get index;
 }
 
 /// @nodoc
-class _$CreateAutocompleteIndexRequestCopyWithImpl<$Res>
+class _$CreateAutocompleteIndexRequestCopyWithImpl<$Res,
+        $Val extends CreateAutocompleteIndexRequest>
     implements $CreateAutocompleteIndexRequestCopyWith<$Res> {
   _$CreateAutocompleteIndexRequestCopyWithImpl(this._value, this._then);
 
-  final CreateAutocompleteIndexRequest _value;
   // ignore: unused_field
-  final $Res Function(CreateAutocompleteIndexRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? index = freezed,
   }) {
     return _then(_value.copyWith(
-      index: index == freezed
+      index: freezed == index
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
               as AutocompleteIndex?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AutocompleteIndexCopyWith<$Res>? get index {
     if (_value.index == null) {
       return null;
     }
 
     return $AutocompleteIndexCopyWith<$Res>(_value.index!, (value) {
-      return _then(_value.copyWith(index: value));
+      return _then(_value.copyWith(index: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$CreateAutocompleteIndexRequestCopyWith<$Res>
+abstract class _$$CreateAutocompleteIndexRequestImplCopyWith<$Res>
     implements $CreateAutocompleteIndexRequestCopyWith<$Res> {
-  factory _$CreateAutocompleteIndexRequestCopyWith(
-          _CreateAutocompleteIndexRequest value,
-          $Res Function(_CreateAutocompleteIndexRequest) then) =
-      __$CreateAutocompleteIndexRequestCopyWithImpl<$Res>;
+  factory _$$CreateAutocompleteIndexRequestImplCopyWith(
+          _$CreateAutocompleteIndexRequestImpl value,
+          $Res Function(_$CreateAutocompleteIndexRequestImpl) then) =
+      __$$CreateAutocompleteIndexRequestImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({AutocompleteIndex? index});
 
   @override
@@ -106,24 +96,22 @@ abstract class _$CreateAutocompleteIndexRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CreateAutocompleteIndexRequestCopyWithImpl<$Res>
-    extends _$CreateAutocompleteIndexRequestCopyWithImpl<$Res>
-    implements _$CreateAutocompleteIndexRequestCopyWith<$Res> {
-  __$CreateAutocompleteIndexRequestCopyWithImpl(
-      _CreateAutocompleteIndexRequest _value,
-      $Res Function(_CreateAutocompleteIndexRequest) _then)
-      : super(_value, (v) => _then(v as _CreateAutocompleteIndexRequest));
+class __$$CreateAutocompleteIndexRequestImplCopyWithImpl<$Res>
+    extends _$CreateAutocompleteIndexRequestCopyWithImpl<$Res,
+        _$CreateAutocompleteIndexRequestImpl>
+    implements _$$CreateAutocompleteIndexRequestImplCopyWith<$Res> {
+  __$$CreateAutocompleteIndexRequestImplCopyWithImpl(
+      _$CreateAutocompleteIndexRequestImpl _value,
+      $Res Function(_$CreateAutocompleteIndexRequestImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _CreateAutocompleteIndexRequest get _value =>
-      super._value as _CreateAutocompleteIndexRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? index = freezed,
   }) {
-    return _then(_CreateAutocompleteIndexRequest(
-      index: index == freezed
+    return _then(_$CreateAutocompleteIndexRequestImpl(
+      index: freezed == index
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
               as AutocompleteIndex?,
@@ -131,20 +119,18 @@ class __$CreateAutocompleteIndexRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_CreateAutocompleteIndexRequest
+@JsonSerializable()
+class _$CreateAutocompleteIndexRequestImpl
     implements _CreateAutocompleteIndexRequest {
-  const _$_CreateAutocompleteIndexRequest({this.index});
+  const _$CreateAutocompleteIndexRequestImpl({this.index});
 
-  factory _$_CreateAutocompleteIndexRequest.fromJson(
+  factory _$CreateAutocompleteIndexRequestImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CreateAutocompleteIndexRequestFromJson(json);
-
-  @override
+      _$$CreateAutocompleteIndexRequestImplFromJson(json);
 
   /// Index is the AutocompleteIndex to create.
+  @override
   final AutocompleteIndex? index;
 
   @override
@@ -153,43 +139,48 @@ class _$_CreateAutocompleteIndexRequest
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _CreateAutocompleteIndexRequest &&
-            (identical(other.index, index) ||
-                const DeepCollectionEquality().equals(other.index, index)));
+        (other.runtimeType == runtimeType &&
+            other is _$CreateAutocompleteIndexRequestImpl &&
+            (identical(other.index, index) || other.index == index));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(index);
 
   @JsonKey(ignore: true)
   @override
-  _$CreateAutocompleteIndexRequestCopyWith<_CreateAutocompleteIndexRequest>
-      get copyWith => __$CreateAutocompleteIndexRequestCopyWithImpl<
-          _CreateAutocompleteIndexRequest>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, index);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreateAutocompleteIndexRequestImplCopyWith<
+          _$CreateAutocompleteIndexRequestImpl>
+      get copyWith => __$$CreateAutocompleteIndexRequestImplCopyWithImpl<
+          _$CreateAutocompleteIndexRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CreateAutocompleteIndexRequestToJson(this);
+    return _$$CreateAutocompleteIndexRequestImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _CreateAutocompleteIndexRequest
     implements CreateAutocompleteIndexRequest {
-  const factory _CreateAutocompleteIndexRequest({AutocompleteIndex? index}) =
-      _$_CreateAutocompleteIndexRequest;
+  const factory _CreateAutocompleteIndexRequest(
+      {final AutocompleteIndex? index}) = _$CreateAutocompleteIndexRequestImpl;
 
   factory _CreateAutocompleteIndexRequest.fromJson(Map<String, dynamic> json) =
-      _$_CreateAutocompleteIndexRequest.fromJson;
+      _$CreateAutocompleteIndexRequestImpl.fromJson;
 
   @override
 
   /// Index is the AutocompleteIndex to create.
-  AutocompleteIndex? get index => throw _privateConstructorUsedError;
+  AutocompleteIndex? get index;
   @override
   @JsonKey(ignore: true)
-  _$CreateAutocompleteIndexRequestCopyWith<_CreateAutocompleteIndexRequest>
+  _$$CreateAutocompleteIndexRequestImplCopyWith<
+          _$CreateAutocompleteIndexRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

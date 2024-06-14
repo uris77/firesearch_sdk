@@ -8,14 +8,12 @@ part 'create_index_request.g.dart';
 @freezed
 class CreateIndexRequest with _$CreateIndexRequest {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory CreateIndexRequest(
       {
-
       /// Index is the Index to create.
       required Index index}) = _CreateIndexRequest;
 
   /// Unmarshalls from json to CreateIndexRequest;
   factory CreateIndexRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_CreateIndexRequestFromJson(json);
+      _$CreateIndexRequestFromJson(json);
 }

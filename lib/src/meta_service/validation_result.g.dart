@@ -6,15 +6,15 @@ part of 'validation_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ValidationResult _$_$_ValidationResultFromJson(Map<String, dynamic> json) {
-  return _$_ValidationResult(
-    valid: json['valid'] as bool,
-    message: json['message'] as String? ?? '',
-  );
-}
+_$ValidationResultImpl _$$ValidationResultImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ValidationResultImpl(
+      valid: json['valid'] as bool,
+      message: json['message'] as String? ?? '',
+    );
 
-Map<String, dynamic> _$_$_ValidationResultToJson(
-        _$_ValidationResult instance) =>
+Map<String, dynamic> _$$ValidationResultImplToJson(
+        _$ValidationResultImpl instance) =>
     <String, dynamic>{
       'valid': instance.valid,
       'message': instance.message,

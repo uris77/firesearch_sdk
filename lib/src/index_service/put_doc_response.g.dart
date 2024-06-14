@@ -6,13 +6,13 @@ part of 'put_doc_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PutDocResponse _$_$_PutDocResponseFromJson(Map<String, dynamic> json) {
-  return _$_PutDocResponse(
-    error: json['error'] as String? ?? '',
-  );
-}
+_$PutDocResponseImpl _$$PutDocResponseImplFromJson(Map<String, dynamic> json) =>
+    _$PutDocResponseImpl(
+      error: json['error'] as String? ?? '',
+    );
 
-Map<String, dynamic> _$_$_PutDocResponseToJson(_$_PutDocResponse instance) =>
+Map<String, dynamic> _$$PutDocResponseImplToJson(
+        _$PutDocResponseImpl instance) =>
     <String, dynamic>{
       'error': instance.error,
     };

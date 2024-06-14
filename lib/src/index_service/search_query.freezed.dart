@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'search_query.dart';
 
@@ -10,44 +12,11 @@ part of 'search_query.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SearchQuery _$SearchQueryFromJson(Map<String, dynamic> json) {
   return _SearchQuery.fromJson(json);
 }
-
-/// @nodoc
-class _$SearchQueryTearOff {
-  const _$SearchQueryTearOff();
-
-  _SearchQuery call(
-      {required String indexPath,
-      required String accessKey,
-      required int limit,
-      required String text,
-      List<Field>? filters,
-      List<String>? select,
-      List<String>? searchFields,
-      String? cursor = ''}) {
-    return _SearchQuery(
-      indexPath: indexPath,
-      accessKey: accessKey,
-      limit: limit,
-      text: text,
-      filters: filters,
-      select: select,
-      searchFields: searchFields,
-      cursor: cursor,
-    );
-  }
-
-  SearchQuery fromJson(Map<String, Object> json) {
-    return SearchQuery.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SearchQuery = _$SearchQueryTearOff();
 
 /// @nodoc
 mixin _$SearchQuery {
@@ -91,7 +60,8 @@ mixin _$SearchQuery {
 abstract class $SearchQueryCopyWith<$Res> {
   factory $SearchQueryCopyWith(
           SearchQuery value, $Res Function(SearchQuery) then) =
-      _$SearchQueryCopyWithImpl<$Res>;
+      _$SearchQueryCopyWithImpl<$Res, SearchQuery>;
+  @useResult
   $Res call(
       {String indexPath,
       String accessKey,
@@ -104,68 +74,72 @@ abstract class $SearchQueryCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SearchQueryCopyWithImpl<$Res> implements $SearchQueryCopyWith<$Res> {
+class _$SearchQueryCopyWithImpl<$Res, $Val extends SearchQuery>
+    implements $SearchQueryCopyWith<$Res> {
   _$SearchQueryCopyWithImpl(this._value, this._then);
 
-  final SearchQuery _value;
   // ignore: unused_field
-  final $Res Function(SearchQuery) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexPath = freezed,
-    Object? accessKey = freezed,
-    Object? limit = freezed,
-    Object? text = freezed,
+    Object? indexPath = null,
+    Object? accessKey = null,
+    Object? limit = null,
+    Object? text = null,
     Object? filters = freezed,
     Object? select = freezed,
     Object? searchFields = freezed,
     Object? cursor = freezed,
   }) {
     return _then(_value.copyWith(
-      indexPath: indexPath == freezed
+      indexPath: null == indexPath
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
-      accessKey: accessKey == freezed
+      accessKey: null == accessKey
           ? _value.accessKey
           : accessKey // ignore: cast_nullable_to_non_nullable
               as String,
-      limit: limit == freezed
+      limit: null == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int,
-      text: text == freezed
+      text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
-      filters: filters == freezed
+      filters: freezed == filters
           ? _value.filters
           : filters // ignore: cast_nullable_to_non_nullable
               as List<Field>?,
-      select: select == freezed
+      select: freezed == select
           ? _value.select
           : select // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      searchFields: searchFields == freezed
+      searchFields: freezed == searchFields
           ? _value.searchFields
           : searchFields // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      cursor: cursor == freezed
+      cursor: freezed == cursor
           ? _value.cursor
           : cursor // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$SearchQueryCopyWith<$Res>
+abstract class _$$SearchQueryImplCopyWith<$Res>
     implements $SearchQueryCopyWith<$Res> {
-  factory _$SearchQueryCopyWith(
-          _SearchQuery value, $Res Function(_SearchQuery) then) =
-      __$SearchQueryCopyWithImpl<$Res>;
+  factory _$$SearchQueryImplCopyWith(
+          _$SearchQueryImpl value, $Res Function(_$SearchQueryImpl) then) =
+      __$$SearchQueryImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String indexPath,
       String accessKey,
@@ -178,56 +152,55 @@ abstract class _$SearchQueryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SearchQueryCopyWithImpl<$Res> extends _$SearchQueryCopyWithImpl<$Res>
-    implements _$SearchQueryCopyWith<$Res> {
-  __$SearchQueryCopyWithImpl(
-      _SearchQuery _value, $Res Function(_SearchQuery) _then)
-      : super(_value, (v) => _then(v as _SearchQuery));
+class __$$SearchQueryImplCopyWithImpl<$Res>
+    extends _$SearchQueryCopyWithImpl<$Res, _$SearchQueryImpl>
+    implements _$$SearchQueryImplCopyWith<$Res> {
+  __$$SearchQueryImplCopyWithImpl(
+      _$SearchQueryImpl _value, $Res Function(_$SearchQueryImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _SearchQuery get _value => super._value as _SearchQuery;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexPath = freezed,
-    Object? accessKey = freezed,
-    Object? limit = freezed,
-    Object? text = freezed,
+    Object? indexPath = null,
+    Object? accessKey = null,
+    Object? limit = null,
+    Object? text = null,
     Object? filters = freezed,
     Object? select = freezed,
     Object? searchFields = freezed,
     Object? cursor = freezed,
   }) {
-    return _then(_SearchQuery(
-      indexPath: indexPath == freezed
+    return _then(_$SearchQueryImpl(
+      indexPath: null == indexPath
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
-      accessKey: accessKey == freezed
+      accessKey: null == accessKey
           ? _value.accessKey
           : accessKey // ignore: cast_nullable_to_non_nullable
               as String,
-      limit: limit == freezed
+      limit: null == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int,
-      text: text == freezed
+      text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
-      filters: filters == freezed
-          ? _value.filters
+      filters: freezed == filters
+          ? _value._filters
           : filters // ignore: cast_nullable_to_non_nullable
               as List<Field>?,
-      select: select == freezed
-          ? _value.select
+      select: freezed == select
+          ? _value._select
           : select // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      searchFields: searchFields == freezed
-          ? _value.searchFields
+      searchFields: freezed == searchFields
+          ? _value._searchFields
           : searchFields // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      cursor: cursor == freezed
+      cursor: freezed == cursor
           ? _value.cursor
           : cursor // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -235,61 +208,92 @@ class __$SearchQueryCopyWithImpl<$Res> extends _$SearchQueryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_SearchQuery implements _SearchQuery {
-  const _$_SearchQuery(
+@JsonSerializable()
+class _$SearchQueryImpl implements _SearchQuery {
+  const _$SearchQueryImpl(
       {required this.indexPath,
       required this.accessKey,
       required this.limit,
       required this.text,
-      this.filters,
-      this.select,
-      this.searchFields,
-      this.cursor = ''});
+      final List<Field>? filters,
+      final List<String>? select,
+      final List<String>? searchFields,
+      this.cursor = ''})
+      : _filters = filters,
+        _select = select,
+        _searchFields = searchFields;
 
-  factory _$_SearchQuery.fromJson(Map<String, dynamic> json) =>
-      _$_$_SearchQueryFromJson(json);
-
-  @override
+  factory _$SearchQueryImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SearchQueryImplFromJson(json);
 
   /// IndexPath is the path of the index to search.
-  final String indexPath;
   @override
+  final String indexPath;
 
   /// AccessKey authenticates the request. Get an AccessKey from the
   /// AccessKeyService.GenerateKey method.
-  final String accessKey;
   @override
+  final String accessKey;
 
   /// Limit is the maximum number of search results to return. Smaller limits are
   /// faster.
-  final int limit;
   @override
+  final int limit;
 
   /// Text contains a phrase to search for.
-  final String text;
   @override
+  final String text;
 
   /// Filters are a list of where filters to apply when performing the search.
-  final List<Field>? filters;
+  final List<Field>? _filters;
+
+  /// Filters are a list of where filters to apply when performing the search.
   @override
+  List<Field>? get filters {
+    final value = _filters;
+    if (value == null) return null;
+    if (_filters is EqualUnmodifiableListView) return _filters;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// Select lists the fields to get from the document. Filters are automatically
   /// included. To get search fields out, they must have been put with store set to
   /// true.
-  final List<String>? select;
+  final List<String>? _select;
+
+  /// Select lists the fields to get from the document. Filters are automatically
+  /// included. To get search fields out, they must have been put with store set to
+  /// true.
   @override
+  List<String>? get select {
+    final value = _select;
+    if (value == null) return null;
+    if (_select is EqualUnmodifiableListView) return _select;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// SearchFields is a list of fields to search. If empty, all fields will be
   /// searched.
-  final List<String>? searchFields;
-  @JsonKey(defaultValue: '')
+  final List<String>? _searchFields;
+
+  /// SearchFields is a list of fields to search. If empty, all fields will be
+  /// searched.
   @override
+  List<String>? get searchFields {
+    final value = _searchFields;
+    if (value == null) return null;
+    if (_searchFields is EqualUnmodifiableListView) return _searchFields;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// Cursor is a encoded string from a previous Query, that you can use to get more
   /// results.
+  @override
+  @JsonKey()
   final String? cursor;
 
   @override
@@ -298,108 +302,104 @@ class _$_SearchQuery implements _SearchQuery {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _SearchQuery &&
+        (other.runtimeType == runtimeType &&
+            other is _$SearchQueryImpl &&
             (identical(other.indexPath, indexPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.indexPath, indexPath)) &&
+                other.indexPath == indexPath) &&
             (identical(other.accessKey, accessKey) ||
-                const DeepCollectionEquality()
-                    .equals(other.accessKey, accessKey)) &&
-            (identical(other.limit, limit) ||
-                const DeepCollectionEquality().equals(other.limit, limit)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.filters, filters) ||
-                const DeepCollectionEquality()
-                    .equals(other.filters, filters)) &&
-            (identical(other.select, select) ||
-                const DeepCollectionEquality().equals(other.select, select)) &&
-            (identical(other.searchFields, searchFields) ||
-                const DeepCollectionEquality()
-                    .equals(other.searchFields, searchFields)) &&
-            (identical(other.cursor, cursor) ||
-                const DeepCollectionEquality().equals(other.cursor, cursor)));
+                other.accessKey == accessKey) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other._filters, _filters) &&
+            const DeepCollectionEquality().equals(other._select, _select) &&
+            const DeepCollectionEquality()
+                .equals(other._searchFields, _searchFields) &&
+            (identical(other.cursor, cursor) || other.cursor == cursor));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(indexPath) ^
-      const DeepCollectionEquality().hash(accessKey) ^
-      const DeepCollectionEquality().hash(limit) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(filters) ^
-      const DeepCollectionEquality().hash(select) ^
-      const DeepCollectionEquality().hash(searchFields) ^
-      const DeepCollectionEquality().hash(cursor);
 
   @JsonKey(ignore: true)
   @override
-  _$SearchQueryCopyWith<_SearchQuery> get copyWith =>
-      __$SearchQueryCopyWithImpl<_SearchQuery>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      indexPath,
+      accessKey,
+      limit,
+      text,
+      const DeepCollectionEquality().hash(_filters),
+      const DeepCollectionEquality().hash(_select),
+      const DeepCollectionEquality().hash(_searchFields),
+      cursor);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchQueryImplCopyWith<_$SearchQueryImpl> get copyWith =>
+      __$$SearchQueryImplCopyWithImpl<_$SearchQueryImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SearchQueryToJson(this);
+    return _$$SearchQueryImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _SearchQuery implements SearchQuery {
   const factory _SearchQuery(
-      {required String indexPath,
-      required String accessKey,
-      required int limit,
-      required String text,
-      List<Field>? filters,
-      List<String>? select,
-      List<String>? searchFields,
-      String? cursor}) = _$_SearchQuery;
+      {required final String indexPath,
+      required final String accessKey,
+      required final int limit,
+      required final String text,
+      final List<Field>? filters,
+      final List<String>? select,
+      final List<String>? searchFields,
+      final String? cursor}) = _$SearchQueryImpl;
 
   factory _SearchQuery.fromJson(Map<String, dynamic> json) =
-      _$_SearchQuery.fromJson;
+      _$SearchQueryImpl.fromJson;
 
   @override
 
   /// IndexPath is the path of the index to search.
-  String get indexPath => throw _privateConstructorUsedError;
+  String get indexPath;
   @override
 
   /// AccessKey authenticates the request. Get an AccessKey from the
   /// AccessKeyService.GenerateKey method.
-  String get accessKey => throw _privateConstructorUsedError;
+  String get accessKey;
   @override
 
   /// Limit is the maximum number of search results to return. Smaller limits are
   /// faster.
-  int get limit => throw _privateConstructorUsedError;
+  int get limit;
   @override
 
   /// Text contains a phrase to search for.
-  String get text => throw _privateConstructorUsedError;
+  String get text;
   @override
 
   /// Filters are a list of where filters to apply when performing the search.
-  List<Field>? get filters => throw _privateConstructorUsedError;
+  List<Field>? get filters;
   @override
 
   /// Select lists the fields to get from the document. Filters are automatically
   /// included. To get search fields out, they must have been put with store set to
   /// true.
-  List<String>? get select => throw _privateConstructorUsedError;
+  List<String>? get select;
   @override
 
   /// SearchFields is a list of fields to search. If empty, all fields will be
   /// searched.
-  List<String>? get searchFields => throw _privateConstructorUsedError;
+  List<String>? get searchFields;
   @override
 
   /// Cursor is a encoded string from a previous Query, that you can use to get more
   /// results.
-  String? get cursor => throw _privateConstructorUsedError;
+  String? get cursor;
   @override
   @JsonKey(ignore: true)
-  _$SearchQueryCopyWith<_SearchQuery> get copyWith =>
+  _$$SearchQueryImplCopyWith<_$SearchQueryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

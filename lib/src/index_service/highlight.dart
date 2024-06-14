@@ -7,10 +7,8 @@ part 'highlight.g.dart';
 @freezed
 class Highlight with _$Highlight {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory Highlight(
       {
-
       ///  Field is the name of the field.
       required String field,
 
@@ -19,5 +17,5 @@ class Highlight with _$Highlight {
 
   /// Unmarshalls from json to Highlight
   factory Highlight.fromJson(Map<String, dynamic> json) =>
-      _$_$_HighlightFromJson(json);
+      _$HighlightFromJson(json);
 }

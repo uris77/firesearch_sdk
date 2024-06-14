@@ -8,10 +8,8 @@ part 'search_result.g.dart';
 @freezed
 class SearchResult with _$SearchResult {
   /// Default constructor
-  @JsonSerializable(explicitToJson: true)
   const factory SearchResult(
       {
-
       /// ID is the document identifier.
       required String id,
 
@@ -26,5 +24,5 @@ class SearchResult with _$SearchResult {
 
   /// Unmarshalls from json to SearchResult
   factory SearchResult.fromJson(Map<String, dynamic> json) =>
-      _$_$_SearchResultFromJson(json);
+      _$SearchResultFromJson(json);
 }

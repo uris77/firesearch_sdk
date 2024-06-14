@@ -8,10 +8,8 @@ part 'get_autocomplete_index_response.g.dart';
 @freezed
 class GetAutocompleteIndexResponse with _$GetAutocompleteIndexResponse {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory GetAutocompleteIndexResponse(
       {
-
       /// Index is the AutocompleteIndex that was created.
       AutocompleteIndex? index,
 
@@ -20,5 +18,5 @@ class GetAutocompleteIndexResponse with _$GetAutocompleteIndexResponse {
 
   /// Unmarshalls json to GetAutocompleteIndexResponse
   factory GetAutocompleteIndexResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_GetAutocompleteIndexResponseFromJson(json);
+      _$GetAutocompleteIndexResponseFromJson(json);
 }

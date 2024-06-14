@@ -6,15 +6,14 @@ part of 'generate_key_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GenerateKeyRequest _$_$_GenerateKeyRequestFromJson(
-    Map<String, dynamic> json) {
-  return _$_GenerateKeyRequest(
-    indexPathPrefix: json['indexPathPrefix'] as String?,
-  );
-}
+_$GenerateKeyRequestImpl _$$GenerateKeyRequestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GenerateKeyRequestImpl(
+      indexPathPrefix: json['indexPathPrefix'] as String?,
+    );
 
-Map<String, dynamic> _$_$_GenerateKeyRequestToJson(
-        _$_GenerateKeyRequest instance) =>
+Map<String, dynamic> _$$GenerateKeyRequestImplToJson(
+        _$GenerateKeyRequestImpl instance) =>
     <String, dynamic>{
       'indexPathPrefix': instance.indexPathPrefix,
     };

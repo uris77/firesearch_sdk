@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'generate_key_response.dart';
 
@@ -10,30 +12,11 @@ part of 'generate_key_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GenerateKeyResponse _$GenerateKeyResponseFromJson(Map<String, dynamic> json) {
   return _GenerateKeyResponse.fromJson(json);
 }
-
-/// @nodoc
-class _$GenerateKeyResponseTearOff {
-  const _$GenerateKeyResponseTearOff();
-
-  _GenerateKeyResponse call({required String accessKey, String? error}) {
-    return _GenerateKeyResponse(
-      accessKey: accessKey,
-      error: error,
-    );
-  }
-
-  GenerateKeyResponse fromJson(Map<String, Object> json) {
-    return GenerateKeyResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GenerateKeyResponse = _$GenerateKeyResponseTearOff();
 
 /// @nodoc
 mixin _$GenerateKeyResponse {
@@ -54,69 +37,71 @@ mixin _$GenerateKeyResponse {
 abstract class $GenerateKeyResponseCopyWith<$Res> {
   factory $GenerateKeyResponseCopyWith(
           GenerateKeyResponse value, $Res Function(GenerateKeyResponse) then) =
-      _$GenerateKeyResponseCopyWithImpl<$Res>;
+      _$GenerateKeyResponseCopyWithImpl<$Res, GenerateKeyResponse>;
+  @useResult
   $Res call({String accessKey, String? error});
 }
 
 /// @nodoc
-class _$GenerateKeyResponseCopyWithImpl<$Res>
+class _$GenerateKeyResponseCopyWithImpl<$Res, $Val extends GenerateKeyResponse>
     implements $GenerateKeyResponseCopyWith<$Res> {
   _$GenerateKeyResponseCopyWithImpl(this._value, this._then);
 
-  final GenerateKeyResponse _value;
   // ignore: unused_field
-  final $Res Function(GenerateKeyResponse) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? accessKey = freezed,
+    Object? accessKey = null,
     Object? error = freezed,
   }) {
     return _then(_value.copyWith(
-      accessKey: accessKey == freezed
+      accessKey: null == accessKey
           ? _value.accessKey
           : accessKey // ignore: cast_nullable_to_non_nullable
               as String,
-      error: error == freezed
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$GenerateKeyResponseCopyWith<$Res>
+abstract class _$$GenerateKeyResponseImplCopyWith<$Res>
     implements $GenerateKeyResponseCopyWith<$Res> {
-  factory _$GenerateKeyResponseCopyWith(_GenerateKeyResponse value,
-          $Res Function(_GenerateKeyResponse) then) =
-      __$GenerateKeyResponseCopyWithImpl<$Res>;
+  factory _$$GenerateKeyResponseImplCopyWith(_$GenerateKeyResponseImpl value,
+          $Res Function(_$GenerateKeyResponseImpl) then) =
+      __$$GenerateKeyResponseImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String accessKey, String? error});
 }
 
 /// @nodoc
-class __$GenerateKeyResponseCopyWithImpl<$Res>
-    extends _$GenerateKeyResponseCopyWithImpl<$Res>
-    implements _$GenerateKeyResponseCopyWith<$Res> {
-  __$GenerateKeyResponseCopyWithImpl(
-      _GenerateKeyResponse _value, $Res Function(_GenerateKeyResponse) _then)
-      : super(_value, (v) => _then(v as _GenerateKeyResponse));
+class __$$GenerateKeyResponseImplCopyWithImpl<$Res>
+    extends _$GenerateKeyResponseCopyWithImpl<$Res, _$GenerateKeyResponseImpl>
+    implements _$$GenerateKeyResponseImplCopyWith<$Res> {
+  __$$GenerateKeyResponseImplCopyWithImpl(_$GenerateKeyResponseImpl _value,
+      $Res Function(_$GenerateKeyResponseImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _GenerateKeyResponse get _value => super._value as _GenerateKeyResponse;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? accessKey = freezed,
+    Object? accessKey = null,
     Object? error = freezed,
   }) {
-    return _then(_GenerateKeyResponse(
-      accessKey: accessKey == freezed
+    return _then(_$GenerateKeyResponseImpl(
+      accessKey: null == accessKey
           ? _value.accessKey
           : accessKey // ignore: cast_nullable_to_non_nullable
               as String,
-      error: error == freezed
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -124,23 +109,21 @@ class __$GenerateKeyResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_GenerateKeyResponse implements _GenerateKeyResponse {
-  const _$_GenerateKeyResponse({required this.accessKey, this.error});
+@JsonSerializable()
+class _$GenerateKeyResponseImpl implements _GenerateKeyResponse {
+  const _$GenerateKeyResponseImpl({required this.accessKey, this.error});
 
-  factory _$_GenerateKeyResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_GenerateKeyResponseFromJson(json);
-
-  @override
+  factory _$GenerateKeyResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GenerateKeyResponseImplFromJson(json);
 
   /// AccessKey is the string that gets passed to `Search` and `Complete` methods to
   /// perform searches. Access keys are valid for 24 hours.
-  final String accessKey;
   @override
+  final String accessKey;
 
   /// Error is string explaining what went wrong. Empty if everything was fine.
+  @override
   final String? error;
 
   @override
@@ -149,52 +132,53 @@ class _$_GenerateKeyResponse implements _GenerateKeyResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _GenerateKeyResponse &&
+        (other.runtimeType == runtimeType &&
+            other is _$GenerateKeyResponseImpl &&
             (identical(other.accessKey, accessKey) ||
-                const DeepCollectionEquality()
-                    .equals(other.accessKey, accessKey)) &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+                other.accessKey == accessKey) &&
+            (identical(other.error, error) || other.error == error));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(accessKey) ^
-      const DeepCollectionEquality().hash(error);
 
   @JsonKey(ignore: true)
   @override
-  _$GenerateKeyResponseCopyWith<_GenerateKeyResponse> get copyWith =>
-      __$GenerateKeyResponseCopyWithImpl<_GenerateKeyResponse>(
+  int get hashCode => Object.hash(runtimeType, accessKey, error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GenerateKeyResponseImplCopyWith<_$GenerateKeyResponseImpl> get copyWith =>
+      __$$GenerateKeyResponseImplCopyWithImpl<_$GenerateKeyResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GenerateKeyResponseToJson(this);
+    return _$$GenerateKeyResponseImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _GenerateKeyResponse implements GenerateKeyResponse {
   const factory _GenerateKeyResponse(
-      {required String accessKey, String? error}) = _$_GenerateKeyResponse;
+      {required final String accessKey,
+      final String? error}) = _$GenerateKeyResponseImpl;
 
   factory _GenerateKeyResponse.fromJson(Map<String, dynamic> json) =
-      _$_GenerateKeyResponse.fromJson;
+      _$GenerateKeyResponseImpl.fromJson;
 
   @override
 
   /// AccessKey is the string that gets passed to `Search` and `Complete` methods to
   /// perform searches. Access keys are valid for 24 hours.
-  String get accessKey => throw _privateConstructorUsedError;
+  String get accessKey;
   @override
 
   /// Error is string explaining what went wrong. Empty if everything was fine.
-  String? get error => throw _privateConstructorUsedError;
+  String? get error;
   @override
   @JsonKey(ignore: true)
-  _$GenerateKeyResponseCopyWith<_GenerateKeyResponse> get copyWith =>
+  _$$GenerateKeyResponseImplCopyWith<_$GenerateKeyResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

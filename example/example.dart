@@ -16,7 +16,7 @@ final headers = {
   'Authorization': 'Bearer <A JWT TOKEN FOR AUTHENTICATION>'
 };
 
-void doSearch() async {
+Future<SearchResponse> doSearch() async {
   var accessKey = await http.get(
       Uri.https('https://firesearch.example.com', '/api/accessKey'),
       headers: headers);
@@ -31,4 +31,5 @@ void doSearch() async {
     text: 'text you are searching for',
   ));
   var response = await indexService.search(searchRequest);
+  return response;
 }

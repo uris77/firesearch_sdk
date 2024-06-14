@@ -7,13 +7,12 @@ part 'delete_autocomplete_doc_response.g.dart';
 @freezed
 class DeleteAutocompleteDocResponse with _$DeleteAutocompleteDocResponse {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory DeleteAutocompleteDocResponse(
       {
-
       /// Error is string explaining what went wrong. Empty if everything was fine.
       @Default('') String? error}) = _DeleteAutocompleteDocResponse;
 
+  /// Deserialize
   factory DeleteAutocompleteDocResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeleteAutocompleteDocResponseFromJson(json);
+      _$DeleteAutocompleteDocResponseFromJson(json);
 }

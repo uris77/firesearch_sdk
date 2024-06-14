@@ -6,14 +6,13 @@ part of 'field.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Field _$_$_FieldFromJson(Map<String, dynamic> json) {
-  return _$_Field(
-    key: json['key'] as String,
-    value: json['value'],
-  );
-}
+_$FieldImpl _$$FieldImplFromJson(Map<String, dynamic> json) => _$FieldImpl(
+      key: json['key'] as String,
+      value: json['value'],
+    );
 
-Map<String, dynamic> _$_$_FieldToJson(_$_Field instance) => <String, dynamic>{
+Map<String, dynamic> _$$FieldImplToJson(_$FieldImpl instance) =>
+    <String, dynamic>{
       'key': instance.key,
       'value': instance.value,
     };

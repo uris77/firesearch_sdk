@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'check_index_path_request.dart';
 
@@ -10,30 +12,12 @@ part of 'check_index_path_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CheckIndexPathRequest _$CheckIndexPathRequestFromJson(
     Map<String, dynamic> json) {
   return _CheckIndexPathRequest.fromJson(json);
 }
-
-/// @nodoc
-class _$CheckIndexPathRequestTearOff {
-  const _$CheckIndexPathRequestTearOff();
-
-  _CheckIndexPathRequest call({required String indexPath}) {
-    return _CheckIndexPathRequest(
-      indexPath: indexPath,
-    );
-  }
-
-  CheckIndexPathRequest fromJson(Map<String, Object> json) {
-    return CheckIndexPathRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CheckIndexPathRequest = _$CheckIndexPathRequestTearOff();
 
 /// @nodoc
 mixin _$CheckIndexPathRequest {
@@ -50,59 +34,64 @@ mixin _$CheckIndexPathRequest {
 abstract class $CheckIndexPathRequestCopyWith<$Res> {
   factory $CheckIndexPathRequestCopyWith(CheckIndexPathRequest value,
           $Res Function(CheckIndexPathRequest) then) =
-      _$CheckIndexPathRequestCopyWithImpl<$Res>;
+      _$CheckIndexPathRequestCopyWithImpl<$Res, CheckIndexPathRequest>;
+  @useResult
   $Res call({String indexPath});
 }
 
 /// @nodoc
-class _$CheckIndexPathRequestCopyWithImpl<$Res>
+class _$CheckIndexPathRequestCopyWithImpl<$Res,
+        $Val extends CheckIndexPathRequest>
     implements $CheckIndexPathRequestCopyWith<$Res> {
   _$CheckIndexPathRequestCopyWithImpl(this._value, this._then);
 
-  final CheckIndexPathRequest _value;
   // ignore: unused_field
-  final $Res Function(CheckIndexPathRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexPath = freezed,
+    Object? indexPath = null,
   }) {
     return _then(_value.copyWith(
-      indexPath: indexPath == freezed
+      indexPath: null == indexPath
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$CheckIndexPathRequestCopyWith<$Res>
+abstract class _$$CheckIndexPathRequestImplCopyWith<$Res>
     implements $CheckIndexPathRequestCopyWith<$Res> {
-  factory _$CheckIndexPathRequestCopyWith(_CheckIndexPathRequest value,
-          $Res Function(_CheckIndexPathRequest) then) =
-      __$CheckIndexPathRequestCopyWithImpl<$Res>;
+  factory _$$CheckIndexPathRequestImplCopyWith(
+          _$CheckIndexPathRequestImpl value,
+          $Res Function(_$CheckIndexPathRequestImpl) then) =
+      __$$CheckIndexPathRequestImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String indexPath});
 }
 
 /// @nodoc
-class __$CheckIndexPathRequestCopyWithImpl<$Res>
-    extends _$CheckIndexPathRequestCopyWithImpl<$Res>
-    implements _$CheckIndexPathRequestCopyWith<$Res> {
-  __$CheckIndexPathRequestCopyWithImpl(_CheckIndexPathRequest _value,
-      $Res Function(_CheckIndexPathRequest) _then)
-      : super(_value, (v) => _then(v as _CheckIndexPathRequest));
+class __$$CheckIndexPathRequestImplCopyWithImpl<$Res>
+    extends _$CheckIndexPathRequestCopyWithImpl<$Res,
+        _$CheckIndexPathRequestImpl>
+    implements _$$CheckIndexPathRequestImplCopyWith<$Res> {
+  __$$CheckIndexPathRequestImplCopyWithImpl(_$CheckIndexPathRequestImpl _value,
+      $Res Function(_$CheckIndexPathRequestImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _CheckIndexPathRequest get _value => super._value as _CheckIndexPathRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexPath = freezed,
+    Object? indexPath = null,
   }) {
-    return _then(_CheckIndexPathRequest(
-      indexPath: indexPath == freezed
+    return _then(_$CheckIndexPathRequestImpl(
+      indexPath: null == indexPath
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
@@ -110,18 +99,16 @@ class __$CheckIndexPathRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_CheckIndexPathRequest implements _CheckIndexPathRequest {
-  const _$_CheckIndexPathRequest({required this.indexPath});
+@JsonSerializable()
+class _$CheckIndexPathRequestImpl implements _CheckIndexPathRequest {
+  const _$CheckIndexPathRequestImpl({required this.indexPath});
 
-  factory _$_CheckIndexPathRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_CheckIndexPathRequestFromJson(json);
-
-  @override
+  factory _$CheckIndexPathRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CheckIndexPathRequestImplFromJson(json);
 
   /// The index path we are requesting
+  @override
   final String indexPath;
 
   @override
@@ -130,43 +117,46 @@ class _$_CheckIndexPathRequest implements _CheckIndexPathRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _CheckIndexPathRequest &&
+        (other.runtimeType == runtimeType &&
+            other is _$CheckIndexPathRequestImpl &&
             (identical(other.indexPath, indexPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.indexPath, indexPath)));
+                other.indexPath == indexPath));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(indexPath);
 
   @JsonKey(ignore: true)
   @override
-  _$CheckIndexPathRequestCopyWith<_CheckIndexPathRequest> get copyWith =>
-      __$CheckIndexPathRequestCopyWithImpl<_CheckIndexPathRequest>(
-          this, _$identity);
+  int get hashCode => Object.hash(runtimeType, indexPath);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CheckIndexPathRequestImplCopyWith<_$CheckIndexPathRequestImpl>
+      get copyWith => __$$CheckIndexPathRequestImplCopyWithImpl<
+          _$CheckIndexPathRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CheckIndexPathRequestToJson(this);
+    return _$$CheckIndexPathRequestImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _CheckIndexPathRequest implements CheckIndexPathRequest {
-  const factory _CheckIndexPathRequest({required String indexPath}) =
-      _$_CheckIndexPathRequest;
+  const factory _CheckIndexPathRequest({required final String indexPath}) =
+      _$CheckIndexPathRequestImpl;
 
   factory _CheckIndexPathRequest.fromJson(Map<String, dynamic> json) =
-      _$_CheckIndexPathRequest.fromJson;
+      _$CheckIndexPathRequestImpl.fromJson;
 
   @override
 
   /// The index path we are requesting
-  String get indexPath => throw _privateConstructorUsedError;
+  String get indexPath;
   @override
   @JsonKey(ignore: true)
-  _$CheckIndexPathRequestCopyWith<_CheckIndexPathRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CheckIndexPathRequestImplCopyWith<_$CheckIndexPathRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

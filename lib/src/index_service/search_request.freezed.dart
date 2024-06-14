@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'search_request.dart';
 
@@ -10,29 +12,11 @@ part of 'search_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SearchRequest _$SearchRequestFromJson(Map<String, dynamic> json) {
   return _SearchRequest.fromJson(json);
 }
-
-/// @nodoc
-class _$SearchRequestTearOff {
-  const _$SearchRequestTearOff();
-
-  _SearchRequest call({required SearchQuery query}) {
-    return _SearchRequest(
-      query: query,
-    );
-  }
-
-  SearchRequest fromJson(Map<String, Object> json) {
-    return SearchRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SearchRequest = _$SearchRequestTearOff();
 
 /// @nodoc
 mixin _$SearchRequest {
@@ -49,48 +33,53 @@ mixin _$SearchRequest {
 abstract class $SearchRequestCopyWith<$Res> {
   factory $SearchRequestCopyWith(
           SearchRequest value, $Res Function(SearchRequest) then) =
-      _$SearchRequestCopyWithImpl<$Res>;
+      _$SearchRequestCopyWithImpl<$Res, SearchRequest>;
+  @useResult
   $Res call({SearchQuery query});
 
   $SearchQueryCopyWith<$Res> get query;
 }
 
 /// @nodoc
-class _$SearchRequestCopyWithImpl<$Res>
+class _$SearchRequestCopyWithImpl<$Res, $Val extends SearchRequest>
     implements $SearchRequestCopyWith<$Res> {
   _$SearchRequestCopyWithImpl(this._value, this._then);
 
-  final SearchRequest _value;
   // ignore: unused_field
-  final $Res Function(SearchRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? query = freezed,
+    Object? query = null,
   }) {
     return _then(_value.copyWith(
-      query: query == freezed
+      query: null == query
           ? _value.query
           : query // ignore: cast_nullable_to_non_nullable
               as SearchQuery,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SearchQueryCopyWith<$Res> get query {
     return $SearchQueryCopyWith<$Res>(_value.query, (value) {
-      return _then(_value.copyWith(query: value));
+      return _then(_value.copyWith(query: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$SearchRequestCopyWith<$Res>
+abstract class _$$SearchRequestImplCopyWith<$Res>
     implements $SearchRequestCopyWith<$Res> {
-  factory _$SearchRequestCopyWith(
-          _SearchRequest value, $Res Function(_SearchRequest) then) =
-      __$SearchRequestCopyWithImpl<$Res>;
+  factory _$$SearchRequestImplCopyWith(
+          _$SearchRequestImpl value, $Res Function(_$SearchRequestImpl) then) =
+      __$$SearchRequestImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({SearchQuery query});
 
   @override
@@ -98,22 +87,20 @@ abstract class _$SearchRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SearchRequestCopyWithImpl<$Res>
-    extends _$SearchRequestCopyWithImpl<$Res>
-    implements _$SearchRequestCopyWith<$Res> {
-  __$SearchRequestCopyWithImpl(
-      _SearchRequest _value, $Res Function(_SearchRequest) _then)
-      : super(_value, (v) => _then(v as _SearchRequest));
+class __$$SearchRequestImplCopyWithImpl<$Res>
+    extends _$SearchRequestCopyWithImpl<$Res, _$SearchRequestImpl>
+    implements _$$SearchRequestImplCopyWith<$Res> {
+  __$$SearchRequestImplCopyWithImpl(
+      _$SearchRequestImpl _value, $Res Function(_$SearchRequestImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _SearchRequest get _value => super._value as _SearchRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? query = freezed,
+    Object? query = null,
   }) {
-    return _then(_SearchRequest(
-      query: query == freezed
+    return _then(_$SearchRequestImpl(
+      query: null == query
           ? _value.query
           : query // ignore: cast_nullable_to_non_nullable
               as SearchQuery,
@@ -121,18 +108,17 @@ class __$SearchRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_SearchRequest implements _SearchRequest {
-  const _$_SearchRequest({required this.query});
 
-  factory _$_SearchRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_SearchRequestFromJson(json);
+@JsonSerializable(explicitToJson: true)
+class _$SearchRequestImpl implements _SearchRequest {
+  const _$SearchRequestImpl({required this.query});
 
-  @override
+  factory _$SearchRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SearchRequestImplFromJson(json);
 
   /// Query is the SearchQuery to perform.
+  @override
   final SearchQuery query;
 
   @override
@@ -141,40 +127,44 @@ class _$_SearchRequest implements _SearchRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _SearchRequest &&
-            (identical(other.query, query) ||
-                const DeepCollectionEquality().equals(other.query, query)));
+        (other.runtimeType == runtimeType &&
+            other is _$SearchRequestImpl &&
+            (identical(other.query, query) || other.query == query));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(query);
 
   @JsonKey(ignore: true)
   @override
-  _$SearchRequestCopyWith<_SearchRequest> get copyWith =>
-      __$SearchRequestCopyWithImpl<_SearchRequest>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, query);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchRequestImplCopyWith<_$SearchRequestImpl> get copyWith =>
+      __$$SearchRequestImplCopyWithImpl<_$SearchRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SearchRequestToJson(this);
+    return _$$SearchRequestImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _SearchRequest implements SearchRequest {
-  const factory _SearchRequest({required SearchQuery query}) = _$_SearchRequest;
+  const factory _SearchRequest({required final SearchQuery query}) =
+      _$SearchRequestImpl;
 
   factory _SearchRequest.fromJson(Map<String, dynamic> json) =
-      _$_SearchRequest.fromJson;
+      _$SearchRequestImpl.fromJson;
 
   @override
 
   /// Query is the SearchQuery to perform.
-  SearchQuery get query => throw _privateConstructorUsedError;
+  SearchQuery get query;
   @override
   @JsonKey(ignore: true)
-  _$SearchRequestCopyWith<_SearchRequest> get copyWith =>
+  _$$SearchRequestImplCopyWith<_$SearchRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -7,14 +7,12 @@ part 'put_doc_response.g.dart';
 @freezed
 class PutDocResponse with _$PutDocResponse {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory PutDocResponse(
       {
-
       /// Error is string explaining what went wrong. Empty if everything was fine.
       @Default('') String? error}) = _PutDocResponse;
 
   /// Unmarshalls from json to PutDocResponse
   factory PutDocResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_PutDocResponseFromJson(json);
+      _$PutDocResponseFromJson(json);
 }

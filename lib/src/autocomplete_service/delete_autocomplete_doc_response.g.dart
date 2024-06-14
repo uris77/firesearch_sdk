@@ -6,15 +6,14 @@ part of 'delete_autocomplete_doc_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DeleteAutocompleteDocResponse _$_$_DeleteAutocompleteDocResponseFromJson(
-    Map<String, dynamic> json) {
-  return _$_DeleteAutocompleteDocResponse(
-    error: json['error'] as String? ?? '',
-  );
-}
+_$DeleteAutocompleteDocResponseImpl
+    _$$DeleteAutocompleteDocResponseImplFromJson(Map<String, dynamic> json) =>
+        _$DeleteAutocompleteDocResponseImpl(
+          error: json['error'] as String? ?? '',
+        );
 
-Map<String, dynamic> _$_$_DeleteAutocompleteDocResponseToJson(
-        _$_DeleteAutocompleteDocResponse instance) =>
+Map<String, dynamic> _$$DeleteAutocompleteDocResponseImplToJson(
+        _$DeleteAutocompleteDocResponseImpl instance) =>
     <String, dynamic>{
       'error': instance.error,
     };

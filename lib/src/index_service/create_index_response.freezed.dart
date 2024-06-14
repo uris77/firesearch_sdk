@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'create_index_response.dart';
 
@@ -10,30 +12,11 @@ part of 'create_index_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CreateIndexResponse _$CreateIndexResponseFromJson(Map<String, dynamic> json) {
   return _CreateIndexResponse.fromJson(json);
 }
-
-/// @nodoc
-class _$CreateIndexResponseTearOff {
-  const _$CreateIndexResponseTearOff();
-
-  _CreateIndexResponse call({Index? index, String? error = ''}) {
-    return _CreateIndexResponse(
-      index: index,
-      error: error,
-    );
-  }
-
-  CreateIndexResponse fromJson(Map<String, Object> json) {
-    return CreateIndexResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CreateIndexResponse = _$CreateIndexResponseTearOff();
 
 /// @nodoc
 mixin _$CreateIndexResponse {
@@ -53,57 +36,62 @@ mixin _$CreateIndexResponse {
 abstract class $CreateIndexResponseCopyWith<$Res> {
   factory $CreateIndexResponseCopyWith(
           CreateIndexResponse value, $Res Function(CreateIndexResponse) then) =
-      _$CreateIndexResponseCopyWithImpl<$Res>;
+      _$CreateIndexResponseCopyWithImpl<$Res, CreateIndexResponse>;
+  @useResult
   $Res call({Index? index, String? error});
 
   $IndexCopyWith<$Res>? get index;
 }
 
 /// @nodoc
-class _$CreateIndexResponseCopyWithImpl<$Res>
+class _$CreateIndexResponseCopyWithImpl<$Res, $Val extends CreateIndexResponse>
     implements $CreateIndexResponseCopyWith<$Res> {
   _$CreateIndexResponseCopyWithImpl(this._value, this._then);
 
-  final CreateIndexResponse _value;
   // ignore: unused_field
-  final $Res Function(CreateIndexResponse) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? index = freezed,
     Object? error = freezed,
   }) {
     return _then(_value.copyWith(
-      index: index == freezed
+      index: freezed == index
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
               as Index?,
-      error: error == freezed
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IndexCopyWith<$Res>? get index {
     if (_value.index == null) {
       return null;
     }
 
     return $IndexCopyWith<$Res>(_value.index!, (value) {
-      return _then(_value.copyWith(index: value));
+      return _then(_value.copyWith(index: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$CreateIndexResponseCopyWith<$Res>
+abstract class _$$CreateIndexResponseImplCopyWith<$Res>
     implements $CreateIndexResponseCopyWith<$Res> {
-  factory _$CreateIndexResponseCopyWith(_CreateIndexResponse value,
-          $Res Function(_CreateIndexResponse) then) =
-      __$CreateIndexResponseCopyWithImpl<$Res>;
+  factory _$$CreateIndexResponseImplCopyWith(_$CreateIndexResponseImpl value,
+          $Res Function(_$CreateIndexResponseImpl) then) =
+      __$$CreateIndexResponseImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Index? index, String? error});
 
   @override
@@ -111,27 +99,25 @@ abstract class _$CreateIndexResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CreateIndexResponseCopyWithImpl<$Res>
-    extends _$CreateIndexResponseCopyWithImpl<$Res>
-    implements _$CreateIndexResponseCopyWith<$Res> {
-  __$CreateIndexResponseCopyWithImpl(
-      _CreateIndexResponse _value, $Res Function(_CreateIndexResponse) _then)
-      : super(_value, (v) => _then(v as _CreateIndexResponse));
+class __$$CreateIndexResponseImplCopyWithImpl<$Res>
+    extends _$CreateIndexResponseCopyWithImpl<$Res, _$CreateIndexResponseImpl>
+    implements _$$CreateIndexResponseImplCopyWith<$Res> {
+  __$$CreateIndexResponseImplCopyWithImpl(_$CreateIndexResponseImpl _value,
+      $Res Function(_$CreateIndexResponseImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _CreateIndexResponse get _value => super._value as _CreateIndexResponse;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? index = freezed,
     Object? error = freezed,
   }) {
-    return _then(_CreateIndexResponse(
-      index: index == freezed
+    return _then(_$CreateIndexResponseImpl(
+      index: freezed == index
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
               as Index?,
-      error: error == freezed
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -139,23 +125,21 @@ class __$CreateIndexResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_CreateIndexResponse implements _CreateIndexResponse {
-  const _$_CreateIndexResponse({this.index, this.error = ''});
+@JsonSerializable()
+class _$CreateIndexResponseImpl implements _CreateIndexResponse {
+  const _$CreateIndexResponseImpl({this.index, this.error = ''});
 
-  factory _$_CreateIndexResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_CreateIndexResponseFromJson(json);
-
-  @override
+  factory _$CreateIndexResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CreateIndexResponseImplFromJson(json);
 
   /// Index is the Index that was created
-  final Index? index;
-  @JsonKey(defaultValue: '')
   @override
+  final Index? index;
 
   /// Error is string explaining what went wrong. Empty if everything was fine.
+  @override
+  @JsonKey()
   final String? error;
 
   @override
@@ -164,50 +148,50 @@ class _$_CreateIndexResponse implements _CreateIndexResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _CreateIndexResponse &&
-            (identical(other.index, index) ||
-                const DeepCollectionEquality().equals(other.index, index)) &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$CreateIndexResponseImpl &&
+            (identical(other.index, index) || other.index == index) &&
+            (identical(other.error, error) || other.error == error));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(index) ^
-      const DeepCollectionEquality().hash(error);
 
   @JsonKey(ignore: true)
   @override
-  _$CreateIndexResponseCopyWith<_CreateIndexResponse> get copyWith =>
-      __$CreateIndexResponseCopyWithImpl<_CreateIndexResponse>(
+  int get hashCode => Object.hash(runtimeType, index, error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreateIndexResponseImplCopyWith<_$CreateIndexResponseImpl> get copyWith =>
+      __$$CreateIndexResponseImplCopyWithImpl<_$CreateIndexResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CreateIndexResponseToJson(this);
+    return _$$CreateIndexResponseImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _CreateIndexResponse implements CreateIndexResponse {
-  const factory _CreateIndexResponse({Index? index, String? error}) =
-      _$_CreateIndexResponse;
+  const factory _CreateIndexResponse(
+      {final Index? index, final String? error}) = _$CreateIndexResponseImpl;
 
   factory _CreateIndexResponse.fromJson(Map<String, dynamic> json) =
-      _$_CreateIndexResponse.fromJson;
+      _$CreateIndexResponseImpl.fromJson;
 
   @override
 
   /// Index is the Index that was created
-  Index? get index => throw _privateConstructorUsedError;
+  Index? get index;
   @override
 
   /// Error is string explaining what went wrong. Empty if everything was fine.
-  String? get error => throw _privateConstructorUsedError;
+  String? get error;
   @override
   @JsonKey(ignore: true)
-  _$CreateIndexResponseCopyWith<_CreateIndexResponse> get copyWith =>
+  _$$CreateIndexResponseImplCopyWith<_$CreateIndexResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,15 +6,14 @@ part of 'delete_autocomplete_index_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DeleteAutocompleteIndexResponse _$_$_DeleteAutocompleteIndexResponseFromJson(
-    Map<String, dynamic> json) {
-  return _$_DeleteAutocompleteIndexResponse(
-    error: json['error'] as String? ?? '',
-  );
-}
+_$DeleteAutocompleteIndexResponseImpl
+    _$$DeleteAutocompleteIndexResponseImplFromJson(Map<String, dynamic> json) =>
+        _$DeleteAutocompleteIndexResponseImpl(
+          error: json['error'] as String? ?? '',
+        );
 
-Map<String, dynamic> _$_$_DeleteAutocompleteIndexResponseToJson(
-        _$_DeleteAutocompleteIndexResponse instance) =>
+Map<String, dynamic> _$$DeleteAutocompleteIndexResponseImplToJson(
+        _$DeleteAutocompleteIndexResponseImpl instance) =>
     <String, dynamic>{
       'error': instance.error,
     };

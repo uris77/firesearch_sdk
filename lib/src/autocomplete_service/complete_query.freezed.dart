@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'complete_query.dart';
 
@@ -10,36 +12,11 @@ part of 'complete_query.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CompleteQuery _$CompleteQueryFromJson(Map<String, dynamic> json) {
   return _CompleteQuery.fromJson(json);
 }
-
-/// @nodoc
-class _$CompleteQueryTearOff {
-  const _$CompleteQueryTearOff();
-
-  _CompleteQuery call(
-      {required String indexPath,
-      required String accessKey,
-      required int limit,
-      required String text}) {
-    return _CompleteQuery(
-      indexPath: indexPath,
-      accessKey: accessKey,
-      limit: limit,
-      text: text,
-    );
-  }
-
-  CompleteQuery fromJson(Map<String, Object> json) {
-    return CompleteQuery.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CompleteQuery = _$CompleteQueryTearOff();
 
 /// @nodoc
 mixin _$CompleteQuery {
@@ -67,89 +44,91 @@ mixin _$CompleteQuery {
 abstract class $CompleteQueryCopyWith<$Res> {
   factory $CompleteQueryCopyWith(
           CompleteQuery value, $Res Function(CompleteQuery) then) =
-      _$CompleteQueryCopyWithImpl<$Res>;
+      _$CompleteQueryCopyWithImpl<$Res, CompleteQuery>;
+  @useResult
   $Res call({String indexPath, String accessKey, int limit, String text});
 }
 
 /// @nodoc
-class _$CompleteQueryCopyWithImpl<$Res>
+class _$CompleteQueryCopyWithImpl<$Res, $Val extends CompleteQuery>
     implements $CompleteQueryCopyWith<$Res> {
   _$CompleteQueryCopyWithImpl(this._value, this._then);
 
-  final CompleteQuery _value;
   // ignore: unused_field
-  final $Res Function(CompleteQuery) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexPath = freezed,
-    Object? accessKey = freezed,
-    Object? limit = freezed,
-    Object? text = freezed,
+    Object? indexPath = null,
+    Object? accessKey = null,
+    Object? limit = null,
+    Object? text = null,
   }) {
     return _then(_value.copyWith(
-      indexPath: indexPath == freezed
+      indexPath: null == indexPath
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
-      accessKey: accessKey == freezed
+      accessKey: null == accessKey
           ? _value.accessKey
           : accessKey // ignore: cast_nullable_to_non_nullable
               as String,
-      limit: limit == freezed
+      limit: null == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int,
-      text: text == freezed
+      text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$CompleteQueryCopyWith<$Res>
+abstract class _$$CompleteQueryImplCopyWith<$Res>
     implements $CompleteQueryCopyWith<$Res> {
-  factory _$CompleteQueryCopyWith(
-          _CompleteQuery value, $Res Function(_CompleteQuery) then) =
-      __$CompleteQueryCopyWithImpl<$Res>;
+  factory _$$CompleteQueryImplCopyWith(
+          _$CompleteQueryImpl value, $Res Function(_$CompleteQueryImpl) then) =
+      __$$CompleteQueryImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String indexPath, String accessKey, int limit, String text});
 }
 
 /// @nodoc
-class __$CompleteQueryCopyWithImpl<$Res>
-    extends _$CompleteQueryCopyWithImpl<$Res>
-    implements _$CompleteQueryCopyWith<$Res> {
-  __$CompleteQueryCopyWithImpl(
-      _CompleteQuery _value, $Res Function(_CompleteQuery) _then)
-      : super(_value, (v) => _then(v as _CompleteQuery));
+class __$$CompleteQueryImplCopyWithImpl<$Res>
+    extends _$CompleteQueryCopyWithImpl<$Res, _$CompleteQueryImpl>
+    implements _$$CompleteQueryImplCopyWith<$Res> {
+  __$$CompleteQueryImplCopyWithImpl(
+      _$CompleteQueryImpl _value, $Res Function(_$CompleteQueryImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _CompleteQuery get _value => super._value as _CompleteQuery;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexPath = freezed,
-    Object? accessKey = freezed,
-    Object? limit = freezed,
-    Object? text = freezed,
+    Object? indexPath = null,
+    Object? accessKey = null,
+    Object? limit = null,
+    Object? text = null,
   }) {
-    return _then(_CompleteQuery(
-      indexPath: indexPath == freezed
+    return _then(_$CompleteQueryImpl(
+      indexPath: null == indexPath
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
-      accessKey: accessKey == freezed
+      accessKey: null == accessKey
           ? _value.accessKey
           : accessKey // ignore: cast_nullable_to_non_nullable
               as String,
-      limit: limit == freezed
+      limit: null == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int,
-      text: text == freezed
+      text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
@@ -157,36 +136,34 @@ class __$CompleteQueryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_CompleteQuery implements _CompleteQuery {
-  const _$_CompleteQuery(
+@JsonSerializable()
+class _$CompleteQueryImpl implements _CompleteQuery {
+  const _$CompleteQueryImpl(
       {required this.indexPath,
       required this.accessKey,
       required this.limit,
       required this.text});
 
-  factory _$_CompleteQuery.fromJson(Map<String, dynamic> json) =>
-      _$_$_CompleteQueryFromJson(json);
-
-  @override
+  factory _$CompleteQueryImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CompleteQueryImplFromJson(json);
 
   /// IndexPath is the path of the index to search.
-  final String indexPath;
   @override
+  final String indexPath;
 
   /// AccessKey authenticates the request. Get an AccessKey from the
   /// AccessKeyService.GenerateKey method.
-  final String accessKey;
   @override
+  final String accessKey;
 
   /// Limit is the maximum number of search results to return. Smaller limits are
   /// faster.
-  final int limit;
   @override
+  final int limit;
 
   /// Text contains a phrase to autocomplete.
+  @override
   final String text;
 
   @override
@@ -195,70 +172,67 @@ class _$_CompleteQuery implements _CompleteQuery {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _CompleteQuery &&
+        (other.runtimeType == runtimeType &&
+            other is _$CompleteQueryImpl &&
             (identical(other.indexPath, indexPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.indexPath, indexPath)) &&
+                other.indexPath == indexPath) &&
             (identical(other.accessKey, accessKey) ||
-                const DeepCollectionEquality()
-                    .equals(other.accessKey, accessKey)) &&
-            (identical(other.limit, limit) ||
-                const DeepCollectionEquality().equals(other.limit, limit)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)));
+                other.accessKey == accessKey) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.text, text) || other.text == text));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(indexPath) ^
-      const DeepCollectionEquality().hash(accessKey) ^
-      const DeepCollectionEquality().hash(limit) ^
-      const DeepCollectionEquality().hash(text);
 
   @JsonKey(ignore: true)
   @override
-  _$CompleteQueryCopyWith<_CompleteQuery> get copyWith =>
-      __$CompleteQueryCopyWithImpl<_CompleteQuery>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, indexPath, accessKey, limit, text);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CompleteQueryImplCopyWith<_$CompleteQueryImpl> get copyWith =>
+      __$$CompleteQueryImplCopyWithImpl<_$CompleteQueryImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CompleteQueryToJson(this);
+    return _$$CompleteQueryImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _CompleteQuery implements CompleteQuery {
   const factory _CompleteQuery(
-      {required String indexPath,
-      required String accessKey,
-      required int limit,
-      required String text}) = _$_CompleteQuery;
+      {required final String indexPath,
+      required final String accessKey,
+      required final int limit,
+      required final String text}) = _$CompleteQueryImpl;
 
   factory _CompleteQuery.fromJson(Map<String, dynamic> json) =
-      _$_CompleteQuery.fromJson;
+      _$CompleteQueryImpl.fromJson;
 
   @override
 
   /// IndexPath is the path of the index to search.
-  String get indexPath => throw _privateConstructorUsedError;
+  String get indexPath;
   @override
 
   /// AccessKey authenticates the request. Get an AccessKey from the
   /// AccessKeyService.GenerateKey method.
-  String get accessKey => throw _privateConstructorUsedError;
+  String get accessKey;
   @override
 
   /// Limit is the maximum number of search results to return. Smaller limits are
   /// faster.
-  int get limit => throw _privateConstructorUsedError;
+  int get limit;
   @override
 
   /// Text contains a phrase to autocomplete.
-  String get text => throw _privateConstructorUsedError;
+  String get text;
   @override
   @JsonKey(ignore: true)
-  _$CompleteQueryCopyWith<_CompleteQuery> get copyWith =>
+  _$$CompleteQueryImplCopyWith<_$CompleteQueryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

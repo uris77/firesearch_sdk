@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'get_autocomplete_indexes_response.dart';
 
@@ -10,33 +12,12 @@ part of 'get_autocomplete_indexes_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetAutocompleteIndexesResponse _$GetAutocompleteIndexesResponseFromJson(
     Map<String, dynamic> json) {
   return _GetAutocompleteIndexesResponse.fromJson(json);
 }
-
-/// @nodoc
-class _$GetAutocompleteIndexesResponseTearOff {
-  const _$GetAutocompleteIndexesResponseTearOff();
-
-  _GetAutocompleteIndexesResponse call(
-      {List<AutocompleteIndex>? indexes, String? error = ''}) {
-    return _GetAutocompleteIndexesResponse(
-      indexes: indexes,
-      error: error,
-    );
-  }
-
-  GetAutocompleteIndexesResponse fromJson(Map<String, Object> json) {
-    return GetAutocompleteIndexesResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetAutocompleteIndexesResponse =
-    _$GetAutocompleteIndexesResponseTearOff();
 
 /// @nodoc
 mixin _$GetAutocompleteIndexesResponse {
@@ -57,72 +38,76 @@ abstract class $GetAutocompleteIndexesResponseCopyWith<$Res> {
   factory $GetAutocompleteIndexesResponseCopyWith(
           GetAutocompleteIndexesResponse value,
           $Res Function(GetAutocompleteIndexesResponse) then) =
-      _$GetAutocompleteIndexesResponseCopyWithImpl<$Res>;
+      _$GetAutocompleteIndexesResponseCopyWithImpl<$Res,
+          GetAutocompleteIndexesResponse>;
+  @useResult
   $Res call({List<AutocompleteIndex>? indexes, String? error});
 }
 
 /// @nodoc
-class _$GetAutocompleteIndexesResponseCopyWithImpl<$Res>
+class _$GetAutocompleteIndexesResponseCopyWithImpl<$Res,
+        $Val extends GetAutocompleteIndexesResponse>
     implements $GetAutocompleteIndexesResponseCopyWith<$Res> {
   _$GetAutocompleteIndexesResponseCopyWithImpl(this._value, this._then);
 
-  final GetAutocompleteIndexesResponse _value;
   // ignore: unused_field
-  final $Res Function(GetAutocompleteIndexesResponse) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? indexes = freezed,
     Object? error = freezed,
   }) {
     return _then(_value.copyWith(
-      indexes: indexes == freezed
+      indexes: freezed == indexes
           ? _value.indexes
           : indexes // ignore: cast_nullable_to_non_nullable
               as List<AutocompleteIndex>?,
-      error: error == freezed
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$GetAutocompleteIndexesResponseCopyWith<$Res>
+abstract class _$$GetAutocompleteIndexesResponseImplCopyWith<$Res>
     implements $GetAutocompleteIndexesResponseCopyWith<$Res> {
-  factory _$GetAutocompleteIndexesResponseCopyWith(
-          _GetAutocompleteIndexesResponse value,
-          $Res Function(_GetAutocompleteIndexesResponse) then) =
-      __$GetAutocompleteIndexesResponseCopyWithImpl<$Res>;
+  factory _$$GetAutocompleteIndexesResponseImplCopyWith(
+          _$GetAutocompleteIndexesResponseImpl value,
+          $Res Function(_$GetAutocompleteIndexesResponseImpl) then) =
+      __$$GetAutocompleteIndexesResponseImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<AutocompleteIndex>? indexes, String? error});
 }
 
 /// @nodoc
-class __$GetAutocompleteIndexesResponseCopyWithImpl<$Res>
-    extends _$GetAutocompleteIndexesResponseCopyWithImpl<$Res>
-    implements _$GetAutocompleteIndexesResponseCopyWith<$Res> {
-  __$GetAutocompleteIndexesResponseCopyWithImpl(
-      _GetAutocompleteIndexesResponse _value,
-      $Res Function(_GetAutocompleteIndexesResponse) _then)
-      : super(_value, (v) => _then(v as _GetAutocompleteIndexesResponse));
+class __$$GetAutocompleteIndexesResponseImplCopyWithImpl<$Res>
+    extends _$GetAutocompleteIndexesResponseCopyWithImpl<$Res,
+        _$GetAutocompleteIndexesResponseImpl>
+    implements _$$GetAutocompleteIndexesResponseImplCopyWith<$Res> {
+  __$$GetAutocompleteIndexesResponseImplCopyWithImpl(
+      _$GetAutocompleteIndexesResponseImpl _value,
+      $Res Function(_$GetAutocompleteIndexesResponseImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _GetAutocompleteIndexesResponse get _value =>
-      super._value as _GetAutocompleteIndexesResponse;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? indexes = freezed,
     Object? error = freezed,
   }) {
-    return _then(_GetAutocompleteIndexesResponse(
-      indexes: indexes == freezed
-          ? _value.indexes
+    return _then(_$GetAutocompleteIndexesResponseImpl(
+      indexes: freezed == indexes
+          ? _value._indexes
           : indexes // ignore: cast_nullable_to_non_nullable
               as List<AutocompleteIndex>?,
-      error: error == freezed
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -130,25 +115,34 @@ class __$GetAutocompleteIndexesResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
-class _$_GetAutocompleteIndexesResponse
+@JsonSerializable()
+class _$GetAutocompleteIndexesResponseImpl
     implements _GetAutocompleteIndexesResponse {
-  const _$_GetAutocompleteIndexesResponse({this.indexes, this.error = ''});
+  const _$GetAutocompleteIndexesResponseImpl(
+      {final List<AutocompleteIndex>? indexes, this.error = ''})
+      : _indexes = indexes;
 
-  factory _$_GetAutocompleteIndexesResponse.fromJson(
+  factory _$GetAutocompleteIndexesResponseImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_GetAutocompleteIndexesResponseFromJson(json);
-
-  @override
+      _$$GetAutocompleteIndexesResponseImplFromJson(json);
 
   /// Indexes are the indexes managed by this service.
-  final List<AutocompleteIndex>? indexes;
-  @JsonKey(defaultValue: '')
+  final List<AutocompleteIndex>? _indexes;
+
+  /// Indexes are the indexes managed by this service.
   @override
+  List<AutocompleteIndex>? get indexes {
+    final value = _indexes;
+    if (value == null) return null;
+    if (_indexes is EqualUnmodifiableListView) return _indexes;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   ///  Error is string explaining what went wrong. Empty if everything was fine.
+  @override
+  @JsonKey()
   final String? error;
 
   @override
@@ -157,53 +151,55 @@ class _$_GetAutocompleteIndexesResponse
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _GetAutocompleteIndexesResponse &&
-            (identical(other.indexes, indexes) ||
-                const DeepCollectionEquality()
-                    .equals(other.indexes, indexes)) &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$GetAutocompleteIndexesResponseImpl &&
+            const DeepCollectionEquality().equals(other._indexes, _indexes) &&
+            (identical(other.error, error) || other.error == error));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(indexes) ^
-      const DeepCollectionEquality().hash(error);
 
   @JsonKey(ignore: true)
   @override
-  _$GetAutocompleteIndexesResponseCopyWith<_GetAutocompleteIndexesResponse>
-      get copyWith => __$GetAutocompleteIndexesResponseCopyWithImpl<
-          _GetAutocompleteIndexesResponse>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_indexes), error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetAutocompleteIndexesResponseImplCopyWith<
+          _$GetAutocompleteIndexesResponseImpl>
+      get copyWith => __$$GetAutocompleteIndexesResponseImplCopyWithImpl<
+          _$GetAutocompleteIndexesResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GetAutocompleteIndexesResponseToJson(this);
+    return _$$GetAutocompleteIndexesResponseImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _GetAutocompleteIndexesResponse
     implements GetAutocompleteIndexesResponse {
   const factory _GetAutocompleteIndexesResponse(
-      {List<AutocompleteIndex>? indexes,
-      String? error}) = _$_GetAutocompleteIndexesResponse;
+      {final List<AutocompleteIndex>? indexes,
+      final String? error}) = _$GetAutocompleteIndexesResponseImpl;
 
   factory _GetAutocompleteIndexesResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetAutocompleteIndexesResponse.fromJson;
+      _$GetAutocompleteIndexesResponseImpl.fromJson;
 
   @override
 
   /// Indexes are the indexes managed by this service.
-  List<AutocompleteIndex>? get indexes => throw _privateConstructorUsedError;
+  List<AutocompleteIndex>? get indexes;
   @override
 
   ///  Error is string explaining what went wrong. Empty if everything was fine.
-  String? get error => throw _privateConstructorUsedError;
+  String? get error;
   @override
   @JsonKey(ignore: true)
-  _$GetAutocompleteIndexesResponseCopyWith<_GetAutocompleteIndexesResponse>
+  _$$GetAutocompleteIndexesResponseImplCopyWith<
+          _$GetAutocompleteIndexesResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

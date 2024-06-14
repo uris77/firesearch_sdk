@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'check_index_name_request.dart';
 
@@ -10,30 +12,12 @@ part of 'check_index_name_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CheckIndexNameRequest _$CheckIndexNameRequestFromJson(
     Map<String, dynamic> json) {
   return _CheckIndexNameRequest.fromJson(json);
 }
-
-/// @nodoc
-class _$CheckIndexNameRequestTearOff {
-  const _$CheckIndexNameRequestTearOff();
-
-  _CheckIndexNameRequest call({required String indexName}) {
-    return _CheckIndexNameRequest(
-      indexName: indexName,
-    );
-  }
-
-  CheckIndexNameRequest fromJson(Map<String, Object> json) {
-    return CheckIndexNameRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CheckIndexNameRequest = _$CheckIndexNameRequestTearOff();
 
 /// @nodoc
 mixin _$CheckIndexNameRequest {
@@ -50,59 +34,64 @@ mixin _$CheckIndexNameRequest {
 abstract class $CheckIndexNameRequestCopyWith<$Res> {
   factory $CheckIndexNameRequestCopyWith(CheckIndexNameRequest value,
           $Res Function(CheckIndexNameRequest) then) =
-      _$CheckIndexNameRequestCopyWithImpl<$Res>;
+      _$CheckIndexNameRequestCopyWithImpl<$Res, CheckIndexNameRequest>;
+  @useResult
   $Res call({String indexName});
 }
 
 /// @nodoc
-class _$CheckIndexNameRequestCopyWithImpl<$Res>
+class _$CheckIndexNameRequestCopyWithImpl<$Res,
+        $Val extends CheckIndexNameRequest>
     implements $CheckIndexNameRequestCopyWith<$Res> {
   _$CheckIndexNameRequestCopyWithImpl(this._value, this._then);
 
-  final CheckIndexNameRequest _value;
   // ignore: unused_field
-  final $Res Function(CheckIndexNameRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexName = freezed,
+    Object? indexName = null,
   }) {
     return _then(_value.copyWith(
-      indexName: indexName == freezed
+      indexName: null == indexName
           ? _value.indexName
           : indexName // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$CheckIndexNameRequestCopyWith<$Res>
+abstract class _$$CheckIndexNameRequestImplCopyWith<$Res>
     implements $CheckIndexNameRequestCopyWith<$Res> {
-  factory _$CheckIndexNameRequestCopyWith(_CheckIndexNameRequest value,
-          $Res Function(_CheckIndexNameRequest) then) =
-      __$CheckIndexNameRequestCopyWithImpl<$Res>;
+  factory _$$CheckIndexNameRequestImplCopyWith(
+          _$CheckIndexNameRequestImpl value,
+          $Res Function(_$CheckIndexNameRequestImpl) then) =
+      __$$CheckIndexNameRequestImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String indexName});
 }
 
 /// @nodoc
-class __$CheckIndexNameRequestCopyWithImpl<$Res>
-    extends _$CheckIndexNameRequestCopyWithImpl<$Res>
-    implements _$CheckIndexNameRequestCopyWith<$Res> {
-  __$CheckIndexNameRequestCopyWithImpl(_CheckIndexNameRequest _value,
-      $Res Function(_CheckIndexNameRequest) _then)
-      : super(_value, (v) => _then(v as _CheckIndexNameRequest));
+class __$$CheckIndexNameRequestImplCopyWithImpl<$Res>
+    extends _$CheckIndexNameRequestCopyWithImpl<$Res,
+        _$CheckIndexNameRequestImpl>
+    implements _$$CheckIndexNameRequestImplCopyWith<$Res> {
+  __$$CheckIndexNameRequestImplCopyWithImpl(_$CheckIndexNameRequestImpl _value,
+      $Res Function(_$CheckIndexNameRequestImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _CheckIndexNameRequest get _value => super._value as _CheckIndexNameRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexName = freezed,
+    Object? indexName = null,
   }) {
-    return _then(_CheckIndexNameRequest(
-      indexName: indexName == freezed
+    return _then(_$CheckIndexNameRequestImpl(
+      indexName: null == indexName
           ? _value.indexName
           : indexName // ignore: cast_nullable_to_non_nullable
               as String,
@@ -110,18 +99,16 @@ class __$CheckIndexNameRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_CheckIndexNameRequest implements _CheckIndexNameRequest {
-  const _$_CheckIndexNameRequest({required this.indexName});
+@JsonSerializable()
+class _$CheckIndexNameRequestImpl implements _CheckIndexNameRequest {
+  const _$CheckIndexNameRequestImpl({required this.indexName});
 
-  factory _$_CheckIndexNameRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_CheckIndexNameRequestFromJson(json);
-
-  @override
+  factory _$CheckIndexNameRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CheckIndexNameRequestImplFromJson(json);
 
   /// IndexName is the name of the index to check.
+  @override
   final String indexName;
 
   @override
@@ -130,43 +117,46 @@ class _$_CheckIndexNameRequest implements _CheckIndexNameRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _CheckIndexNameRequest &&
+        (other.runtimeType == runtimeType &&
+            other is _$CheckIndexNameRequestImpl &&
             (identical(other.indexName, indexName) ||
-                const DeepCollectionEquality()
-                    .equals(other.indexName, indexName)));
+                other.indexName == indexName));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(indexName);
 
   @JsonKey(ignore: true)
   @override
-  _$CheckIndexNameRequestCopyWith<_CheckIndexNameRequest> get copyWith =>
-      __$CheckIndexNameRequestCopyWithImpl<_CheckIndexNameRequest>(
-          this, _$identity);
+  int get hashCode => Object.hash(runtimeType, indexName);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CheckIndexNameRequestImplCopyWith<_$CheckIndexNameRequestImpl>
+      get copyWith => __$$CheckIndexNameRequestImplCopyWithImpl<
+          _$CheckIndexNameRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CheckIndexNameRequestToJson(this);
+    return _$$CheckIndexNameRequestImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _CheckIndexNameRequest implements CheckIndexNameRequest {
-  const factory _CheckIndexNameRequest({required String indexName}) =
-      _$_CheckIndexNameRequest;
+  const factory _CheckIndexNameRequest({required final String indexName}) =
+      _$CheckIndexNameRequestImpl;
 
   factory _CheckIndexNameRequest.fromJson(Map<String, dynamic> json) =
-      _$_CheckIndexNameRequest.fromJson;
+      _$CheckIndexNameRequestImpl.fromJson;
 
   @override
 
   /// IndexName is the name of the index to check.
-  String get indexName => throw _privateConstructorUsedError;
+  String get indexName;
   @override
   @JsonKey(ignore: true)
-  _$CheckIndexNameRequestCopyWith<_CheckIndexNameRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CheckIndexNameRequestImplCopyWith<_$CheckIndexNameRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

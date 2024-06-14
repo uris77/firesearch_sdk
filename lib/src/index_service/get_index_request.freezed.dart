@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'get_index_request.dart';
 
@@ -10,29 +12,11 @@ part of 'get_index_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetIndexRequest _$GetIndexRequestFromJson(Map<String, dynamic> json) {
   return _GetIndexRequest.fromJson(json);
 }
-
-/// @nodoc
-class _$GetIndexRequestTearOff {
-  const _$GetIndexRequestTearOff();
-
-  _GetIndexRequest call({required String indexPath}) {
-    return _GetIndexRequest(
-      indexPath: indexPath,
-    );
-  }
-
-  GetIndexRequest fromJson(Map<String, Object> json) {
-    return GetIndexRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetIndexRequest = _$GetIndexRequestTearOff();
 
 /// @nodoc
 mixin _$GetIndexRequest {
@@ -49,59 +33,61 @@ mixin _$GetIndexRequest {
 abstract class $GetIndexRequestCopyWith<$Res> {
   factory $GetIndexRequestCopyWith(
           GetIndexRequest value, $Res Function(GetIndexRequest) then) =
-      _$GetIndexRequestCopyWithImpl<$Res>;
+      _$GetIndexRequestCopyWithImpl<$Res, GetIndexRequest>;
+  @useResult
   $Res call({String indexPath});
 }
 
 /// @nodoc
-class _$GetIndexRequestCopyWithImpl<$Res>
+class _$GetIndexRequestCopyWithImpl<$Res, $Val extends GetIndexRequest>
     implements $GetIndexRequestCopyWith<$Res> {
   _$GetIndexRequestCopyWithImpl(this._value, this._then);
 
-  final GetIndexRequest _value;
   // ignore: unused_field
-  final $Res Function(GetIndexRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexPath = freezed,
+    Object? indexPath = null,
   }) {
     return _then(_value.copyWith(
-      indexPath: indexPath == freezed
+      indexPath: null == indexPath
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$GetIndexRequestCopyWith<$Res>
+abstract class _$$GetIndexRequestImplCopyWith<$Res>
     implements $GetIndexRequestCopyWith<$Res> {
-  factory _$GetIndexRequestCopyWith(
-          _GetIndexRequest value, $Res Function(_GetIndexRequest) then) =
-      __$GetIndexRequestCopyWithImpl<$Res>;
+  factory _$$GetIndexRequestImplCopyWith(_$GetIndexRequestImpl value,
+          $Res Function(_$GetIndexRequestImpl) then) =
+      __$$GetIndexRequestImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String indexPath});
 }
 
 /// @nodoc
-class __$GetIndexRequestCopyWithImpl<$Res>
-    extends _$GetIndexRequestCopyWithImpl<$Res>
-    implements _$GetIndexRequestCopyWith<$Res> {
-  __$GetIndexRequestCopyWithImpl(
-      _GetIndexRequest _value, $Res Function(_GetIndexRequest) _then)
-      : super(_value, (v) => _then(v as _GetIndexRequest));
+class __$$GetIndexRequestImplCopyWithImpl<$Res>
+    extends _$GetIndexRequestCopyWithImpl<$Res, _$GetIndexRequestImpl>
+    implements _$$GetIndexRequestImplCopyWith<$Res> {
+  __$$GetIndexRequestImplCopyWithImpl(
+      _$GetIndexRequestImpl _value, $Res Function(_$GetIndexRequestImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _GetIndexRequest get _value => super._value as _GetIndexRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexPath = freezed,
+    Object? indexPath = null,
   }) {
-    return _then(_GetIndexRequest(
-      indexPath: indexPath == freezed
+    return _then(_$GetIndexRequestImpl(
+      indexPath: null == indexPath
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
@@ -109,18 +95,16 @@ class __$GetIndexRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_GetIndexRequest implements _GetIndexRequest {
-  const _$_GetIndexRequest({required this.indexPath});
+@JsonSerializable()
+class _$GetIndexRequestImpl implements _GetIndexRequest {
+  const _$GetIndexRequestImpl({required this.indexPath});
 
-  factory _$_GetIndexRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_GetIndexRequestFromJson(json);
-
-  @override
+  factory _$GetIndexRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetIndexRequestImplFromJson(json);
 
   /// IndexPath is the collection path in Firestore that identifies an Index.
+  @override
   final String indexPath;
 
   @override
@@ -129,42 +113,46 @@ class _$_GetIndexRequest implements _GetIndexRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _GetIndexRequest &&
+        (other.runtimeType == runtimeType &&
+            other is _$GetIndexRequestImpl &&
             (identical(other.indexPath, indexPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.indexPath, indexPath)));
+                other.indexPath == indexPath));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(indexPath);
 
   @JsonKey(ignore: true)
   @override
-  _$GetIndexRequestCopyWith<_GetIndexRequest> get copyWith =>
-      __$GetIndexRequestCopyWithImpl<_GetIndexRequest>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, indexPath);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetIndexRequestImplCopyWith<_$GetIndexRequestImpl> get copyWith =>
+      __$$GetIndexRequestImplCopyWithImpl<_$GetIndexRequestImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GetIndexRequestToJson(this);
+    return _$$GetIndexRequestImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _GetIndexRequest implements GetIndexRequest {
-  const factory _GetIndexRequest({required String indexPath}) =
-      _$_GetIndexRequest;
+  const factory _GetIndexRequest({required final String indexPath}) =
+      _$GetIndexRequestImpl;
 
   factory _GetIndexRequest.fromJson(Map<String, dynamic> json) =
-      _$_GetIndexRequest.fromJson;
+      _$GetIndexRequestImpl.fromJson;
 
   @override
 
   /// IndexPath is the collection path in Firestore that identifies an Index.
-  String get indexPath => throw _privateConstructorUsedError;
+  String get indexPath;
   @override
   @JsonKey(ignore: true)
-  _$GetIndexRequestCopyWith<_GetIndexRequest> get copyWith =>
+  _$$GetIndexRequestImplCopyWith<_$GetIndexRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

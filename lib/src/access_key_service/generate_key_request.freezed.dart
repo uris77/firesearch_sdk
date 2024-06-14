@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'generate_key_request.dart';
 
@@ -10,29 +12,11 @@ part of 'generate_key_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GenerateKeyRequest _$GenerateKeyRequestFromJson(Map<String, dynamic> json) {
   return _GenerateKeyRequest.fromJson(json);
 }
-
-/// @nodoc
-class _$GenerateKeyRequestTearOff {
-  const _$GenerateKeyRequestTearOff();
-
-  _GenerateKeyRequest call({String? indexPathPrefix}) {
-    return _GenerateKeyRequest(
-      indexPathPrefix: indexPathPrefix,
-    );
-  }
-
-  GenerateKeyRequest fromJson(Map<String, Object> json) {
-    return GenerateKeyRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GenerateKeyRequest = _$GenerateKeyRequestTearOff();
 
 /// @nodoc
 mixin _$GenerateKeyRequest {
@@ -52,59 +36,61 @@ mixin _$GenerateKeyRequest {
 abstract class $GenerateKeyRequestCopyWith<$Res> {
   factory $GenerateKeyRequestCopyWith(
           GenerateKeyRequest value, $Res Function(GenerateKeyRequest) then) =
-      _$GenerateKeyRequestCopyWithImpl<$Res>;
+      _$GenerateKeyRequestCopyWithImpl<$Res, GenerateKeyRequest>;
+  @useResult
   $Res call({String? indexPathPrefix});
 }
 
 /// @nodoc
-class _$GenerateKeyRequestCopyWithImpl<$Res>
+class _$GenerateKeyRequestCopyWithImpl<$Res, $Val extends GenerateKeyRequest>
     implements $GenerateKeyRequestCopyWith<$Res> {
   _$GenerateKeyRequestCopyWithImpl(this._value, this._then);
 
-  final GenerateKeyRequest _value;
   // ignore: unused_field
-  final $Res Function(GenerateKeyRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? indexPathPrefix = freezed,
   }) {
     return _then(_value.copyWith(
-      indexPathPrefix: indexPathPrefix == freezed
+      indexPathPrefix: freezed == indexPathPrefix
           ? _value.indexPathPrefix
           : indexPathPrefix // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$GenerateKeyRequestCopyWith<$Res>
+abstract class _$$GenerateKeyRequestImplCopyWith<$Res>
     implements $GenerateKeyRequestCopyWith<$Res> {
-  factory _$GenerateKeyRequestCopyWith(
-          _GenerateKeyRequest value, $Res Function(_GenerateKeyRequest) then) =
-      __$GenerateKeyRequestCopyWithImpl<$Res>;
+  factory _$$GenerateKeyRequestImplCopyWith(_$GenerateKeyRequestImpl value,
+          $Res Function(_$GenerateKeyRequestImpl) then) =
+      __$$GenerateKeyRequestImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String? indexPathPrefix});
 }
 
 /// @nodoc
-class __$GenerateKeyRequestCopyWithImpl<$Res>
-    extends _$GenerateKeyRequestCopyWithImpl<$Res>
-    implements _$GenerateKeyRequestCopyWith<$Res> {
-  __$GenerateKeyRequestCopyWithImpl(
-      _GenerateKeyRequest _value, $Res Function(_GenerateKeyRequest) _then)
-      : super(_value, (v) => _then(v as _GenerateKeyRequest));
+class __$$GenerateKeyRequestImplCopyWithImpl<$Res>
+    extends _$GenerateKeyRequestCopyWithImpl<$Res, _$GenerateKeyRequestImpl>
+    implements _$$GenerateKeyRequestImplCopyWith<$Res> {
+  __$$GenerateKeyRequestImplCopyWithImpl(_$GenerateKeyRequestImpl _value,
+      $Res Function(_$GenerateKeyRequestImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _GenerateKeyRequest get _value => super._value as _GenerateKeyRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? indexPathPrefix = freezed,
   }) {
-    return _then(_GenerateKeyRequest(
-      indexPathPrefix: indexPathPrefix == freezed
+    return _then(_$GenerateKeyRequestImpl(
+      indexPathPrefix: freezed == indexPathPrefix
           ? _value.indexPathPrefix
           : indexPathPrefix // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -112,21 +98,19 @@ class __$GenerateKeyRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_GenerateKeyRequest implements _GenerateKeyRequest {
-  const _$_GenerateKeyRequest({this.indexPathPrefix});
+@JsonSerializable()
+class _$GenerateKeyRequestImpl implements _GenerateKeyRequest {
+  const _$GenerateKeyRequestImpl({this.indexPathPrefix});
 
-  factory _$_GenerateKeyRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_GenerateKeyRequestFromJson(json);
-
-  @override
+  factory _$GenerateKeyRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GenerateKeyRequestImplFromJson(json);
 
   /// IndexPathPrefix is the collection path prefix in Firestore to provide access
   /// for. For example, if you put the prefix "firesearch/orgs/my-org" you will be
   /// able to perform searches on both "firesearch/orgs/my-org/cards" and
   /// "firesearch/orgs/my-org/messages" indexes.
+  @override
   final String? indexPathPrefix;
 
   @override
@@ -135,36 +119,39 @@ class _$_GenerateKeyRequest implements _GenerateKeyRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _GenerateKeyRequest &&
+        (other.runtimeType == runtimeType &&
+            other is _$GenerateKeyRequestImpl &&
             (identical(other.indexPathPrefix, indexPathPrefix) ||
-                const DeepCollectionEquality()
-                    .equals(other.indexPathPrefix, indexPathPrefix)));
+                other.indexPathPrefix == indexPathPrefix));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(indexPathPrefix);
 
   @JsonKey(ignore: true)
   @override
-  _$GenerateKeyRequestCopyWith<_GenerateKeyRequest> get copyWith =>
-      __$GenerateKeyRequestCopyWithImpl<_GenerateKeyRequest>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, indexPathPrefix);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GenerateKeyRequestImplCopyWith<_$GenerateKeyRequestImpl> get copyWith =>
+      __$$GenerateKeyRequestImplCopyWithImpl<_$GenerateKeyRequestImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GenerateKeyRequestToJson(this);
+    return _$$GenerateKeyRequestImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _GenerateKeyRequest implements GenerateKeyRequest {
-  const factory _GenerateKeyRequest({String? indexPathPrefix}) =
-      _$_GenerateKeyRequest;
+  const factory _GenerateKeyRequest({final String? indexPathPrefix}) =
+      _$GenerateKeyRequestImpl;
 
   factory _GenerateKeyRequest.fromJson(Map<String, dynamic> json) =
-      _$_GenerateKeyRequest.fromJson;
+      _$GenerateKeyRequestImpl.fromJson;
 
   @override
 
@@ -172,9 +159,9 @@ abstract class _GenerateKeyRequest implements GenerateKeyRequest {
   /// for. For example, if you put the prefix "firesearch/orgs/my-org" you will be
   /// able to perform searches on both "firesearch/orgs/my-org/cards" and
   /// "firesearch/orgs/my-org/messages" indexes.
-  String? get indexPathPrefix => throw _privateConstructorUsedError;
+  String? get indexPathPrefix;
   @override
   @JsonKey(ignore: true)
-  _$GenerateKeyRequestCopyWith<_GenerateKeyRequest> get copyWith =>
+  _$$GenerateKeyRequestImplCopyWith<_$GenerateKeyRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

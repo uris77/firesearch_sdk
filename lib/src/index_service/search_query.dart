@@ -8,10 +8,8 @@ part 'search_query.g.dart';
 @freezed
 class SearchQuery with _$SearchQuery {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory SearchQuery(
       {
-
       /// IndexPath is the path of the index to search.
       required String indexPath,
 
@@ -44,5 +42,5 @@ class SearchQuery with _$SearchQuery {
 
   /// Unmarshalls from json to SeachQuery
   factory SearchQuery.fromJson(Map<String, dynamic> json) =>
-      _$_$_SearchQueryFromJson(json);
+      _$SearchQueryFromJson(json);
 }

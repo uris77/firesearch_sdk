@@ -6,15 +6,15 @@ part of 'delete_doc_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DeleteDocRequest _$_$_DeleteDocRequestFromJson(Map<String, dynamic> json) {
-  return _$_DeleteDocRequest(
-    indexPath: json['indexPath'] as String,
-    id: json['id'] as String,
-  );
-}
+_$DeleteDocRequestImpl _$$DeleteDocRequestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DeleteDocRequestImpl(
+      indexPath: json['indexPath'] as String,
+      id: json['id'] as String,
+    );
 
-Map<String, dynamic> _$_$_DeleteDocRequestToJson(
-        _$_DeleteDocRequest instance) =>
+Map<String, dynamic> _$$DeleteDocRequestImplToJson(
+        _$DeleteDocRequestImpl instance) =>
     <String, dynamic>{
       'indexPath': instance.indexPath,
       'id': instance.id,

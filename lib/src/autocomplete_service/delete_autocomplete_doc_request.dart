@@ -7,10 +7,8 @@ part 'delete_autocomplete_doc_request.g.dart';
 @freezed
 class DeleteAutocompleteDocRequest with _$DeleteAutocompleteDocRequest {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory DeleteAutocompleteDocRequest(
       {
-
       /// IndexPath is the AutocompleteIndex to delete from.
       required String indexPath,
 
@@ -19,5 +17,5 @@ class DeleteAutocompleteDocRequest with _$DeleteAutocompleteDocRequest {
 
   /// Unmarshalls from json to DeleteAutocompleteDocRequest
   factory DeleteAutocompleteDocRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeleteAutocompleteDocRequestFromJson(json);
+      _$DeleteAutocompleteDocRequestFromJson(json);
 }

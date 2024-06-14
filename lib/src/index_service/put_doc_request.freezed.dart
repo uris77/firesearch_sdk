@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'put_doc_request.dart';
 
@@ -10,30 +12,11 @@ part of 'put_doc_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PutDocRequest _$PutDocRequestFromJson(Map<String, dynamic> json) {
   return _PutDocRequest.fromJson(json);
 }
-
-/// @nodoc
-class _$PutDocRequestTearOff {
-  const _$PutDocRequestTearOff();
-
-  _PutDocRequest call({required String indexPath, required Doc doc}) {
-    return _PutDocRequest(
-      indexPath: indexPath,
-      doc: doc,
-    );
-  }
-
-  PutDocRequest fromJson(Map<String, Object> json) {
-    return PutDocRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PutDocRequest = _$PutDocRequestTearOff();
 
 /// @nodoc
 mixin _$PutDocRequest {
@@ -53,53 +36,58 @@ mixin _$PutDocRequest {
 abstract class $PutDocRequestCopyWith<$Res> {
   factory $PutDocRequestCopyWith(
           PutDocRequest value, $Res Function(PutDocRequest) then) =
-      _$PutDocRequestCopyWithImpl<$Res>;
+      _$PutDocRequestCopyWithImpl<$Res, PutDocRequest>;
+  @useResult
   $Res call({String indexPath, Doc doc});
 
   $DocCopyWith<$Res> get doc;
 }
 
 /// @nodoc
-class _$PutDocRequestCopyWithImpl<$Res>
+class _$PutDocRequestCopyWithImpl<$Res, $Val extends PutDocRequest>
     implements $PutDocRequestCopyWith<$Res> {
   _$PutDocRequestCopyWithImpl(this._value, this._then);
 
-  final PutDocRequest _value;
   // ignore: unused_field
-  final $Res Function(PutDocRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexPath = freezed,
-    Object? doc = freezed,
+    Object? indexPath = null,
+    Object? doc = null,
   }) {
     return _then(_value.copyWith(
-      indexPath: indexPath == freezed
+      indexPath: null == indexPath
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
-      doc: doc == freezed
+      doc: null == doc
           ? _value.doc
           : doc // ignore: cast_nullable_to_non_nullable
               as Doc,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $DocCopyWith<$Res> get doc {
     return $DocCopyWith<$Res>(_value.doc, (value) {
-      return _then(_value.copyWith(doc: value));
+      return _then(_value.copyWith(doc: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$PutDocRequestCopyWith<$Res>
+abstract class _$$PutDocRequestImplCopyWith<$Res>
     implements $PutDocRequestCopyWith<$Res> {
-  factory _$PutDocRequestCopyWith(
-          _PutDocRequest value, $Res Function(_PutDocRequest) then) =
-      __$PutDocRequestCopyWithImpl<$Res>;
+  factory _$$PutDocRequestImplCopyWith(
+          _$PutDocRequestImpl value, $Res Function(_$PutDocRequestImpl) then) =
+      __$$PutDocRequestImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String indexPath, Doc doc});
 
   @override
@@ -107,27 +95,25 @@ abstract class _$PutDocRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PutDocRequestCopyWithImpl<$Res>
-    extends _$PutDocRequestCopyWithImpl<$Res>
-    implements _$PutDocRequestCopyWith<$Res> {
-  __$PutDocRequestCopyWithImpl(
-      _PutDocRequest _value, $Res Function(_PutDocRequest) _then)
-      : super(_value, (v) => _then(v as _PutDocRequest));
+class __$$PutDocRequestImplCopyWithImpl<$Res>
+    extends _$PutDocRequestCopyWithImpl<$Res, _$PutDocRequestImpl>
+    implements _$$PutDocRequestImplCopyWith<$Res> {
+  __$$PutDocRequestImplCopyWithImpl(
+      _$PutDocRequestImpl _value, $Res Function(_$PutDocRequestImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _PutDocRequest get _value => super._value as _PutDocRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexPath = freezed,
-    Object? doc = freezed,
+    Object? indexPath = null,
+    Object? doc = null,
   }) {
-    return _then(_PutDocRequest(
-      indexPath: indexPath == freezed
+    return _then(_$PutDocRequestImpl(
+      indexPath: null == indexPath
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
-      doc: doc == freezed
+      doc: null == doc
           ? _value.doc
           : doc // ignore: cast_nullable_to_non_nullable
               as Doc,
@@ -135,22 +121,20 @@ class __$PutDocRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_PutDocRequest implements _PutDocRequest {
-  const _$_PutDocRequest({required this.indexPath, required this.doc});
+@JsonSerializable()
+class _$PutDocRequestImpl implements _PutDocRequest {
+  const _$PutDocRequestImpl({required this.indexPath, required this.doc});
 
-  factory _$_PutDocRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_PutDocRequestFromJson(json);
-
-  @override
+  factory _$PutDocRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PutDocRequestImplFromJson(json);
 
   /// IndexPath is the Index to put a document to.
-  final String indexPath;
   @override
+  final String indexPath;
 
   /// Doc is the document to put.
+  @override
   final Doc doc;
 
   @override
@@ -159,50 +143,51 @@ class _$_PutDocRequest implements _PutDocRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _PutDocRequest &&
+        (other.runtimeType == runtimeType &&
+            other is _$PutDocRequestImpl &&
             (identical(other.indexPath, indexPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.indexPath, indexPath)) &&
-            (identical(other.doc, doc) ||
-                const DeepCollectionEquality().equals(other.doc, doc)));
+                other.indexPath == indexPath) &&
+            (identical(other.doc, doc) || other.doc == doc));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(indexPath) ^
-      const DeepCollectionEquality().hash(doc);
 
   @JsonKey(ignore: true)
   @override
-  _$PutDocRequestCopyWith<_PutDocRequest> get copyWith =>
-      __$PutDocRequestCopyWithImpl<_PutDocRequest>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, indexPath, doc);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PutDocRequestImplCopyWith<_$PutDocRequestImpl> get copyWith =>
+      __$$PutDocRequestImplCopyWithImpl<_$PutDocRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PutDocRequestToJson(this);
+    return _$$PutDocRequestImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _PutDocRequest implements PutDocRequest {
-  const factory _PutDocRequest({required String indexPath, required Doc doc}) =
-      _$_PutDocRequest;
+  const factory _PutDocRequest(
+      {required final String indexPath,
+      required final Doc doc}) = _$PutDocRequestImpl;
 
   factory _PutDocRequest.fromJson(Map<String, dynamic> json) =
-      _$_PutDocRequest.fromJson;
+      _$PutDocRequestImpl.fromJson;
 
   @override
 
   /// IndexPath is the Index to put a document to.
-  String get indexPath => throw _privateConstructorUsedError;
+  String get indexPath;
   @override
 
   /// Doc is the document to put.
-  Doc get doc => throw _privateConstructorUsedError;
+  Doc get doc;
   @override
   @JsonKey(ignore: true)
-  _$PutDocRequestCopyWith<_PutDocRequest> get copyWith =>
+  _$$PutDocRequestImplCopyWith<_$PutDocRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

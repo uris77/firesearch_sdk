@@ -8,7 +8,6 @@ part 'search_response.g.dart';
 @freezed
 class SearchResponse with _$SearchResponse {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory SearchResponse({
     /// Query is the SearchQuery that generated these results.
     SearchQuery? searchQuery,
@@ -33,5 +32,5 @@ class SearchResponse with _$SearchResponse {
 
   /// Unmarshalls json to SearchResponse
   factory SearchResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_SearchResponseFromJson(json);
+      _$SearchResponseFromJson(json);
 }

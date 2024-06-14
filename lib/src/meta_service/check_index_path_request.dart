@@ -7,7 +7,6 @@ part 'check_index_path_request.g.dart';
 @freezed
 class CheckIndexPathRequest with _$CheckIndexPathRequest {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory CheckIndexPathRequest({
     /// The index path we are requesting
     required String indexPath,
@@ -15,5 +14,5 @@ class CheckIndexPathRequest with _$CheckIndexPathRequest {
 
   /// Unmarshalls json to CheckIndexPathRequest
   factory CheckIndexPathRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_CheckIndexPathRequestFromJson(json);
+      _$CheckIndexPathRequestFromJson(json);
 }

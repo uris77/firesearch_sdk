@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'search_result.dart';
 
@@ -10,36 +12,11 @@ part of 'search_result.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SearchResult _$SearchResultFromJson(Map<String, dynamic> json) {
   return _SearchResult.fromJson(json);
 }
-
-/// @nodoc
-class _$SearchResultTearOff {
-  const _$SearchResultTearOff();
-
-  _SearchResult call(
-      {required String id,
-      List<Field>? fields,
-      List<Highlight>? highlights,
-      int? score = 0}) {
-    return _SearchResult(
-      id: id,
-      fields: fields,
-      highlights: highlights,
-      score: score,
-    );
-  }
-
-  SearchResult fromJson(Map<String, Object> json) {
-    return SearchResult.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SearchResult = _$SearchResultTearOff();
 
 /// @nodoc
 mixin _$SearchResult {
@@ -65,7 +42,8 @@ mixin _$SearchResult {
 abstract class $SearchResultCopyWith<$Res> {
   factory $SearchResultCopyWith(
           SearchResult value, $Res Function(SearchResult) then) =
-      _$SearchResultCopyWithImpl<$Res>;
+      _$SearchResultCopyWithImpl<$Res, SearchResult>;
+  @useResult
   $Res call(
       {String id,
       List<Field>? fields,
@@ -74,48 +52,52 @@ abstract class $SearchResultCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SearchResultCopyWithImpl<$Res> implements $SearchResultCopyWith<$Res> {
+class _$SearchResultCopyWithImpl<$Res, $Val extends SearchResult>
+    implements $SearchResultCopyWith<$Res> {
   _$SearchResultCopyWithImpl(this._value, this._then);
 
-  final SearchResult _value;
   // ignore: unused_field
-  final $Res Function(SearchResult) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
     Object? fields = freezed,
     Object? highlights = freezed,
     Object? score = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      fields: fields == freezed
+      fields: freezed == fields
           ? _value.fields
           : fields // ignore: cast_nullable_to_non_nullable
               as List<Field>?,
-      highlights: highlights == freezed
+      highlights: freezed == highlights
           ? _value.highlights
           : highlights // ignore: cast_nullable_to_non_nullable
               as List<Highlight>?,
-      score: score == freezed
+      score: freezed == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as int?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$SearchResultCopyWith<$Res>
+abstract class _$$SearchResultImplCopyWith<$Res>
     implements $SearchResultCopyWith<$Res> {
-  factory _$SearchResultCopyWith(
-          _SearchResult value, $Res Function(_SearchResult) then) =
-      __$SearchResultCopyWithImpl<$Res>;
+  factory _$$SearchResultImplCopyWith(
+          _$SearchResultImpl value, $Res Function(_$SearchResultImpl) then) =
+      __$$SearchResultImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       List<Field>? fields,
@@ -124,36 +106,35 @@ abstract class _$SearchResultCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SearchResultCopyWithImpl<$Res> extends _$SearchResultCopyWithImpl<$Res>
-    implements _$SearchResultCopyWith<$Res> {
-  __$SearchResultCopyWithImpl(
-      _SearchResult _value, $Res Function(_SearchResult) _then)
-      : super(_value, (v) => _then(v as _SearchResult));
+class __$$SearchResultImplCopyWithImpl<$Res>
+    extends _$SearchResultCopyWithImpl<$Res, _$SearchResultImpl>
+    implements _$$SearchResultImplCopyWith<$Res> {
+  __$$SearchResultImplCopyWithImpl(
+      _$SearchResultImpl _value, $Res Function(_$SearchResultImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _SearchResult get _value => super._value as _SearchResult;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
     Object? fields = freezed,
     Object? highlights = freezed,
     Object? score = freezed,
   }) {
-    return _then(_SearchResult(
-      id: id == freezed
+    return _then(_$SearchResultImpl(
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      fields: fields == freezed
-          ? _value.fields
+      fields: freezed == fields
+          ? _value._fields
           : fields // ignore: cast_nullable_to_non_nullable
               as List<Field>?,
-      highlights: highlights == freezed
-          ? _value.highlights
+      highlights: freezed == highlights
+          ? _value._highlights
           : highlights // ignore: cast_nullable_to_non_nullable
               as List<Highlight>?,
-      score: score == freezed
+      score: freezed == score
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as int?,
@@ -161,32 +142,53 @@ class __$SearchResultCopyWithImpl<$Res> extends _$SearchResultCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_SearchResult implements _SearchResult {
-  const _$_SearchResult(
-      {required this.id, this.fields, this.highlights, this.score = 0});
+@JsonSerializable()
+class _$SearchResultImpl implements _SearchResult {
+  const _$SearchResultImpl(
+      {required this.id,
+      final List<Field>? fields,
+      final List<Highlight>? highlights,
+      this.score = 0})
+      : _fields = fields,
+        _highlights = highlights;
 
-  factory _$_SearchResult.fromJson(Map<String, dynamic> json) =>
-      _$_$_SearchResultFromJson(json);
-
-  @override
+  factory _$SearchResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SearchResultImplFromJson(json);
 
   /// ID is the document identifier.
-  final String id;
   @override
+  final String id;
 
   /// Fields are the selected fields for this document.
-  final List<Field>? fields;
+  final List<Field>? _fields;
+
+  /// Fields are the selected fields for this document.
   @override
+  List<Field>? get fields {
+    final value = _fields;
+    if (value == null) return null;
+    if (_fields is EqualUnmodifiableListView) return _fields;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// Highlights describe areas within the text that specifically match the query.
-  final List<Highlight>? highlights;
-  @JsonKey(defaultValue: 0)
+  final List<Highlight>? _highlights;
+
+  /// Highlights describe areas within the text that specifically match the query.
   @override
+  List<Highlight>? get highlights {
+    final value = _highlights;
+    if (value == null) return null;
+    if (_highlights is EqualUnmodifiableListView) return _highlights;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// Score is a relative value for this query. Higher score is better.
+  @override
+  @JsonKey()
   final int? score;
 
   @override
@@ -195,67 +197,68 @@ class _$_SearchResult implements _SearchResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _SearchResult &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.fields, fields) ||
-                const DeepCollectionEquality().equals(other.fields, fields)) &&
-            (identical(other.highlights, highlights) ||
-                const DeepCollectionEquality()
-                    .equals(other.highlights, highlights)) &&
-            (identical(other.score, score) ||
-                const DeepCollectionEquality().equals(other.score, score)));
+        (other.runtimeType == runtimeType &&
+            other is _$SearchResultImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other._fields, _fields) &&
+            const DeepCollectionEquality()
+                .equals(other._highlights, _highlights) &&
+            (identical(other.score, score) || other.score == score));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(fields) ^
-      const DeepCollectionEquality().hash(highlights) ^
-      const DeepCollectionEquality().hash(score);
 
   @JsonKey(ignore: true)
   @override
-  _$SearchResultCopyWith<_SearchResult> get copyWith =>
-      __$SearchResultCopyWithImpl<_SearchResult>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_fields),
+      const DeepCollectionEquality().hash(_highlights),
+      score);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchResultImplCopyWith<_$SearchResultImpl> get copyWith =>
+      __$$SearchResultImplCopyWithImpl<_$SearchResultImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SearchResultToJson(this);
+    return _$$SearchResultImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _SearchResult implements SearchResult {
   const factory _SearchResult(
-      {required String id,
-      List<Field>? fields,
-      List<Highlight>? highlights,
-      int? score}) = _$_SearchResult;
+      {required final String id,
+      final List<Field>? fields,
+      final List<Highlight>? highlights,
+      final int? score}) = _$SearchResultImpl;
 
   factory _SearchResult.fromJson(Map<String, dynamic> json) =
-      _$_SearchResult.fromJson;
+      _$SearchResultImpl.fromJson;
 
   @override
 
   /// ID is the document identifier.
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
 
   /// Fields are the selected fields for this document.
-  List<Field>? get fields => throw _privateConstructorUsedError;
+  List<Field>? get fields;
   @override
 
   /// Highlights describe areas within the text that specifically match the query.
-  List<Highlight>? get highlights => throw _privateConstructorUsedError;
+  List<Highlight>? get highlights;
   @override
 
   /// Score is a relative value for this query. Higher score is better.
-  int? get score => throw _privateConstructorUsedError;
+  int? get score;
   @override
   @JsonKey(ignore: true)
-  _$SearchResultCopyWith<_SearchResult> get copyWith =>
+  _$$SearchResultImplCopyWith<_$SearchResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

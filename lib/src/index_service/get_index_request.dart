@@ -7,14 +7,12 @@ part 'get_index_request.g.dart';
 @freezed
 class GetIndexRequest with _$GetIndexRequest {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory GetIndexRequest(
       {
-
       /// IndexPath is the collection path in Firestore that identifies an Index.
       required String indexPath}) = _GetIndexRequest;
 
   /// Unmarshalls from json to GetIndexRequest
   factory GetIndexRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_GetIndexRequestFromJson(json);
+      _$GetIndexRequestFromJson(json);
 }

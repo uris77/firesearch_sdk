@@ -7,14 +7,12 @@ part 'check_index_name_request.g.dart';
 @freezed
 class CheckIndexNameRequest with _$CheckIndexNameRequest {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory CheckIndexNameRequest(
       {
-
       /// IndexName is the name of the index to check.
       required String indexName}) = _CheckIndexNameRequest;
 
   /// Unmarshalls json to CheckIndexNameRequest
   factory CheckIndexNameRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_CheckIndexNameRequestFromJson(json);
+      _$CheckIndexNameRequestFromJson(json);
 }

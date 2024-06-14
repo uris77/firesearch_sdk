@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'highlight.dart';
 
@@ -10,30 +12,11 @@ part of 'highlight.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Highlight _$HighlightFromJson(Map<String, dynamic> json) {
   return _Highlight.fromJson(json);
 }
-
-/// @nodoc
-class _$HighlightTearOff {
-  const _$HighlightTearOff();
-
-  _Highlight call({required String field, required String text}) {
-    return _Highlight(
-      field: field,
-      text: text,
-    );
-  }
-
-  Highlight fromJson(Map<String, Object> json) {
-    return Highlight.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Highlight = _$HighlightTearOff();
 
 /// @nodoc
 mixin _$Highlight {
@@ -52,65 +35,71 @@ mixin _$Highlight {
 /// @nodoc
 abstract class $HighlightCopyWith<$Res> {
   factory $HighlightCopyWith(Highlight value, $Res Function(Highlight) then) =
-      _$HighlightCopyWithImpl<$Res>;
+      _$HighlightCopyWithImpl<$Res, Highlight>;
+  @useResult
   $Res call({String field, String text});
 }
 
 /// @nodoc
-class _$HighlightCopyWithImpl<$Res> implements $HighlightCopyWith<$Res> {
+class _$HighlightCopyWithImpl<$Res, $Val extends Highlight>
+    implements $HighlightCopyWith<$Res> {
   _$HighlightCopyWithImpl(this._value, this._then);
 
-  final Highlight _value;
   // ignore: unused_field
-  final $Res Function(Highlight) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? field = freezed,
-    Object? text = freezed,
+    Object? field = null,
+    Object? text = null,
   }) {
     return _then(_value.copyWith(
-      field: field == freezed
+      field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
               as String,
-      text: text == freezed
+      text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$HighlightCopyWith<$Res> implements $HighlightCopyWith<$Res> {
-  factory _$HighlightCopyWith(
-          _Highlight value, $Res Function(_Highlight) then) =
-      __$HighlightCopyWithImpl<$Res>;
+abstract class _$$HighlightImplCopyWith<$Res>
+    implements $HighlightCopyWith<$Res> {
+  factory _$$HighlightImplCopyWith(
+          _$HighlightImpl value, $Res Function(_$HighlightImpl) then) =
+      __$$HighlightImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String field, String text});
 }
 
 /// @nodoc
-class __$HighlightCopyWithImpl<$Res> extends _$HighlightCopyWithImpl<$Res>
-    implements _$HighlightCopyWith<$Res> {
-  __$HighlightCopyWithImpl(_Highlight _value, $Res Function(_Highlight) _then)
-      : super(_value, (v) => _then(v as _Highlight));
+class __$$HighlightImplCopyWithImpl<$Res>
+    extends _$HighlightCopyWithImpl<$Res, _$HighlightImpl>
+    implements _$$HighlightImplCopyWith<$Res> {
+  __$$HighlightImplCopyWithImpl(
+      _$HighlightImpl _value, $Res Function(_$HighlightImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _Highlight get _value => super._value as _Highlight;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? field = freezed,
-    Object? text = freezed,
+    Object? field = null,
+    Object? text = null,
   }) {
-    return _then(_Highlight(
-      field: field == freezed
+    return _then(_$HighlightImpl(
+      field: null == field
           ? _value.field
           : field // ignore: cast_nullable_to_non_nullable
               as String,
-      text: text == freezed
+      text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
@@ -118,22 +107,20 @@ class __$HighlightCopyWithImpl<$Res> extends _$HighlightCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_Highlight implements _Highlight {
-  const _$_Highlight({required this.field, required this.text});
+@JsonSerializable()
+class _$HighlightImpl implements _Highlight {
+  const _$HighlightImpl({required this.field, required this.text});
 
-  factory _$_Highlight.fromJson(Map<String, dynamic> json) =>
-      _$_$_HighlightFromJson(json);
-
-  @override
+  factory _$HighlightImpl.fromJson(Map<String, dynamic> json) =>
+      _$$HighlightImplFromJson(json);
 
   ///  Field is the name of the field.
-  final String field;
   @override
+  final String field;
 
   /// Text is the highlighted text.
+  @override
   final String text;
 
   @override
@@ -142,49 +129,50 @@ class _$_Highlight implements _Highlight {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _Highlight &&
-            (identical(other.field, field) ||
-                const DeepCollectionEquality().equals(other.field, field)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)));
+        (other.runtimeType == runtimeType &&
+            other is _$HighlightImpl &&
+            (identical(other.field, field) || other.field == field) &&
+            (identical(other.text, text) || other.text == text));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(field) ^
-      const DeepCollectionEquality().hash(text);
 
   @JsonKey(ignore: true)
   @override
-  _$HighlightCopyWith<_Highlight> get copyWith =>
-      __$HighlightCopyWithImpl<_Highlight>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, field, text);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$HighlightImplCopyWith<_$HighlightImpl> get copyWith =>
+      __$$HighlightImplCopyWithImpl<_$HighlightImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_HighlightToJson(this);
+    return _$$HighlightImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _Highlight implements Highlight {
-  const factory _Highlight({required String field, required String text}) =
-      _$_Highlight;
+  const factory _Highlight(
+      {required final String field,
+      required final String text}) = _$HighlightImpl;
 
   factory _Highlight.fromJson(Map<String, dynamic> json) =
-      _$_Highlight.fromJson;
+      _$HighlightImpl.fromJson;
 
   @override
 
   ///  Field is the name of the field.
-  String get field => throw _privateConstructorUsedError;
+  String get field;
   @override
 
   /// Text is the highlighted text.
-  String get text => throw _privateConstructorUsedError;
+  String get text;
   @override
   @JsonKey(ignore: true)
-  _$HighlightCopyWith<_Highlight> get copyWith =>
+  _$$HighlightImplCopyWith<_$HighlightImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

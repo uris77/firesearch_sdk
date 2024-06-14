@@ -6,14 +6,14 @@ part of 'delete_doc_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DeleteDocResponse _$_$_DeleteDocResponseFromJson(Map<String, dynamic> json) {
-  return _$_DeleteDocResponse(
-    error: json['error'] as String? ?? '',
-  );
-}
+_$DeleteDocResponseImpl _$$DeleteDocResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DeleteDocResponseImpl(
+      error: json['error'] as String? ?? '',
+    );
 
-Map<String, dynamic> _$_$_DeleteDocResponseToJson(
-        _$_DeleteDocResponse instance) =>
+Map<String, dynamic> _$$DeleteDocResponseImplToJson(
+        _$DeleteDocResponseImpl instance) =>
     <String, dynamic>{
       'error': instance.error,
     };

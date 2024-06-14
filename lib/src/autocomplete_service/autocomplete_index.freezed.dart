@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'autocomplete_index.dart';
 
@@ -10,38 +12,11 @@ part of 'autocomplete_index.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AutocompleteIndex _$AutocompleteIndexFromJson(Map<String, dynamic> json) {
   return _AutocompleteIndex.fromJson(json);
 }
-
-/// @nodoc
-class _$AutocompleteIndexTearOff {
-  const _$AutocompleteIndexTearOff();
-
-  _AutocompleteIndex call(
-      {required String indexPath,
-      required String name,
-      bool? keepStopWords = false,
-      bool? caseSensitive = false,
-      bool? noStem = false}) {
-    return _AutocompleteIndex(
-      indexPath: indexPath,
-      name: name,
-      keepStopWords: keepStopWords,
-      caseSensitive: caseSensitive,
-      noStem: noStem,
-    );
-  }
-
-  AutocompleteIndex fromJson(Map<String, Object> json) {
-    return AutocompleteIndex.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AutocompleteIndex = _$AutocompleteIndexTearOff();
 
 /// @nodoc
 mixin _$AutocompleteIndex {
@@ -73,7 +48,8 @@ mixin _$AutocompleteIndex {
 abstract class $AutocompleteIndexCopyWith<$Res> {
   factory $AutocompleteIndexCopyWith(
           AutocompleteIndex value, $Res Function(AutocompleteIndex) then) =
-      _$AutocompleteIndexCopyWithImpl<$Res>;
+      _$AutocompleteIndexCopyWithImpl<$Res, AutocompleteIndex>;
+  @useResult
   $Res call(
       {String indexPath,
       String name,
@@ -83,54 +59,57 @@ abstract class $AutocompleteIndexCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AutocompleteIndexCopyWithImpl<$Res>
+class _$AutocompleteIndexCopyWithImpl<$Res, $Val extends AutocompleteIndex>
     implements $AutocompleteIndexCopyWith<$Res> {
   _$AutocompleteIndexCopyWithImpl(this._value, this._then);
 
-  final AutocompleteIndex _value;
   // ignore: unused_field
-  final $Res Function(AutocompleteIndex) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexPath = freezed,
-    Object? name = freezed,
+    Object? indexPath = null,
+    Object? name = null,
     Object? keepStopWords = freezed,
     Object? caseSensitive = freezed,
     Object? noStem = freezed,
   }) {
     return _then(_value.copyWith(
-      indexPath: indexPath == freezed
+      indexPath: null == indexPath
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      keepStopWords: keepStopWords == freezed
+      keepStopWords: freezed == keepStopWords
           ? _value.keepStopWords
           : keepStopWords // ignore: cast_nullable_to_non_nullable
               as bool?,
-      caseSensitive: caseSensitive == freezed
+      caseSensitive: freezed == caseSensitive
           ? _value.caseSensitive
           : caseSensitive // ignore: cast_nullable_to_non_nullable
               as bool?,
-      noStem: noStem == freezed
+      noStem: freezed == noStem
           ? _value.noStem
           : noStem // ignore: cast_nullable_to_non_nullable
               as bool?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$AutocompleteIndexCopyWith<$Res>
+abstract class _$$AutocompleteIndexImplCopyWith<$Res>
     implements $AutocompleteIndexCopyWith<$Res> {
-  factory _$AutocompleteIndexCopyWith(
-          _AutocompleteIndex value, $Res Function(_AutocompleteIndex) then) =
-      __$AutocompleteIndexCopyWithImpl<$Res>;
+  factory _$$AutocompleteIndexImplCopyWith(_$AutocompleteIndexImpl value,
+          $Res Function(_$AutocompleteIndexImpl) then) =
+      __$$AutocompleteIndexImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String indexPath,
       String name,
@@ -140,42 +119,40 @@ abstract class _$AutocompleteIndexCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AutocompleteIndexCopyWithImpl<$Res>
-    extends _$AutocompleteIndexCopyWithImpl<$Res>
-    implements _$AutocompleteIndexCopyWith<$Res> {
-  __$AutocompleteIndexCopyWithImpl(
-      _AutocompleteIndex _value, $Res Function(_AutocompleteIndex) _then)
-      : super(_value, (v) => _then(v as _AutocompleteIndex));
+class __$$AutocompleteIndexImplCopyWithImpl<$Res>
+    extends _$AutocompleteIndexCopyWithImpl<$Res, _$AutocompleteIndexImpl>
+    implements _$$AutocompleteIndexImplCopyWith<$Res> {
+  __$$AutocompleteIndexImplCopyWithImpl(_$AutocompleteIndexImpl _value,
+      $Res Function(_$AutocompleteIndexImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _AutocompleteIndex get _value => super._value as _AutocompleteIndex;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? indexPath = freezed,
-    Object? name = freezed,
+    Object? indexPath = null,
+    Object? name = null,
     Object? keepStopWords = freezed,
     Object? caseSensitive = freezed,
     Object? noStem = freezed,
   }) {
-    return _then(_AutocompleteIndex(
-      indexPath: indexPath == freezed
+    return _then(_$AutocompleteIndexImpl(
+      indexPath: null == indexPath
           ? _value.indexPath
           : indexPath // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      keepStopWords: keepStopWords == freezed
+      keepStopWords: freezed == keepStopWords
           ? _value.keepStopWords
           : keepStopWords // ignore: cast_nullable_to_non_nullable
               as bool?,
-      caseSensitive: caseSensitive == freezed
+      caseSensitive: freezed == caseSensitive
           ? _value.caseSensitive
           : caseSensitive // ignore: cast_nullable_to_non_nullable
               as bool?,
-      noStem: noStem == freezed
+      noStem: freezed == noStem
           ? _value.noStem
           : noStem // ignore: cast_nullable_to_non_nullable
               as bool?,
@@ -183,45 +160,43 @@ class __$AutocompleteIndexCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_AutocompleteIndex implements _AutocompleteIndex {
-  const _$_AutocompleteIndex(
+@JsonSerializable()
+class _$AutocompleteIndexImpl implements _AutocompleteIndex {
+  const _$AutocompleteIndexImpl(
       {required this.indexPath,
       required this.name,
       this.keepStopWords = false,
       this.caseSensitive = false,
       this.noStem = false});
 
-  factory _$_AutocompleteIndex.fromJson(Map<String, dynamic> json) =>
-      _$_$_AutocompleteIndexFromJson(json);
-
-  @override
+  factory _$AutocompleteIndexImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AutocompleteIndexImplFromJson(json);
 
   /// IndexPath is the collection path in Firestore for this index. Each index must
   /// use a unique path.
-  final String indexPath;
   @override
+  final String indexPath;
 
   /// Name is an internal human readable name for this index. End users will never see this.
-  final String name;
-  @JsonKey(defaultValue: false)
   @override
+  final String name;
 
   /// KeepStopWords prevents stop words from being removed from this index.
-  final bool? keepStopWords;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
+  final bool? keepStopWords;
 
   /// CaseSensitive preserves case across this index. By default, all entries and
   /// queries are lower cased.
-  final bool? caseSensitive;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
+  final bool? caseSensitive;
 
   /// NoStem prevents words from being reduced. Only effective if a Language is
   /// specified.
+  @override
+  @JsonKey()
   final bool? noStem;
 
   @override
@@ -230,80 +205,76 @@ class _$_AutocompleteIndex implements _AutocompleteIndex {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _AutocompleteIndex &&
+        (other.runtimeType == runtimeType &&
+            other is _$AutocompleteIndexImpl &&
             (identical(other.indexPath, indexPath) ||
-                const DeepCollectionEquality()
-                    .equals(other.indexPath, indexPath)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
+                other.indexPath == indexPath) &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.keepStopWords, keepStopWords) ||
-                const DeepCollectionEquality()
-                    .equals(other.keepStopWords, keepStopWords)) &&
+                other.keepStopWords == keepStopWords) &&
             (identical(other.caseSensitive, caseSensitive) ||
-                const DeepCollectionEquality()
-                    .equals(other.caseSensitive, caseSensitive)) &&
-            (identical(other.noStem, noStem) ||
-                const DeepCollectionEquality().equals(other.noStem, noStem)));
+                other.caseSensitive == caseSensitive) &&
+            (identical(other.noStem, noStem) || other.noStem == noStem));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(indexPath) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(keepStopWords) ^
-      const DeepCollectionEquality().hash(caseSensitive) ^
-      const DeepCollectionEquality().hash(noStem);
 
   @JsonKey(ignore: true)
   @override
-  _$AutocompleteIndexCopyWith<_AutocompleteIndex> get copyWith =>
-      __$AutocompleteIndexCopyWithImpl<_AutocompleteIndex>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType, indexPath, name, keepStopWords, caseSensitive, noStem);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AutocompleteIndexImplCopyWith<_$AutocompleteIndexImpl> get copyWith =>
+      __$$AutocompleteIndexImplCopyWithImpl<_$AutocompleteIndexImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AutocompleteIndexToJson(this);
+    return _$$AutocompleteIndexImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _AutocompleteIndex implements AutocompleteIndex {
   const factory _AutocompleteIndex(
-      {required String indexPath,
-      required String name,
-      bool? keepStopWords,
-      bool? caseSensitive,
-      bool? noStem}) = _$_AutocompleteIndex;
+      {required final String indexPath,
+      required final String name,
+      final bool? keepStopWords,
+      final bool? caseSensitive,
+      final bool? noStem}) = _$AutocompleteIndexImpl;
 
   factory _AutocompleteIndex.fromJson(Map<String, dynamic> json) =
-      _$_AutocompleteIndex.fromJson;
+      _$AutocompleteIndexImpl.fromJson;
 
   @override
 
   /// IndexPath is the collection path in Firestore for this index. Each index must
   /// use a unique path.
-  String get indexPath => throw _privateConstructorUsedError;
+  String get indexPath;
   @override
 
   /// Name is an internal human readable name for this index. End users will never see this.
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
 
   /// KeepStopWords prevents stop words from being removed from this index.
-  bool? get keepStopWords => throw _privateConstructorUsedError;
+  bool? get keepStopWords;
   @override
 
   /// CaseSensitive preserves case across this index. By default, all entries and
   /// queries are lower cased.
-  bool? get caseSensitive => throw _privateConstructorUsedError;
+  bool? get caseSensitive;
   @override
 
   /// NoStem prevents words from being reduced. Only effective if a Language is
   /// specified.
-  bool? get noStem => throw _privateConstructorUsedError;
+  bool? get noStem;
   @override
   @JsonKey(ignore: true)
-  _$AutocompleteIndexCopyWith<_AutocompleteIndex> get copyWith =>
+  _$$AutocompleteIndexImplCopyWith<_$AutocompleteIndexImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

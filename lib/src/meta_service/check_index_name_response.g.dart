@@ -6,19 +6,18 @@ part of 'check_index_name_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CheckIndexNameResponse _$_$_CheckIndexNameResponseFromJson(
-    Map<String, dynamic> json) {
-  return _$_CheckIndexNameResponse(
-    validationResult: json['validationResult'] == null
-        ? null
-        : ValidationResult.fromJson(
-            json['validationResult'] as Map<String, dynamic>),
-    error: json['error'] as String? ?? '',
-  );
-}
+_$CheckIndexNameResponseImpl _$$CheckIndexNameResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CheckIndexNameResponseImpl(
+      validationResult: json['validationResult'] == null
+          ? null
+          : ValidationResult.fromJson(
+              json['validationResult'] as Map<String, dynamic>),
+      error: json['error'] as String? ?? '',
+    );
 
-Map<String, dynamic> _$_$_CheckIndexNameResponseToJson(
-        _$_CheckIndexNameResponse instance) =>
+Map<String, dynamic> _$$CheckIndexNameResponseImplToJson(
+        _$CheckIndexNameResponseImpl instance) =>
     <String, dynamic>{
       'validationResult': instance.validationResult?.toJson(),
       'error': instance.error,

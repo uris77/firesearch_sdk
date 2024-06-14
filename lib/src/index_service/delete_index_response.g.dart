@@ -6,15 +6,14 @@ part of 'delete_index_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DeleteIndexResponse _$_$_DeleteIndexResponseFromJson(
-    Map<String, dynamic> json) {
-  return _$_DeleteIndexResponse(
-    error: json['error'] as String? ?? '',
-  );
-}
+_$DeleteIndexResponseImpl _$$DeleteIndexResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DeleteIndexResponseImpl(
+      error: json['error'] as String? ?? '',
+    );
 
-Map<String, dynamic> _$_$_DeleteIndexResponseToJson(
-        _$_DeleteIndexResponse instance) =>
+Map<String, dynamic> _$$DeleteIndexResponseImplToJson(
+        _$DeleteIndexResponseImpl instance) =>
     <String, dynamic>{
       'error': instance.error,
     };

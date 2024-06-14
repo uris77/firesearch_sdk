@@ -8,7 +8,7 @@ class MockHttp extends Mock implements FiresearchHttpClient {}
 
 void main() {
   setUpAll(() {
-    registerFallbackValue<Map<String, String>>(Map<String, String>());
+    registerFallbackValue(Map<String, String>());
   });
 
   group('Autocomplete Service', () {

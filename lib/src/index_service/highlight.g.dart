@@ -6,14 +6,13 @@ part of 'highlight.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Highlight _$_$_HighlightFromJson(Map<String, dynamic> json) {
-  return _$_Highlight(
-    field: json['field'] as String,
-    text: json['text'] as String,
-  );
-}
+_$HighlightImpl _$$HighlightImplFromJson(Map<String, dynamic> json) =>
+    _$HighlightImpl(
+      field: json['field'] as String,
+      text: json['text'] as String,
+    );
 
-Map<String, dynamic> _$_$_HighlightToJson(_$_Highlight instance) =>
+Map<String, dynamic> _$$HighlightImplToJson(_$HighlightImpl instance) =>
     <String, dynamic>{
       'field': instance.field,
       'text': instance.text,

@@ -7,10 +7,8 @@ part 'autocomplete_index.g.dart';
 @freezed
 class AutocompleteIndex with _$AutocompleteIndex {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory AutocompleteIndex(
       {
-
       /// IndexPath is the collection path in Firestore for this index. Each index must
       /// use a unique path.
       required String indexPath,
@@ -31,5 +29,5 @@ class AutocompleteIndex with _$AutocompleteIndex {
 
   /// Unmarshalls json to an AutocompleteIndex
   factory AutocompleteIndex.fromJson(Map<String, dynamic> json) =>
-      _$_$_AutocompleteIndexFromJson(json);
+      _$AutocompleteIndexFromJson(json);
 }

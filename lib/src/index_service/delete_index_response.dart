@@ -9,11 +9,10 @@ class DeleteIndexResponse with _$DeleteIndexResponse {
   /// Default Constructor
   const factory DeleteIndexResponse(
       {
-
       /// Error is string explaining what went wrong. Empty if everything was fine.
       @Default('') String? error}) = _DeleteIndexResponse;
 
   /// Unmarshalls from json to DeleteIndexResponse
   factory DeleteIndexResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeleteIndexResponseFromJson(json);
+      _$DeleteIndexResponseFromJson(json);
 }

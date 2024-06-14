@@ -7,10 +7,8 @@ part 'validation_result.g.dart';
 @freezed
 class ValidationResult with _$ValidationResult {
   /// Default constructor
-  @JsonSerializable(explicitToJson: true)
   const factory ValidationResult(
       {
-
       /// Valid indicates whether the validation was successful or not.
       required bool valid,
 
@@ -19,5 +17,5 @@ class ValidationResult with _$ValidationResult {
 
   /// Unmarshalls json to ValidationResult
   factory ValidationResult.fromJson(Map<String, dynamic> json) =>
-      _$_$_ValidationResultFromJson(json);
+      _$ValidationResultFromJson(json);
 }

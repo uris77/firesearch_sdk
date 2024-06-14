@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'complete_request.dart';
 
@@ -10,29 +12,11 @@ part of 'complete_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CompleteRequest _$CompleteRequestFromJson(Map<String, dynamic> json) {
   return _CompleteRequest.fromJson(json);
 }
-
-/// @nodoc
-class _$CompleteRequestTearOff {
-  const _$CompleteRequestTearOff();
-
-  _CompleteRequest call(CompleteQuery query) {
-    return _CompleteRequest(
-      query,
-    );
-  }
-
-  CompleteRequest fromJson(Map<String, Object> json) {
-    return CompleteRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CompleteRequest = _$CompleteRequestTearOff();
 
 /// @nodoc
 mixin _$CompleteRequest {
@@ -48,48 +32,53 @@ mixin _$CompleteRequest {
 abstract class $CompleteRequestCopyWith<$Res> {
   factory $CompleteRequestCopyWith(
           CompleteRequest value, $Res Function(CompleteRequest) then) =
-      _$CompleteRequestCopyWithImpl<$Res>;
+      _$CompleteRequestCopyWithImpl<$Res, CompleteRequest>;
+  @useResult
   $Res call({CompleteQuery query});
 
   $CompleteQueryCopyWith<$Res> get query;
 }
 
 /// @nodoc
-class _$CompleteRequestCopyWithImpl<$Res>
+class _$CompleteRequestCopyWithImpl<$Res, $Val extends CompleteRequest>
     implements $CompleteRequestCopyWith<$Res> {
   _$CompleteRequestCopyWithImpl(this._value, this._then);
 
-  final CompleteRequest _value;
   // ignore: unused_field
-  final $Res Function(CompleteRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? query = freezed,
+    Object? query = null,
   }) {
     return _then(_value.copyWith(
-      query: query == freezed
+      query: null == query
           ? _value.query
           : query // ignore: cast_nullable_to_non_nullable
               as CompleteQuery,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CompleteQueryCopyWith<$Res> get query {
     return $CompleteQueryCopyWith<$Res>(_value.query, (value) {
-      return _then(_value.copyWith(query: value));
+      return _then(_value.copyWith(query: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$CompleteRequestCopyWith<$Res>
+abstract class _$$CompleteRequestImplCopyWith<$Res>
     implements $CompleteRequestCopyWith<$Res> {
-  factory _$CompleteRequestCopyWith(
-          _CompleteRequest value, $Res Function(_CompleteRequest) then) =
-      __$CompleteRequestCopyWithImpl<$Res>;
+  factory _$$CompleteRequestImplCopyWith(_$CompleteRequestImpl value,
+          $Res Function(_$CompleteRequestImpl) then) =
+      __$$CompleteRequestImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({CompleteQuery query});
 
   @override
@@ -97,22 +86,20 @@ abstract class _$CompleteRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CompleteRequestCopyWithImpl<$Res>
-    extends _$CompleteRequestCopyWithImpl<$Res>
-    implements _$CompleteRequestCopyWith<$Res> {
-  __$CompleteRequestCopyWithImpl(
-      _CompleteRequest _value, $Res Function(_CompleteRequest) _then)
-      : super(_value, (v) => _then(v as _CompleteRequest));
+class __$$CompleteRequestImplCopyWithImpl<$Res>
+    extends _$CompleteRequestCopyWithImpl<$Res, _$CompleteRequestImpl>
+    implements _$$CompleteRequestImplCopyWith<$Res> {
+  __$$CompleteRequestImplCopyWithImpl(
+      _$CompleteRequestImpl _value, $Res Function(_$CompleteRequestImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _CompleteRequest get _value => super._value as _CompleteRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? query = freezed,
+    Object? query = null,
   }) {
-    return _then(_CompleteRequest(
-      query == freezed
+    return _then(_$CompleteRequestImpl(
+      null == query
           ? _value.query
           : query // ignore: cast_nullable_to_non_nullable
               as CompleteQuery,
@@ -120,14 +107,13 @@ class __$CompleteRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_CompleteRequest implements _CompleteRequest {
-  const _$_CompleteRequest(this.query);
+@JsonSerializable()
+class _$CompleteRequestImpl implements _CompleteRequest {
+  const _$CompleteRequestImpl(this.query);
 
-  factory _$_CompleteRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_CompleteRequestFromJson(json);
+  factory _$CompleteRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CompleteRequestImplFromJson(json);
 
   @override
   final CompleteQuery query;
@@ -138,38 +124,43 @@ class _$_CompleteRequest implements _CompleteRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _CompleteRequest &&
-            (identical(other.query, query) ||
-                const DeepCollectionEquality().equals(other.query, query)));
+        (other.runtimeType == runtimeType &&
+            other is _$CompleteRequestImpl &&
+            (identical(other.query, query) || other.query == query));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(query);
 
   @JsonKey(ignore: true)
   @override
-  _$CompleteRequestCopyWith<_CompleteRequest> get copyWith =>
-      __$CompleteRequestCopyWithImpl<_CompleteRequest>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, query);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CompleteRequestImplCopyWith<_$CompleteRequestImpl> get copyWith =>
+      __$$CompleteRequestImplCopyWithImpl<_$CompleteRequestImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CompleteRequestToJson(this);
+    return _$$CompleteRequestImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _CompleteRequest implements CompleteRequest {
-  const factory _CompleteRequest(CompleteQuery query) = _$_CompleteRequest;
+  const factory _CompleteRequest(final CompleteQuery query) =
+      _$CompleteRequestImpl;
 
   factory _CompleteRequest.fromJson(Map<String, dynamic> json) =
-      _$_CompleteRequest.fromJson;
+      _$CompleteRequestImpl.fromJson;
 
   @override
-  CompleteQuery get query => throw _privateConstructorUsedError;
+  CompleteQuery get query;
   @override
   @JsonKey(ignore: true)
-  _$CompleteRequestCopyWith<_CompleteRequest> get copyWith =>
+  _$$CompleteRequestImplCopyWith<_$CompleteRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

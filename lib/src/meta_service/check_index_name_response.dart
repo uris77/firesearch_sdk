@@ -8,7 +8,6 @@ part 'check_index_name_response.g.dart';
 @freezed
 class CheckIndexNameResponse with _$CheckIndexNameResponse {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory CheckIndexNameResponse({
     /// ValidationResult holds the result of the check.
     ValidationResult? validationResult,
@@ -19,5 +18,5 @@ class CheckIndexNameResponse with _$CheckIndexNameResponse {
 
   /// Unmarshalls json into CheckIndexNameResponse
   factory CheckIndexNameResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_CheckIndexNameResponseFromJson(json);
+      _$CheckIndexNameResponseFromJson(json);
 }

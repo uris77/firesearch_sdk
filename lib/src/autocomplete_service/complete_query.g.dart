@@ -6,16 +6,15 @@ part of 'complete_query.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CompleteQuery _$_$_CompleteQueryFromJson(Map<String, dynamic> json) {
-  return _$_CompleteQuery(
-    indexPath: json['indexPath'] as String,
-    accessKey: json['accessKey'] as String,
-    limit: json['limit'] as int,
-    text: json['text'] as String,
-  );
-}
+_$CompleteQueryImpl _$$CompleteQueryImplFromJson(Map<String, dynamic> json) =>
+    _$CompleteQueryImpl(
+      indexPath: json['indexPath'] as String,
+      accessKey: json['accessKey'] as String,
+      limit: (json['limit'] as num).toInt(),
+      text: json['text'] as String,
+    );
 
-Map<String, dynamic> _$_$_CompleteQueryToJson(_$_CompleteQuery instance) =>
+Map<String, dynamic> _$$CompleteQueryImplToJson(_$CompleteQueryImpl instance) =>
     <String, dynamic>{
       'indexPath': instance.indexPath,
       'accessKey': instance.accessKey,

@@ -6,13 +6,12 @@ part of 'search_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SearchRequest _$_$_SearchRequestFromJson(Map<String, dynamic> json) {
-  return _$_SearchRequest(
-    query: SearchQuery.fromJson(json['query'] as Map<String, dynamic>),
-  );
-}
+_$SearchRequestImpl _$$SearchRequestImplFromJson(Map<String, dynamic> json) =>
+    _$SearchRequestImpl(
+      query: SearchQuery.fromJson(json['query'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_SearchRequestToJson(_$_SearchRequest instance) =>
+Map<String, dynamic> _$$SearchRequestImplToJson(_$SearchRequestImpl instance) =>
     <String, dynamic>{
       'query': instance.query.toJson(),
     };

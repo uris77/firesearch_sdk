@@ -21,5 +21,5 @@ class Doc with _$Doc {
   }) = _Doc;
 
   /// Unmarshalls from json to DOc
-  factory Doc.fromJson(Map<String, dynamic> json) => _$_$_DocFromJson(json);
+  factory Doc.fromJson(Map<String, dynamic> json) => _$DocFromJson(json);
 }

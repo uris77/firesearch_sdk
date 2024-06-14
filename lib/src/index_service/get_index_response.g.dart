@@ -6,17 +6,17 @@ part of 'get_index_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetIndexResponse _$_$_GetIndexResponseFromJson(Map<String, dynamic> json) {
-  return _$_GetIndexResponse(
-    index: json['index'] == null
-        ? null
-        : Index.fromJson(json['index'] as Map<String, dynamic>),
-    error: json['error'] as String? ?? '',
-  );
-}
+_$GetIndexResponseImpl _$$GetIndexResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetIndexResponseImpl(
+      index: json['index'] == null
+          ? null
+          : Index.fromJson(json['index'] as Map<String, dynamic>),
+      error: json['error'] as String? ?? '',
+    );
 
-Map<String, dynamic> _$_$_GetIndexResponseToJson(
-        _$_GetIndexResponse instance) =>
+Map<String, dynamic> _$$GetIndexResponseImplToJson(
+        _$GetIndexResponseImpl instance) =>
     <String, dynamic>{
       'index': instance.index?.toJson(),
       'error': instance.error,

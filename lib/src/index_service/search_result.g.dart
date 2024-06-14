@@ -6,20 +6,19 @@ part of 'search_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SearchResult _$_$_SearchResultFromJson(Map<String, dynamic> json) {
-  return _$_SearchResult(
-    id: json['id'] as String,
-    fields: (json['fields'] as List<dynamic>?)
-        ?.map((e) => Field.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    highlights: (json['highlights'] as List<dynamic>?)
-        ?.map((e) => Highlight.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    score: json['score'] as int? ?? 0,
-  );
-}
+_$SearchResultImpl _$$SearchResultImplFromJson(Map<String, dynamic> json) =>
+    _$SearchResultImpl(
+      id: json['id'] as String,
+      fields: (json['fields'] as List<dynamic>?)
+          ?.map((e) => Field.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      highlights: (json['highlights'] as List<dynamic>?)
+          ?.map((e) => Highlight.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      score: (json['score'] as num?)?.toInt() ?? 0,
+    );
 
-Map<String, dynamic> _$_$_SearchResultToJson(_$_SearchResult instance) =>
+Map<String, dynamic> _$$SearchResultImplToJson(_$SearchResultImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'fields': instance.fields?.map((e) => e.toJson()).toList(),

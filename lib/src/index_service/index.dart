@@ -7,10 +7,8 @@ part 'index.g.dart';
 @freezed
 class Index with _$Index {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory Index(
       {
-
       /// IndexPath is the collection path in Firestore for this index. Each index must
       /// use a unique path.
       required String indexPath,
@@ -34,5 +32,5 @@ class Index with _$Index {
       @Default(false) bool? noStem}) = _Index;
 
   /// Unmarshalls from json to Index
-  factory Index.fromJson(Map<String, dynamic> json) => _$_$_IndexFromJson(json);
+  factory Index.fromJson(Map<String, dynamic> json) => _$IndexFromJson(json);
 }

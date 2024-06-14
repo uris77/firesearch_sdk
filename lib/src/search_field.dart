@@ -7,10 +7,8 @@ part 'search_field.g.dart';
 @freezed
 class SearchField with _$SearchField {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory SearchField(
       {
-
       /// Key is the name of the search field. Cannot begin with an underscore.
       required String key,
 
@@ -23,5 +21,5 @@ class SearchField with _$SearchField {
 
   /// Unmarshalls from json to SearchField
   factory SearchField.fromJson(Map<String, dynamic> json) =>
-      _$_$_SearchFieldFromJson(json);
+      _$SearchFieldFromJson(json);
 }

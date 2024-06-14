@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'complete_response.dart';
 
@@ -10,36 +12,11 @@ part of 'complete_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CompleteResponse _$CompleteResponseFromJson(Map<String, dynamic> json) {
   return _CompleteResponse.fromJson(json);
 }
-
-/// @nodoc
-class _$CompleteResponseTearOff {
-  const _$CompleteResponseTearOff();
-
-  _CompleteResponse call(
-      {required CompleteQuery query,
-      required List<AutocompleteDoc> hits,
-      required int duration,
-      String? error = ''}) {
-    return _CompleteResponse(
-      query: query,
-      hits: hits,
-      duration: duration,
-      error: error,
-    );
-  }
-
-  CompleteResponse fromJson(Map<String, Object> json) {
-    return CompleteResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CompleteResponse = _$CompleteResponseTearOff();
 
 /// @nodoc
 mixin _$CompleteResponse {
@@ -65,7 +42,8 @@ mixin _$CompleteResponse {
 abstract class $CompleteResponseCopyWith<$Res> {
   factory $CompleteResponseCopyWith(
           CompleteResponse value, $Res Function(CompleteResponse) then) =
-      _$CompleteResponseCopyWithImpl<$Res>;
+      _$CompleteResponseCopyWithImpl<$Res, CompleteResponse>;
+  @useResult
   $Res call(
       {CompleteQuery query,
       List<AutocompleteDoc> hits,
@@ -76,56 +54,60 @@ abstract class $CompleteResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CompleteResponseCopyWithImpl<$Res>
+class _$CompleteResponseCopyWithImpl<$Res, $Val extends CompleteResponse>
     implements $CompleteResponseCopyWith<$Res> {
   _$CompleteResponseCopyWithImpl(this._value, this._then);
 
-  final CompleteResponse _value;
   // ignore: unused_field
-  final $Res Function(CompleteResponse) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? query = freezed,
-    Object? hits = freezed,
-    Object? duration = freezed,
+    Object? query = null,
+    Object? hits = null,
+    Object? duration = null,
     Object? error = freezed,
   }) {
     return _then(_value.copyWith(
-      query: query == freezed
+      query: null == query
           ? _value.query
           : query // ignore: cast_nullable_to_non_nullable
               as CompleteQuery,
-      hits: hits == freezed
+      hits: null == hits
           ? _value.hits
           : hits // ignore: cast_nullable_to_non_nullable
               as List<AutocompleteDoc>,
-      duration: duration == freezed
+      duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as int,
-      error: error == freezed
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CompleteQueryCopyWith<$Res> get query {
     return $CompleteQueryCopyWith<$Res>(_value.query, (value) {
-      return _then(_value.copyWith(query: value));
+      return _then(_value.copyWith(query: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$CompleteResponseCopyWith<$Res>
+abstract class _$$CompleteResponseImplCopyWith<$Res>
     implements $CompleteResponseCopyWith<$Res> {
-  factory _$CompleteResponseCopyWith(
-          _CompleteResponse value, $Res Function(_CompleteResponse) then) =
-      __$CompleteResponseCopyWithImpl<$Res>;
+  factory _$$CompleteResponseImplCopyWith(_$CompleteResponseImpl value,
+          $Res Function(_$CompleteResponseImpl) then) =
+      __$$CompleteResponseImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {CompleteQuery query,
       List<AutocompleteDoc> hits,
@@ -137,37 +119,35 @@ abstract class _$CompleteResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CompleteResponseCopyWithImpl<$Res>
-    extends _$CompleteResponseCopyWithImpl<$Res>
-    implements _$CompleteResponseCopyWith<$Res> {
-  __$CompleteResponseCopyWithImpl(
-      _CompleteResponse _value, $Res Function(_CompleteResponse) _then)
-      : super(_value, (v) => _then(v as _CompleteResponse));
+class __$$CompleteResponseImplCopyWithImpl<$Res>
+    extends _$CompleteResponseCopyWithImpl<$Res, _$CompleteResponseImpl>
+    implements _$$CompleteResponseImplCopyWith<$Res> {
+  __$$CompleteResponseImplCopyWithImpl(_$CompleteResponseImpl _value,
+      $Res Function(_$CompleteResponseImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _CompleteResponse get _value => super._value as _CompleteResponse;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? query = freezed,
-    Object? hits = freezed,
-    Object? duration = freezed,
+    Object? query = null,
+    Object? hits = null,
+    Object? duration = null,
     Object? error = freezed,
   }) {
-    return _then(_CompleteResponse(
-      query: query == freezed
+    return _then(_$CompleteResponseImpl(
+      query: null == query
           ? _value.query
           : query // ignore: cast_nullable_to_non_nullable
               as CompleteQuery,
-      hits: hits == freezed
-          ? _value.hits
+      hits: null == hits
+          ? _value._hits
           : hits // ignore: cast_nullable_to_non_nullable
               as List<AutocompleteDoc>,
-      duration: duration == freezed
+      duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as int,
-      error: error == freezed
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -175,35 +155,41 @@ class __$CompleteResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
-class _$_CompleteResponse implements _CompleteResponse {
-  const _$_CompleteResponse(
+@JsonSerializable()
+class _$CompleteResponseImpl implements _CompleteResponse {
+  const _$CompleteResponseImpl(
       {required this.query,
-      required this.hits,
+      required final List<AutocompleteDoc> hits,
       required this.duration,
-      this.error = ''});
+      this.error = ''})
+      : _hits = hits;
 
-  factory _$_CompleteResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_CompleteResponseFromJson(json);
-
-  @override
+  factory _$CompleteResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CompleteResponseImplFromJson(json);
 
   /// Query is the CompleteQuery that generated these results.
-  final CompleteQuery query;
   @override
+  final CompleteQuery query;
 
   /// Hits are the search results.
-  final List<AutocompleteDoc> hits;
+  final List<AutocompleteDoc> _hits;
+
+  /// Hits are the search results.
   @override
+  List<AutocompleteDoc> get hits {
+    if (_hits is EqualUnmodifiableListView) return _hits;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_hits);
+  }
 
   ///  Duration is the milliseconds that the search took to execute in the server side
-  final int duration;
-  @JsonKey(defaultValue: '')
   @override
+  final int duration;
 
   /// Error is string explaining what went wrong. Empty if everything was fine.
+  @override
+  @JsonKey()
   final String? error;
 
   @override
@@ -212,67 +198,65 @@ class _$_CompleteResponse implements _CompleteResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _CompleteResponse &&
-            (identical(other.query, query) ||
-                const DeepCollectionEquality().equals(other.query, query)) &&
-            (identical(other.hits, hits) ||
-                const DeepCollectionEquality().equals(other.hits, hits)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$CompleteResponseImpl &&
+            (identical(other.query, query) || other.query == query) &&
+            const DeepCollectionEquality().equals(other._hits, _hits) &&
             (identical(other.duration, duration) ||
-                const DeepCollectionEquality()
-                    .equals(other.duration, duration)) &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+                other.duration == duration) &&
+            (identical(other.error, error) || other.error == error));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(query) ^
-      const DeepCollectionEquality().hash(hits) ^
-      const DeepCollectionEquality().hash(duration) ^
-      const DeepCollectionEquality().hash(error);
 
   @JsonKey(ignore: true)
   @override
-  _$CompleteResponseCopyWith<_CompleteResponse> get copyWith =>
-      __$CompleteResponseCopyWithImpl<_CompleteResponse>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, query,
+      const DeepCollectionEquality().hash(_hits), duration, error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CompleteResponseImplCopyWith<_$CompleteResponseImpl> get copyWith =>
+      __$$CompleteResponseImplCopyWithImpl<_$CompleteResponseImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CompleteResponseToJson(this);
+    return _$$CompleteResponseImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _CompleteResponse implements CompleteResponse {
   const factory _CompleteResponse(
-      {required CompleteQuery query,
-      required List<AutocompleteDoc> hits,
-      required int duration,
-      String? error}) = _$_CompleteResponse;
+      {required final CompleteQuery query,
+      required final List<AutocompleteDoc> hits,
+      required final int duration,
+      final String? error}) = _$CompleteResponseImpl;
 
   factory _CompleteResponse.fromJson(Map<String, dynamic> json) =
-      _$_CompleteResponse.fromJson;
+      _$CompleteResponseImpl.fromJson;
 
   @override
 
   /// Query is the CompleteQuery that generated these results.
-  CompleteQuery get query => throw _privateConstructorUsedError;
+  CompleteQuery get query;
   @override
 
   /// Hits are the search results.
-  List<AutocompleteDoc> get hits => throw _privateConstructorUsedError;
+  List<AutocompleteDoc> get hits;
   @override
 
   ///  Duration is the milliseconds that the search took to execute in the server side
-  int get duration => throw _privateConstructorUsedError;
+  int get duration;
   @override
 
   /// Error is string explaining what went wrong. Empty if everything was fine.
-  String? get error => throw _privateConstructorUsedError;
+  String? get error;
   @override
   @JsonKey(ignore: true)
-  _$CompleteResponseCopyWith<_CompleteResponse> get copyWith =>
+  _$$CompleteResponseImplCopyWith<_$CompleteResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -8,10 +8,8 @@ part 'search_request.g.dart';
 @freezed
 class SearchRequest with _$SearchRequest {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory SearchRequest(
       {
-
       /// Query is the SearchQuery to perform.
       required SearchQuery query}) = _SearchRequest;
 

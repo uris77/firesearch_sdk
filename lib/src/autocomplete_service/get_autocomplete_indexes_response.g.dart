@@ -6,19 +6,19 @@ part of 'get_autocomplete_indexes_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetAutocompleteIndexesResponse _$_$_GetAutocompleteIndexesResponseFromJson(
-    Map<String, dynamic> json) {
-  return _$_GetAutocompleteIndexesResponse(
-    indexes: (json['indexes'] as List<dynamic>?)
-        ?.map((e) => AutocompleteIndex.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    error: json['error'] as String? ?? '',
-  );
-}
+_$GetAutocompleteIndexesResponseImpl
+    _$$GetAutocompleteIndexesResponseImplFromJson(Map<String, dynamic> json) =>
+        _$GetAutocompleteIndexesResponseImpl(
+          indexes: (json['indexes'] as List<dynamic>?)
+              ?.map(
+                  (e) => AutocompleteIndex.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          error: json['error'] as String? ?? '',
+        );
 
-Map<String, dynamic> _$_$_GetAutocompleteIndexesResponseToJson(
-        _$_GetAutocompleteIndexesResponse instance) =>
+Map<String, dynamic> _$$GetAutocompleteIndexesResponseImplToJson(
+        _$GetAutocompleteIndexesResponseImpl instance) =>
     <String, dynamic>{
-      'indexes': instance.indexes,
+      'indexes': instance.indexes?.map((e) => e.toJson()).toList(),
       'error': instance.error,
     };

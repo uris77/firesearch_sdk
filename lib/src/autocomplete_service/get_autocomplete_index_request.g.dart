@@ -6,15 +6,14 @@ part of 'get_autocomplete_index_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetAutocompleteIndexRequest _$_$_GetAutocompleteIndexRequestFromJson(
-    Map<String, dynamic> json) {
-  return _$_GetAutocompleteIndexRequest(
-    indexPath: json['indexPath'] as String,
-  );
-}
+_$GetAutocompleteIndexRequestImpl _$$GetAutocompleteIndexRequestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GetAutocompleteIndexRequestImpl(
+      indexPath: json['indexPath'] as String,
+    );
 
-Map<String, dynamic> _$_$_GetAutocompleteIndexRequestToJson(
-        _$_GetAutocompleteIndexRequest instance) =>
+Map<String, dynamic> _$$GetAutocompleteIndexRequestImplToJson(
+        _$GetAutocompleteIndexRequestImpl instance) =>
     <String, dynamic>{
       'indexPath': instance.indexPath,
     };

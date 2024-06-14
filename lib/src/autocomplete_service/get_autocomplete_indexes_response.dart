@@ -10,7 +10,6 @@ class GetAutocompleteIndexesResponse with _$GetAutocompleteIndexesResponse {
   /// Default Constructor
   const factory GetAutocompleteIndexesResponse(
       {
-
       /// Indexes are the indexes managed by this service.
       List<AutocompleteIndex>? indexes,
 
@@ -19,5 +18,5 @@ class GetAutocompleteIndexesResponse with _$GetAutocompleteIndexesResponse {
 
   /// Unmarshalls json to GetAutocompleteIndexesResponse
   factory GetAutocompleteIndexesResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_GetAutocompleteIndexesResponseFromJson(json);
+      _$GetAutocompleteIndexesResponseFromJson(json);
 }

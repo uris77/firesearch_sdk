@@ -9,10 +9,9 @@ part 'complete_request.g.dart';
 class CompleteRequest with _$CompleteRequest {
   /// Constructor
   /// query is the CompleteQuery to perform.
-  @JsonSerializable(explicitToJson: true)
   const factory CompleteRequest(CompleteQuery query) = _CompleteRequest;
 
   /// Unmarshalls from json to CompleteRequest
   factory CompleteRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_CompleteRequestFromJson(json);
+      _$CompleteRequestFromJson(json);
 }

@@ -8,10 +8,8 @@ part 'create_index_response.g.dart';
 @freezed
 class CreateIndexResponse with _$CreateIndexResponse {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory CreateIndexResponse(
       {
-
       /// Index is the Index that was created
       Index? index,
 
@@ -20,5 +18,5 @@ class CreateIndexResponse with _$CreateIndexResponse {
 
   /// Unmarshalls json to a CreateIndexResponse.
   factory CreateIndexResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_CreateIndexResponseFromJson(json);
+      _$CreateIndexResponseFromJson(json);
 }

@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'delete_index_response.dart';
 
@@ -10,29 +12,11 @@ part of 'delete_index_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 DeleteIndexResponse _$DeleteIndexResponseFromJson(Map<String, dynamic> json) {
   return _DeleteIndexResponse.fromJson(json);
 }
-
-/// @nodoc
-class _$DeleteIndexResponseTearOff {
-  const _$DeleteIndexResponseTearOff();
-
-  _DeleteIndexResponse call({String? error = ''}) {
-    return _DeleteIndexResponse(
-      error: error,
-    );
-  }
-
-  DeleteIndexResponse fromJson(Map<String, Object> json) {
-    return DeleteIndexResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DeleteIndexResponse = _$DeleteIndexResponseTearOff();
 
 /// @nodoc
 mixin _$DeleteIndexResponse {
@@ -49,59 +33,61 @@ mixin _$DeleteIndexResponse {
 abstract class $DeleteIndexResponseCopyWith<$Res> {
   factory $DeleteIndexResponseCopyWith(
           DeleteIndexResponse value, $Res Function(DeleteIndexResponse) then) =
-      _$DeleteIndexResponseCopyWithImpl<$Res>;
+      _$DeleteIndexResponseCopyWithImpl<$Res, DeleteIndexResponse>;
+  @useResult
   $Res call({String? error});
 }
 
 /// @nodoc
-class _$DeleteIndexResponseCopyWithImpl<$Res>
+class _$DeleteIndexResponseCopyWithImpl<$Res, $Val extends DeleteIndexResponse>
     implements $DeleteIndexResponseCopyWith<$Res> {
   _$DeleteIndexResponseCopyWithImpl(this._value, this._then);
 
-  final DeleteIndexResponse _value;
   // ignore: unused_field
-  final $Res Function(DeleteIndexResponse) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? error = freezed,
   }) {
     return _then(_value.copyWith(
-      error: error == freezed
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$DeleteIndexResponseCopyWith<$Res>
+abstract class _$$DeleteIndexResponseImplCopyWith<$Res>
     implements $DeleteIndexResponseCopyWith<$Res> {
-  factory _$DeleteIndexResponseCopyWith(_DeleteIndexResponse value,
-          $Res Function(_DeleteIndexResponse) then) =
-      __$DeleteIndexResponseCopyWithImpl<$Res>;
+  factory _$$DeleteIndexResponseImplCopyWith(_$DeleteIndexResponseImpl value,
+          $Res Function(_$DeleteIndexResponseImpl) then) =
+      __$$DeleteIndexResponseImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String? error});
 }
 
 /// @nodoc
-class __$DeleteIndexResponseCopyWithImpl<$Res>
-    extends _$DeleteIndexResponseCopyWithImpl<$Res>
-    implements _$DeleteIndexResponseCopyWith<$Res> {
-  __$DeleteIndexResponseCopyWithImpl(
-      _DeleteIndexResponse _value, $Res Function(_DeleteIndexResponse) _then)
-      : super(_value, (v) => _then(v as _DeleteIndexResponse));
+class __$$DeleteIndexResponseImplCopyWithImpl<$Res>
+    extends _$DeleteIndexResponseCopyWithImpl<$Res, _$DeleteIndexResponseImpl>
+    implements _$$DeleteIndexResponseImplCopyWith<$Res> {
+  __$$DeleteIndexResponseImplCopyWithImpl(_$DeleteIndexResponseImpl _value,
+      $Res Function(_$DeleteIndexResponseImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _DeleteIndexResponse get _value => super._value as _DeleteIndexResponse;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? error = freezed,
   }) {
-    return _then(_DeleteIndexResponse(
-      error: error == freezed
+    return _then(_$DeleteIndexResponseImpl(
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -109,19 +95,17 @@ class __$DeleteIndexResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
-class _$_DeleteIndexResponse implements _DeleteIndexResponse {
-  const _$_DeleteIndexResponse({this.error = ''});
+@JsonSerializable()
+class _$DeleteIndexResponseImpl implements _DeleteIndexResponse {
+  const _$DeleteIndexResponseImpl({this.error = ''});
 
-  factory _$_DeleteIndexResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeleteIndexResponseFromJson(json);
-
-  @JsonKey(defaultValue: '')
-  @override
+  factory _$DeleteIndexResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DeleteIndexResponseImplFromJson(json);
 
   /// Error is string explaining what went wrong. Empty if everything was fine.
+  @override
+  @JsonKey()
   final String? error;
 
   @override
@@ -130,41 +114,45 @@ class _$_DeleteIndexResponse implements _DeleteIndexResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _DeleteIndexResponse &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteIndexResponseImpl &&
+            (identical(other.error, error) || other.error == error));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
 
   @JsonKey(ignore: true)
   @override
-  _$DeleteIndexResponseCopyWith<_DeleteIndexResponse> get copyWith =>
-      __$DeleteIndexResponseCopyWithImpl<_DeleteIndexResponse>(
+  int get hashCode => Object.hash(runtimeType, error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeleteIndexResponseImplCopyWith<_$DeleteIndexResponseImpl> get copyWith =>
+      __$$DeleteIndexResponseImplCopyWithImpl<_$DeleteIndexResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeleteIndexResponseToJson(this);
+    return _$$DeleteIndexResponseImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _DeleteIndexResponse implements DeleteIndexResponse {
-  const factory _DeleteIndexResponse({String? error}) = _$_DeleteIndexResponse;
+  const factory _DeleteIndexResponse({final String? error}) =
+      _$DeleteIndexResponseImpl;
 
   factory _DeleteIndexResponse.fromJson(Map<String, dynamic> json) =
-      _$_DeleteIndexResponse.fromJson;
+      _$DeleteIndexResponseImpl.fromJson;
 
   @override
 
   /// Error is string explaining what went wrong. Empty if everything was fine.
-  String? get error => throw _privateConstructorUsedError;
+  String? get error;
   @override
   @JsonKey(ignore: true)
-  _$DeleteIndexResponseCopyWith<_DeleteIndexResponse> get copyWith =>
+  _$$DeleteIndexResponseImplCopyWith<_$DeleteIndexResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

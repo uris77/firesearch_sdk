@@ -8,7 +8,6 @@ part 'put_autocomplete_doc_request.g.dart';
 @freezed
 class PutAutocompleteDocRequest with _$PutAutocompleteDocRequest {
   /// Default Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory PutAutocompleteDocRequest({
     /// IndexPath is the AutocompleteIndex to put a document to.
     required String indexPath,
@@ -19,5 +18,5 @@ class PutAutocompleteDocRequest with _$PutAutocompleteDocRequest {
 
   /// Converts a map to PutAutocompleteDocRequest
   factory PutAutocompleteDocRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_PutAutocompleteDocRequestFromJson(json);
+      _$PutAutocompleteDocRequestFromJson(json);
 }

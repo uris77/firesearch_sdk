@@ -6,15 +6,14 @@ part of 'check_index_path_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CheckIndexPathRequest _$_$_CheckIndexPathRequestFromJson(
-    Map<String, dynamic> json) {
-  return _$_CheckIndexPathRequest(
-    indexPath: json['indexPath'] as String,
-  );
-}
+_$CheckIndexPathRequestImpl _$$CheckIndexPathRequestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CheckIndexPathRequestImpl(
+      indexPath: json['indexPath'] as String,
+    );
 
-Map<String, dynamic> _$_$_CheckIndexPathRequestToJson(
-        _$_CheckIndexPathRequest instance) =>
+Map<String, dynamic> _$$CheckIndexPathRequestImplToJson(
+        _$CheckIndexPathRequestImpl instance) =>
     <String, dynamic>{
       'indexPath': instance.indexPath,
     };

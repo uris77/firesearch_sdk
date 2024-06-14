@@ -7,10 +7,8 @@ part 'complete_query.g.dart';
 @freezed
 class CompleteQuery with _$CompleteQuery {
   /// Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory CompleteQuery(
       {
-
       /// IndexPath is the path of the index to search.
       required String indexPath,
 
@@ -27,5 +25,5 @@ class CompleteQuery with _$CompleteQuery {
 
   /// Unmarshalls json to a CompleteQuery.
   factory CompleteQuery.fromJson(Map<String, dynamic> json) =>
-      _$_$_CompleteQueryFromJson(json);
+      _$CompleteQueryFromJson(json);
 }

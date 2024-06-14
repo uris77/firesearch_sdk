@@ -6,15 +6,14 @@ part of 'delete_index_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DeleteIndexRequest _$_$_DeleteIndexRequestFromJson(
-    Map<String, dynamic> json) {
-  return _$_DeleteIndexRequest(
-    indexPath: json['indexPath'] as String,
-  );
-}
+_$DeleteIndexRequestImpl _$$DeleteIndexRequestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DeleteIndexRequestImpl(
+      indexPath: json['indexPath'] as String,
+    );
 
-Map<String, dynamic> _$_$_DeleteIndexRequestToJson(
-        _$_DeleteIndexRequest instance) =>
+Map<String, dynamic> _$$DeleteIndexRequestImplToJson(
+        _$DeleteIndexRequestImpl instance) =>
     <String, dynamic>{
       'indexPath': instance.indexPath,
     };

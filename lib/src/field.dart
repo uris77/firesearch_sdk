@@ -7,10 +7,8 @@ part 'field.g.dart';
 @freezed
 class Field with _$Field {
   /// Constructor
-  @JsonSerializable(explicitToJson: true)
   const factory Field(
       {
-
       /// Key is the name of the field. Cannot begin with an underscore.
       required String key,
 
@@ -18,5 +16,5 @@ class Field with _$Field {
       required dynamic value}) = _Field;
 
   /// Unmarshalls from json to Field
-  factory Field.fromJson(Map<String, dynamic> json) => _$_$_FieldFromJson(json);
+  factory Field.fromJson(Map<String, dynamic> json) => _$FieldFromJson(json);
 }
